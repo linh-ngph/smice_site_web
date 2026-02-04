@@ -8,7 +8,7 @@ const smiceLinks = [
 ];
 
 const secteursLinks = [
-  { label: "Hotêllerie", href: "/secteurs#hotellerie" },
+  { label: "Hôtellerie", href: "/secteurs#hotellerie" },
   { label: "Restauration", href: "/secteurs#restauration" },
   { label: "Transports", href: "/secteurs#transports" },
   { label: "Retail", href: "/secteurs#retail" },
@@ -236,94 +236,5 @@ const ressourcesLinks = [
 
   .footer-bottom a:hover {
     color: #4A5FC1;
-  }
-
-  /* ===== Tablet Responsive ===== */
-  @media (max-width: 1024px) {
-    .footer-content {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
-
-    .footer-brand {
-      grid-column: 1 / -1;
-      max-width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .footer-tagline {
-      max-width: 400px;
-      margin: 0 auto 20px;
-    }
-
-    .social-links {
-      justify-content: center;
-    }
-
-    .footer-section {
-      text-align: left;
-    }
-  }
-
-  /* ===== Mobile Responsive ===== */
-  @media (max-width: 768px) {
-    .footer {
-      padding: 50px 20px 24px;
-    }
-
-    .footer-content {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px 20px;
-    }
-
-    .footer-brand {
-      grid-column: 1 / -1;
-      text-align: center;
-    }
-
-    .footer-section h4 {
-      font-size: 15px;
-      margin-bottom: 16px;
-    }
-
-    .footer-links a {
-      font-size: 13px;
-    }
-
-    .footer-bottom p {
-      font-size: 12px;
-      line-height: 1.8;
-    }
-  }
-
-  /* ===== Small Mobile ===== */
-  @media (max-width: 480px) {
-    .footer-content {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px 16px;
-    }
-
-    .footer-brand {
-      grid-column: 1 / -1;
-      text-align: center;
-    }
-
-    .footer-section {
-      text-align: left;
-    }
-
-    .footer-links {
-      align-items: flex-start;
-    }
-
-    .social-icon {
-      width: 36px;
-      height: 36px;
-    }
-
-    .footer-bottom p {
-      font-size: 11px;
-    }
   }
 </style>

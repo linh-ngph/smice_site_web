@@ -319,23 +319,20 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
     }
 
     .contact-image-wrapper {
-      min-height: 350px;
-      order: -1;
+      display: none;
     }
 
     .image-decoration {
-      width: 200px;
-      height: 350px;
-      top: -20px;
-      right: -30px;
+      display: none;
     }
 
     .team-image {
-      max-width: 320px;
+      display: none;
     }
 
     .submit-btn {
-      width: auto;
+      width: 100%;
+      align-self: stretch;
     }
   }
 
@@ -352,13 +349,11 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
     }
 
     .image-decoration {
-      width: 150px;
-      height: 280px;
-      right: -20px;
+      display: none;
     }
 
     .team-image {
-      max-width: 280px;
+      display: none;
     }
   }
 </style>

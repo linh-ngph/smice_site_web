@@ -264,11 +264,24 @@ const {
     }
 
     .services-grid {
-      gap: 24px;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .service-card {
+      flex: 0 1 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+
+    .service-card:nth-child(3) {
+      flex: 0 1 auto;
+      max-width: 344px;
     }
 
     .service-image {
       height: 160px;
+      width: 100%;
     }
   }
 
@@ -291,10 +304,14 @@ const {
     }
 
     .services-grid {
-      grid-template-columns: 1fr;
+      flex-direction: column;
       gap: 40px;
       max-width: 400px;
       margin: 0 auto;
+    }
+
+    .service-card {
+      max-width: 100%;
     }
 
     .service-subtitle {
