@@ -7,7 +7,7 @@ const platformCards = [
     id: 1,
     title: "Une plateforme claire",
     titleColor: "#4B5563",
-    image: "/images/platform/plateforme.png",
+    image: "/images/homepage/platform/plateform-image.jpg",
     description: "Pilotez vos audits, vos standards et vos plans d'actions depuis un espace simple et visuel.",
     buttonText: "En savoir plus",
     buttonLink: "/services"
@@ -16,7 +16,7 @@ const platformCards = [
     id: 2,
     title: "Une application mobile terrain",
     titleColor: "#9B7BC7",
-    image: "/images/platform/mobile-app.png",
+    image: "/images/homepage/platform/application-mobile.jpg",
     description: "Vos équipes remontent leurs observations, suivent leurs checklists et agissent plus vite.",
     buttonText: "Découvrir l'app",
     buttonLink: "/services"
@@ -25,7 +25,7 @@ const platformCards = [
     id: 3,
     title: "Du temps réel pour décider",
     titleColor: "#7DD3B8",
-    image: "/images/platform/temps-reel.png",
+    image: "/images/homepage/platform/du-temps-reel.jpg",
     description: "Indicateurs, alertes et résultats accessibles instantanément, où que vous soyez.",
     buttonText: "Voir les fonctionnalités",
     buttonLink: "/services"
@@ -38,9 +38,19 @@ const platformCards = [
     <h2 class="platform-title">La Plateforme & Application Smice en vidéo</h2>
     
     <div class="platform-grid">
-      {platformCards.map((card) => (
+      {platformCards.map((card, idx) => (
         <div class="platform-card">
-          <h3 class="card-title" style={`color: ${card.titleColor}`}>{card.title}</h3>
+          <h3
+            class="card-title"
+            style={{
+              color:
+                idx === 0 ? '#75898A' :
+                idx === 1 ? '#6989D4' :
+                idx === 2 ? '#9B8AAD' : card.titleColor
+            }}
+          >
+            {card.title}
+          </h3>
           <div class="card-image">
             <img src={card.image} alt={card.title} />
           </div>
@@ -57,7 +67,7 @@ const platformCards = [
 
 <style>
   .platform-section {
-    background-color: #F5F7FF;
+    background-color: #FFFFFE;
     padding: 80px 24px;
   }
 
@@ -67,36 +77,41 @@ const platformCards = [
   }
 
   .platform-title {
-    font-size: 38px;
-    font-weight: 700;
-    color: #4A5FC1;
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     text-align: center;
     margin: 0 0 50px 0;
+    font-family: inherit;
+    letter-spacing: 0;
   }
 
   .platform-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    align-items: stretch;
   }
 
   .platform-card {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: 100%;
   }
 
   .card-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0;
     text-align: center;
+    font-family: inherit;
   }
 
   .card-image {
     width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: 16px;
+    height: 280px;
+    border-radius: 4px;
     overflow: hidden;
     background: #E5E7EB;
   }
@@ -108,11 +123,13 @@ const platformCards = [
   }
 
   .card-description {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
-    color: #6B7280;
+    color: #7C797F;
     margin: 0;
     flex: 1;
+    font-weight: 500;
+    font-family: inherit;
   }
 
   .card-btn {
@@ -120,21 +137,25 @@ const platformCards = [
     align-items: center;
     justify-content: center;
     gap: 8px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
+    font-weight: 600;
     padding: 14px 24px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
     border-radius: 8px;
+    text-decoration: none;
     transition: all 0.3s ease;
+    margin-top: auto;
+    box-shadow: 0 2px 8px 0 rgba(68, 88, 136, 0.08);
+    font-family: inherit;
+    text-align: center;
     width: 100%;
   }
 
   .card-btn:hover {
-    background: #3D4EAA;
+    background: #5574BE;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
   }
 
   /* ===== Tablet Responsive ===== */
@@ -173,12 +194,14 @@ const platformCards = [
     }
 
     .platform-title {
-      font-size: 26px;
-      margin-bottom: 35px;
+      font-size: 40px;
+      font-weight: 800;
+      color: #1A1A2E;
+      text-align: center;
+      margin-bottom: 48px;
+      font-family: inherit;
+      letter-spacing: 0;
     }
-
-    .platform-grid {
-      grid-template-columns: 1fr;
       gap: 40px;
       max-width: 400px;
       margin: 0 auto;

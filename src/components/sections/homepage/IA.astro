@@ -5,24 +5,14 @@
 <section class="ia-section" id="ia">
   <div class="ia-container">
     <h2 class="ia-title">
-      L'<span class="highlight-yellow">IA</span> chez Smice, évidemment.
+      L'<span class="highlight-yellow ia-blue ia-iaword"><span class="ia-ia-text">IA</span>
+        <img src="/images/homepage/ia/subline-IA.png" alt="soulignement IA" class="ia-subline" />
+      </span> chez Smice, évidemment.
     </h2>
     
     <div class="ia-content">
       <div class="ia-image-group">
-        <div class="ia-bloc-verbatims">
-          <img src="/images/homepage/ia/bloc-ia-verbatims.png" alt="Résumé de verbatims" />
-        </div>
-        <div class="ia-bloc-campagnes">
-          <img src="/images/homepage/ia/bloc-ia-campagnes.png" alt="Création de campagnes" />
-        </div>
-          <div class="ia-ceo-border-group">
-            <img class="ceo-border" src="/images/homepage/ia/border-ceo.png" alt="" />
-            <div class="ceo-img-stack">
-              <img class="ceo-border-2" src="/images/homepage/ia/border-ceo-2.png" alt="" />
-              <img class="ceo-img" src="/images/homepage/ia/ceo.png" alt="CEO Smice" />
-            </div>
-          </div>
+        <img src="/images/homepage/ia/illustration.png" alt="L'IA chez Smice" class="ia-illustration" />
       </div>
       
       <div class="ia-text">
@@ -35,7 +25,7 @@
         
         <div class="ia-author">
           <div class="author-avatar">
-            <img src="/images/ia/julien-avatar.png" alt="Julien Mondhard" />
+            <img src="/images/homepage/ia/ceo-avatar.png" alt="Julien Mondhard" />
           </div>
           <div class="author-info">
             <span class="author-name">Julien Mondhard</span>
@@ -59,16 +49,40 @@
   }
 
   .ia-title {
-    font-size: 42px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     text-align: center;
     margin: 0 0 50px 0;
   }
 
+  .ia-title .ia-blue {
+    color: #6989D4;
+    font-weight: 800;
+  }
+
+
   .ia-title .highlight-yellow {
     position: relative;
-    display: inline;
+    display: inline-block;
+  }
+
+  .ia-title .ia-iaword {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .ia-title .ia-subline {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+    display: block;
   }
 
   .ia-title .highlight-yellow::after {
@@ -87,159 +101,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: stretch;
   }
 
   /* Image Section */
   .ia-image-group {
     position: relative;
     width: 100%;
-    min-height: 420px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    background: #DDE3F2;
-    border-radius: 20px;
-    padding: 24px 0 24px 24px;
-    overflow: visible;
-    box-shadow: 0 2px 12px 0 rgba(68, 88, 136, 0.08);
+    justify-content: center;
   }
 
-  .ia-ceo-img {
-    position: relative;
-    z-index: 1;
-    height: 370px;
-    margin-left: 40px;
-    margin-right: 0;
-    display: flex;
-    align-items: flex-end;
-    filter: drop-shadow(0 8px 30px rgba(0,0,0,0.10));
-  }
-
-    .ia-ceo-border-group {
-      position: absolute;
-      right: 24px;
-      bottom: 0;
-      height: 370px;
-      width: 240px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      z-index: 1;
-    }
-
-    .ia-ceo-border-group .ceo-border {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 240px;
-      height: 370px;
-      z-index: 3;
-      pointer-events: none;
-    }
-
-    .ia-ceo-border-group .ceo-img-stack {
-      position: absolute;
-      right: 18px;
-      bottom: 10px;
-      width: 200px;
-      height: 340px;
-      display: flex;
-      align-items: stretch;
-      justify-content: stretch;
-      z-index: 1;
-    }
-
-    .ia-ceo-border-group .ceo-border-2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200px;
-      height: 340px;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .ia-ceo-border-group .ceo-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200px;
-      height: 340px;
-      object-fit: cover;
-      border-radius: 18px;
-      z-index: 1;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.10);
-      background: transparent;
-    }
-
-  .ia-bloc-verbatims {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-    width: 210px;
-    z-index: 2;
-    transform: rotate(-7deg);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
-  }
-
-  .ia-bloc-campagnes {
-    position: absolute;
-    bottom: 32px;
-    left: 0px;
-    width: 210px;
-    z-index: 2;
-    transform: rotate(-4deg);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
-  }
-
-  .frequency-badge {
-    background: #4A5FC1;
-    color: white;
-    font-size: 10px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-
-  .card-mini-text {
-    font-size: 10px;
-    color: #6B7280;
-    line-height: 1.4;
-  }
-
-  .card-mini-text p {
-    margin: 0;
-  }
-
-  .card-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 20px;
-  }
-
-  /* Paper Planes */
-  .paper-plane {
-    position: absolute;
-    font-size: 24px;
-    z-index: 3;
-    opacity: 0.8;
-  }
-
-  .plane-1 {
-    top: 50%;
-    right: 20px;
-    transform: rotate(-30deg);
-  }
-
-  .plane-2 {
-    bottom: 80px;
-    right: 60px;
-    transform: rotate(15deg);
-    font-size: 18px;
+  .ia-illustration {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   /* Text Section */
@@ -247,21 +124,26 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    justify-content: center;
   }
 
   .ia-quote {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.7;
-    color: #374151;
+    color: #7C797F;
     margin: 0;
     font-style: normal;
+    font-weight: 500;
+    font-family: inherit;
   }
 
   .ia-description {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.7;
-    color: #374151;
+    color: #7C797F;
     margin: 0;
+    font-weight: 500;
+    font-family: inherit;
   }
 
   .ia-author {
@@ -318,21 +200,23 @@
       gap: 40px;
     }
 
-    .ia-image {
-      min-height: 350px;
+    .ia-image-group {
+      height: 400px;
     }
 
-    .main-image {
-      max-width: 320px;
+    .ia-bg-shape {
+      width: 320px;
+      height: 350px;
     }
 
-    .card-verbatims {
-      width: 190px;
+    .ia-ceo-container {
+      width: 240px;
+      height: 350px;
     }
 
-    .card-campagnes {
+    .ia-bloc-verbatims,
+    .ia-bloc-campagnes {
       width: 170px;
-      left: -10px;
     }
 
     .ia-quote,
@@ -357,32 +241,30 @@
       gap: 35px;
     }
 
-    .ia-image {
-      min-height: 320px;
-      display: flex;
-      justify-content: center;
+    .ia-image-group {
+      height: 380px;
     }
 
-    .main-image {
-      max-width: 280px;
+    .ia-bg-shape {
+      width: 280px;
+      height: 320px;
     }
 
-    .floating-card {
-      transform: scale(0.85);
+    .ia-ceo-container {
+      width: 220px;
+      height: 320px;
     }
 
-    .card-verbatims {
+    .ia-bloc-verbatims {
+      width: 150px;
       top: 10px;
-      left: 10%;
+      left: 10px;
     }
 
-    .card-campagnes {
+    .ia-bloc-campagnes {
+      width: 150px;
       bottom: 20px;
-      left: 5%;
-    }
-
-    .paper-plane {
-      display: none;
+      left: 10px;
     }
 
     .ia-text {
@@ -410,15 +292,23 @@
       bottom: 2px;
     }
 
-    .floating-card {
-      transform: scale(0.75);
+    .ia-image-group {
+      height: 340px;
     }
 
-    .card-verbatims {
-      left: 0;
+    .ia-bg-shape {
+      width: 240px;
+      height: 280px;
     }
 
-    .card-campagnes {
+    .ia-ceo-container {
+      width: 180px;
+      height: 280px;
+    }
+
+    .ia-bloc-verbatims,
+    .ia-bloc-campagnes {
+      width: 130px;
       left: 0;
     }
 

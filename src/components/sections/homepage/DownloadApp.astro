@@ -12,17 +12,17 @@
         <p class="download-tagline">Envie de rejoindre l'aventure ?</p>
         <h2 class="download-title">Devenez Smiceur !</h2>
         <div class="store-buttons">
-          <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
-            <img src="/images/stores/app-store.svg" alt="Download on the App Store" />
+          <a href="https://apps.apple.com/fr/app/smice/id1322441055" class="store-btn" aria-label="Télécharger sur l'App Store" target="_blank" rel="noopener">
+            <img src="/images/homepage/download/apple-store.png" alt="Download on the App Store" />
           </a>
-          <a href="#" class="store-btn" aria-label="Télécharger sur Google Play">
-            <img src="/images/stores/google-play.svg" alt="Get it on Google Play" />
+          <a href="https://play.google.com/store/apps/details?id=com.qcm.smiceplus&pcampaignid=web_share" class="store-btn" aria-label="Télécharger sur Google Play" target="_blank" rel="noopener">
+            <img src="/images/homepage/download/google-store.png" alt="Get it on Google Play" />
           </a>
         </div>
       </div>
       
       <div class="phone-mockup">
-        <img src="/images/app/phone-mockup.png" alt="Application Smice" />
+          <img src="/images/homepage/download/mobile.png" alt="Application Smice" class="mobile-img-lower" />
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
 
 <style>
   .download-app-section {
-    background-color: #F5F7FF;
+    background-color: #FFFFFE;
     padding: 80px 24px;
   }
 
@@ -40,15 +40,17 @@
   }
 
   .download-app-card {
-    background: linear-gradient(135deg, #4A5FC1 0%, #3D4EAA 100%);
+    background: #435888;
     border-radius: 24px;
-    padding: 50px 60px;
+    padding: 32px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    min-height: 220px;
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
   }
 
   /* Diagonal stripe decoration */
@@ -91,21 +93,22 @@
   .download-content {
     position: relative;
     z-index: 2;
-    max-width: 400px;
+    max-width: 450px;
+    flex-shrink: 0;
   }
 
   .download-tagline {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 8px 0;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 700;
+    color: #D9E1F3;
+    margin: 0 0 4px 0;
   }
 
   .download-title {
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
     color: white;
-    margin: 0 0 28px 0;
+    margin: 0 0 16px 0;
     line-height: 1.2;
   }
 
@@ -117,6 +120,7 @@
 
   .store-btn {
     display: block;
+    width: 140px;
     height: 44px;
     transition: transform 0.3s ease;
   }
@@ -126,15 +130,17 @@
   }
 
   .store-btn img {
+    width: 100%;
     height: 100%;
-    width: auto;
+    object-fit: contain;
+    display: block;
   }
 
   /* Phone Mockup */
   .phone-mockup {
     position: absolute;
     right: 60px;
-    bottom: 0;
+     bottom: -100px;
     width: 280px;
     z-index: 2;
   }

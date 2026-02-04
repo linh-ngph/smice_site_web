@@ -58,8 +58,10 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
     
     <div class="contact-image-wrapper">
       <div class="image-decoration" style={`background: ${decorationColor};`}></div>
-      <div class="team-image">
-        <img src="/images/contact/team-photo.png" alt="L'équipe Smice" />
+      <div class="team-image-bg">
+        <div class="team-image">
+          <img src="/images/team/team-contactez-nous.png" alt="L'équipe Smice" />
+        </div>
       </div>
     </div>
   </div>
@@ -67,7 +69,7 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
 
 <style>
   .contact-section {
-    background-color: #F5F7FF;
+    background-color: #FFFFFE;
     padding: 80px 24px;
     overflow: hidden;
   }
@@ -83,27 +85,34 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
 
   .contact-form-wrapper {
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .contact-tagline {
     font-size: 16px;
     font-style: italic;
-    color: #4A5FC1;
+    font-weight: 700;
+    color: #8EA7DF;
     margin: 0 0 8px 0;
   }
 
   .contact-title {
-    font-size: 38px;
-    font-weight: 700;
-    color: #1A1A2E;
-    margin: 0 0 12px 0;
+    font-size: 32px;
+    font-weight: 800;
+    font-style: normal;
+    color: #566FAC;
+  
   }
 
   .contact-subtitle {
-    font-size: 15px;
-    color: #6B7280;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9795B5;
     line-height: 1.6;
-    margin: 0 0 30px 0;
+
   }
 
   /* Form Styles */
@@ -132,7 +141,8 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
   .form-group label {
     font-size: 14px;
     font-weight: 600;
-    color: #1A1A2E;
+    font-style: normal;
+    color: #435888;
   }
 
   .form-group input,
@@ -177,15 +187,15 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
 
   .submit-btn {
     padding: 16px 40px;
-    background: #4A5FC1;
+    background: #6989D4;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-self: center;
+    align-self: flex-end;
     margin-top: 10px;
   }
 
@@ -211,16 +221,30 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
     width: 300px;
     height: 550px;
     border-radius: 20px;
-    transform: rotate(-5deg);
-    z-index: 0;
+    background: #435888 !important;
+    z-index: 1;
+  }
+
+  .team-image-bg {
+    background: #D9E1F3;
+    border-radius: 16px;
+    border: 8px solid #D9E1F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 466px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
   }
 
   .team-image {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     max-width: 450px;
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   }
@@ -273,6 +297,9 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
 
     .contact-form-wrapper {
       max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     .contact-title {
@@ -308,7 +335,7 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
     }
 
     .submit-btn {
-      width: 100%;
+      width: auto;
     }
   }
 
