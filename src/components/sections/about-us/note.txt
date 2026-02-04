@@ -1,0 +1,10 @@
+In hero section :
+The line “20 ans d’expertise au service d’une seule ambition:…” has style : font: Inter, weight: 800, style: Extra Bold, size: 34px, colors text: #435888
+Except for these worlds: “simple; fiable; accessible” has colors text: #9B8AAD
+Otherwise, words “accessible” has a sublime name “subline_accesible.png”
+
+
+The button has style: width: 157px, height: 45px, radius: 6px, padding: top 8px, right 16px, bottom 8px, left 16px, colors background: #9B8AAD
+
+The line “Les dates clés de Smice” has style: font: Inter, style: bold, weight: 700, size: 20px, colors text: #504C54
+except for these word: “date clés’ has color text: #6989D4, and it has a sublime name “subline_dateclés.png”
