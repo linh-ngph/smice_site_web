@@ -14,7 +14,7 @@ const keyDates = [
     <div class="about-hero-content">
       <h1 class="about-hero-title">
         20 ans d'expertise au service d'une seule ambition : rendre la qualité 
-        <span class="highlight">simple</span>, <span class="highlight">fiable</span> et <span class="highlight">accessible</span>.
+        <span class="highlight">simple</span>; <span class="highlight">fiable</span>; <span class="highlight-accessible">accessible<img src="/images/about/hero-section/subline_accesible.png" alt="" class="subline-accessible" /></span>.
       </h1>
       <p class="about-hero-description">
         Depuis 2005, Smice fait avancer l'expérience client avec une méthode qui marche, une communauté qui s'implique et une plateforme qui pilote la qualité en temps réel.
@@ -24,9 +24,11 @@ const keyDates = [
     
     <div class="about-hero-image">
       <div class="image-collage">
-        <img src="/images/about/about-hero.png" alt="L'équipe Smice" class="main-image" />
         <div class="badge-20">
-          <span class="badge-number">20</span>
+          <img src="/images/about/hero-section/20_ans.png" alt="20 ans" class="badge-image" />
+        </div>
+        <div class="photo-wrapper">
+          <img src="/images/about/hero-section/julien.png" alt="L'équipe Smice" class="main-image" />
         </div>
       </div>
     </div>
@@ -35,7 +37,7 @@ const keyDates = [
   <!-- Key Dates Section -->
   <div class="key-dates-section">
     <h2 class="key-dates-title">
-      Les <span class="underline">dates clés</span> de Smice
+      Les <span class="underline">dates clés<img src="/images/about/hero-section/subline_date.png" alt="" class="subline-datecles" /></span> de Smice
     </h2>
     
     <div class="key-dates-grid">
@@ -58,7 +60,8 @@ const keyDates = [
   }
 
   .about-hero-container {
-    max-width: 1200px;
+    max-width: 1224px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
@@ -72,18 +75,30 @@ const keyDates = [
   }
 
   .about-hero-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--text-dark);
+    font-size: 34px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.3;
     margin: 0 0 24px 0;
   }
 
   .about-hero-title .highlight {
-    color: var(--primary-blue);
-    text-decoration: underline;
-    text-decoration-color: var(--primary-blue);
-    text-underline-offset: 4px;
+    color: #9B8AAD;
+  }
+
+  .about-hero-title .highlight-accessible {
+    color: #9B8AAD;
+    position: relative;
+    display: inline-block;
+  }
+
+  .subline-accessible {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .about-hero-description {
@@ -94,88 +109,111 @@ const keyDates = [
   }
 
   .btn-secondary {
-    display: inline-block;
-    padding: 14px 28px;
-    background-color: #E07B5B;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 157px;
+    height: 45px;
+    padding: 8px 16px;
+    background-color: #9B8AAD;
     color: white;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
   }
 
   .btn-secondary:hover {
-    background-color: #c96a4d;
+    background-color: #8a7a9c;
     transform: translateY(-2px);
   }
 
   /* Image Collage */
   .about-hero-image {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .image-collage {
     position: relative;
     width: 100%;
-    max-width: 480px;
+    max-width: 550px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .photo-wrapper {
+    border-radius: 16px;
+    padding: 8px;
+    background-color: #FFFFFE;
+    display: inline-block;
+    max-height: 500px;
   }
 
   .main-image {
     width: 100%;
-    height: auto;
-    border-radius: 24px;
+    height: 100%;
+    max-height: 434px;
+    border-radius: 12px;
     object-fit: cover;
+    display: block;
   }
 
   .badge-20 {
     position: absolute;
     bottom: -20px;
-    right: 30%;
-    transform: translateX(50%);
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    border-radius: 50%;
+    left: 60px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    z-index: 10;
   }
 
-  .badge-number {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary-blue);
+  .badge-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   /* Key Dates Section */
   .key-dates-section {
-    max-width: 1200px;
+    max-width: 1224px;
+    width: 100%;
     margin: 80px auto 0;
-    padding: 0 24px 40px;
     text-align: center;
     border-radius: 0 0 40px 40px;
   }
 
   .key-dates-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 700;
+    color: #504C54;
     margin: 0 0 50px 0;
   }
 
   .key-dates-title .underline {
-    text-decoration: underline;
-    text-decoration-color: var(--primary-blue);
-    text-underline-offset: 4px;
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .subline-datecles {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .key-dates-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 30px;
   }
 
   .date-item {
@@ -184,15 +222,16 @@ const keyDates = [
 
   .date-year {
     display: block;
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--primary-blue);
+    font-size: 32px;
+    font-weight: 800;
+    color: #6989D4;
     margin-bottom: 12px;
   }
 
   .date-description {
-    font-size: 14px;
-    color: var(--text-gray);
+    font-size: 20px;
+    font-weight: 400;
+    color: #504C54;
     line-height: 1.5;
     margin: 0;
   }
