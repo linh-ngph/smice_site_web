@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const seoConfig = {
+  title: "Secteurs d'activité | SMICE",
+  description: "Découvrez les secteurs dans lesquels nous intervenons. Expertise multi-sectorielle et accompagnement sur mesure.",
+  keywords: ["SMICE", "secteurs", "industries", "domaines d'expertise", "activités"],
+};
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/secteurs" backgroundColor="#F0F7F6" />
+  
+  <main>
+    <!-- Secteurs homepage content will be implemented later -->
+  </main>
+  
+  <Footer />
+</Layout>

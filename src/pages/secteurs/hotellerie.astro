@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import SecteursHero from '../../components/sections/secteurs/SecteursHero.astro';
+import Testimonials from '../../components/sections/common/Testimonials.astro';
+import Experience from '../../components/sections/common/Experience.astro';
+import BenefitsSection from '../../components/sections/secteurs/BenefitsSection.astro';
+import FeaturesSection from '../../components/sections/secteurs/FeaturesSection.astro';
+import FAQSection from '../../components/sections/common/FAQSection.astro';
+import Contact from '../../components/sections/common/Contact.astro';
+
+const seoConfig = {
+  title: "Secteur Hôtellerie | SMICE",
+  description: "Sublimez l'expérience client dans votre hôtellerie. Le partenaire qualité qui garantit l'excellence de vos standards, de la réservation au check-out.",
+  keywords: ["SMICE", "hôtellerie", "hôtel", "mystery shopping", "qualité"],
+};
+
+// Hôtellerie testimonials
+const hotellerieTestimonials = [
+  {
+    id: 1,
+    quote: "Grâce à Smice, nous avons une vision claire de l'expérience vécue par nos clients à chaque étape de leur séjour. La plateforme nous permet d'agir rapidement sur les points d'amélioration.",
+    name: "Isabelle Fontaine",
+    company: "Directrice Qualité, Hôtels Prestige",
+    avatar: "/images/testimonials/isabelle-fontaine.png",
+    nameColor: "#4A5FC1"
+  },
+  {
+    id: 2,
+    quote: "Les audits mystères Smice ont transformé notre approche de l'excellence. Nos équipes sont plus attentives aux détails et nos clients le remarquent dans leurs avis.",
+    name: "Philippe Moreau",
+    company: "Responsable Expérience Client, GrandStay",
+    avatar: "/images/testimonials/philippe-moreau.png",
+    nameColor: "#9B7BC7"
+  },
+  {
+    id: 3,
+    quote: "Smice nous permet de maintenir nos standards d'excellence sur l'ensemble de notre chaîne. Un partenaire indispensable pour notre démarche qualité.",
+    name: "Caroline Blanc",
+    company: "Manager Réseau, Boutique Hotels",
+    avatar: "/images/testimonials/caroline-blanc.png",
+    nameColor: "#C9A227"
+  }
+];
+
+// Platform features for hôtellerie
+const hotellerieFeatures = [
+  {
+    tag: "PLAN D'ACTIONS",
+    title: "Lancez des actions concrètes pour améliorer le respect de vos standards hôteliers.",
+    image: "/images/platform/plan-actions.png",
+    imageAlt: "Plan d'actions"
+  },
+  {
+    tag: "VERBATIMS",
+    title: "Obtenez des retours d'expériences clients.",
+    image: "/images/platform/verbatims.png",
+    imageAlt: "Verbatims"
+  },
+  {
+    tag: "MUR D'IMAGES",
+    title: "Vos points améliorables, en images.",
+    image: "/images/platform/image-wall.png",
+    imageAlt: "Mur d'images"
+  }
+];
+
+// Hôtellerie-specific services
+const hotellerieServices = [
+  {
+    title: "Vos process opérationnels",
+    subtitle: "Analysez la qualité de service à chaque étape du séjour.",
+    image: "/images/services/hotellerie-process.png",
+    description: "Évaluez la rigueur de vos process, de la réservation au check-out. Smice analyse accueil, propreté des chambres, qualité du petit-déjeuner et réactivité des équipes pour une vision complète de votre performance opérationnelle.",
+    buttonText: "En savoir plus",
+    buttonStyle: "light" as const,
+    href: "/services#process"
+  },
+  {
+    title: "Vos clients mystères",
+    subtitle: "Découvrez ce que vos clients vivent vraiment.",
+    image: "/images/services/hotellerie-mystery.png",
+    description: "Nos Smiceurs séjournent dans vos établissements comme de vrais clients : réservation, accueil, chambre, restauration, départ. Vous accédez à la réalité terrain telle qu'elle est vécue par vos hôtes.",
+    buttonText: "En savoir plus",
+    buttonStyle: "primary" as const,
+    href: "/services#mystery"
+  },
+  {
+    title: "Vos collaborateurs",
+    subtitle: "Impliquez vos équipes dans la démarche qualité.",
+    image: "/images/services/hotellerie-collaborators.png",
+    description: "Avec les auto-évaluations et les feedbacks immédiats, vos équipes gagnent en rigueur et en attention aux détails. Les résultats deviennent un outil de coaching opérationnel au quotidien.",
+    buttonText: "En savoir plus",
+    buttonStyle: "secondary" as const,
+    href: "/services#collaborators"
+  }
+];
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/secteurs" backgroundColor="#F0F7F6" />
+  
+  <main>
+    <SecteursHero sector="hotellerie" />
+    <Experience 
+      title="La qualité de votre hôtellerie, mesurée à "
+      titleHighlight="chaque étape"
+      subtitle="Smice accompagne hôtels, chaînes et résidences dans le pilotage de leur excellence opérationnelle et garantit une qualité homogène sur l'ensemble des établissements."
+      services={hotellerieServices}
+      backgroundColor="white"
+    />
+    <BenefitsSection 
+      benefits={[
+        {
+          title: "Des standards maîtrisés, de l'accueil au départ",
+          highlights: ["standards", "départ"],
+          sectionTitle: "Pour vos standards :",
+          paragraphs: [
+            "Smice vous aide à garantir une expérience client parfaitement cohérente, de la réservation jusqu'au check-out. Nos évaluations mesurent la qualité de l'accueil, la propreté des espaces, le confort des chambres et l'attention portée aux détails.",
+            "Vous obtenez une vision complète et structurée de la maîtrise de vos standards, à chaque étape du séjour client."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/hotellerie-lobby.png",
+          imageAlt: "Lobby d'hôtel",
+          backgroundColor: "#F0F7F6",
+          imageOnLeft: true
+        },
+        {
+          title: "Pour vos clients, chaque détail compte",
+          highlights: ["clients", "détail"],
+          sectionTitle: "Pour vos clients :",
+          paragraphs: [
+            "Les visites mystère Smice vous révèlent votre hôtel tel qu'il est réellement vécu : accueil, chambre, petit-déjeuner, spa, et toutes les interactions avec vos équipes.",
+            "Le regard objectif de nos Smiceurs met en lumière ce qui fonctionne — et les détails qui font la différence.",
+            "Vous obtenez une vision authentique de l'expérience client pour garantir un séjour mémorable."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/hotellerie-chambre.png",
+          imageAlt: "Chambre d'hôtel",
+          backgroundColor: "#F4F7FF",
+          imageOnLeft: false
+        },
+        {
+          title: "Un outil d'engagement et de progression",
+          highlights: ["engagement", "progression"],
+          sectionTitle: "Pour vos équipes :",
+          paragraphs: [
+            "Smice leur offre un cadre simple et motivant pour progresser chaque jour. Les auto-évaluations régulières renforcent la rigueur, les feedbacks immédiats améliorent la relation client.",
+            "Vos collaborateurs gagnent en autonomie et en sens du détail — au bénéfice direct de l'expérience client."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/hotellerie-team.png",
+          imageAlt: "Équipe hôtelière",
+          backgroundColor: "#F3EFF6",
+          imageOnLeft: true
+        }
+      ]}
+    />
+    <Testimonials 
+      title="Ils ont décidé de nous faire "
+      titleHighlight="confiance"
+      subtitle="Ces professionnels de l'hôtellerie améliorent l'expérience client main dans la main avec Smice, et voici leurs retours."
+      testimonials={hotellerieTestimonials}
+      backgroundColor="#F0F7F6"
+    />
+    <FeaturesSection 
+      title="Une "
+      titleHighlight="plateforme"
+      platformImage="/images/platform/dashboard.png"
+      subtitle="Des "
+      subtitleHighlight1="fonctionnalités"
+      subtitleHighlight2="hôtellerie"
+      features={hotellerieFeatures}
+      backgroundColor="white"
+      mobileAppTitle="Une application mobile pour former vos "
+      mobileAppHighlight="collaborateurs"
+      mobileAppImage="/images/platform/mobile-app.png"
+      mobileAppParagraphs={[
+        "Depuis près de vingt ans, Smice aide les hôteliers à structurer leur qualité et à professionnaliser leurs équipes grâce à une expertise terrain solide.",
+        "Notre application mobile guide chaque contrôle et facilite l'intégration des bons gestes, tandis que la plateforme d'analyse donne aux managers une visibilité immédiate sur les résultats.",
+        "Avec une communauté de Smiceurs formés, Smice assure une montée en compétence continue pour renforcer l'excellence hôtelière."
+      ]}
+    />
+    <FAQSection 
+      backgroundColor="#F5F7FA"
+      faqItems={[
+        {
+          question: "Comment garantir la même qualité dans tous vos établissements ?",
+          answer: "Grâce aux visites mystère, aux audits et à l'auto-évaluation, Smice vous donne une vision homogène de chaque hôtel. Les standards sont mesurés de la même façon partout, avec preuves visuelles et scores comparatifs.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment améliorer l'expérience client en continu ?",
+          answer: "L'auto-évaluation transforme chaque contrôle en outil de formation. Les équipes apprennent en faisant et montent en compétence sans attendre une formation formelle.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment mesurer la satisfaction client objectivement ?",
+          answer: "Entre auto-évaluation, audits opérationnels et visites mystère, vous combinez perception, conformité et exécution. Une triple lecture indispensable pour garantir une qualité réellement maîtrisée.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment obtenir une vision terrain fiable sur l'ensemble de votre chaîne ?",
+          answer: "La communauté de Smiceurs intervient sur site, à visage découvert ou en client mystère. Leur regard extérieur vous offre une lecture indépendante et objective.",
+          defaultOpen: false
+        }
+      ]}
+    />
+    <Contact decorationColor="#75898A" />
+  </main>
+  
+  <Footer />
+</Layout>

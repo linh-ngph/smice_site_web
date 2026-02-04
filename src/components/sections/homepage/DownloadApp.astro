@@ -1,0 +1,252 @@
+---
+// Download App Section - Devenez Smiceur
+---
+
+<section class="download-app-section" id="download-app">
+  <div class="download-app-container">
+    <div class="download-app-card">
+      <!-- Diagonal stripe decoration -->
+      <div class="stripe-decoration"></div>
+      
+      <div class="download-content">
+        <p class="download-tagline">Envie de rejoindre l'aventure ?</p>
+        <h2 class="download-title">Devenez Smiceur !</h2>
+        <div class="store-buttons">
+          <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
+            <img src="/images/stores/app-store.svg" alt="Download on the App Store" />
+          </a>
+          <a href="#" class="store-btn" aria-label="Télécharger sur Google Play">
+            <img src="/images/stores/google-play.svg" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="phone-mockup">
+        <img src="/images/app/phone-mockup.png" alt="Application Smice" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .download-app-section {
+    background-color: #F5F7FF;
+    padding: 80px 24px;
+  }
+
+  .download-app-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .download-app-card {
+    background: linear-gradient(135deg, #4A5FC1 0%, #3D4EAA 100%);
+    border-radius: 24px;
+    padding: 50px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+  }
+
+  /* Diagonal stripe decoration */
+  .stripe-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.08) 40%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  .stripe-decoration::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(255, 255, 255, 0.06) 40%,
+      rgba(255, 255, 255, 0.06) 50%,
+      transparent 50%,
+      transparent 100%
+    );
+  }
+
+  .download-content {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+  }
+
+  .download-tagline {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 8px 0;
+    font-weight: 400;
+  }
+
+  .download-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 28px 0;
+    line-height: 1.2;
+  }
+
+  .store-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .store-btn {
+    display: block;
+    height: 44px;
+    transition: transform 0.3s ease;
+  }
+
+  .store-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .store-btn img {
+    height: 100%;
+    width: auto;
+  }
+
+  /* Phone Mockup */
+  .phone-mockup {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    width: 280px;
+    z-index: 2;
+  }
+
+  .phone-mockup img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .download-app-section {
+      padding: 60px 24px;
+    }
+
+    .download-app-card {
+      padding: 40px 40px;
+    }
+
+    .download-title {
+      font-size: 30px;
+    }
+
+    .download-tagline {
+      font-size: 15px;
+    }
+
+    .phone-mockup {
+      right: 30px;
+      width: 240px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .download-app-section {
+      padding: 50px 20px;
+    }
+
+    .download-app-card {
+      flex-direction: column;
+      padding: 35px 28px 0 28px;
+      text-align: center;
+      min-height: auto;
+    }
+
+    .download-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .download-title {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    .download-tagline {
+      font-size: 14px;
+    }
+
+    .store-buttons {
+      justify-content: center;
+    }
+
+    .store-btn {
+      height: 40px;
+    }
+
+    .phone-mockup {
+      position: relative;
+      right: auto;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .stripe-decoration {
+      width: 100%;
+      background: linear-gradient(
+        145deg,
+        transparent 0%,
+        transparent 60%,
+        rgba(255, 255, 255, 0.08) 60%,
+        rgba(255, 255, 255, 0.08) 70%,
+        transparent 70%,
+        transparent 100%
+      );
+    }
+
+    .stripe-decoration::before {
+      display: none;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .download-app-card {
+      padding: 30px 24px 0 24px;
+      border-radius: 20px;
+    }
+
+    .download-title {
+      font-size: 24px;
+    }
+
+    .store-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone-mockup {
+      width: 180px;
+    }
+  }
+</style>

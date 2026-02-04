@@ -1,0 +1,483 @@
+---
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
+
+interface Testimonial {
+  id: number;
+  quote: string;
+  name: string;
+  company: string;
+  avatar: string;
+  nameColor: string;
+}
+
+interface Props {
+  title?: string;
+  titleHighlight?: string;
+  subtitle?: string;
+  testimonials?: Testimonial[];
+  backgroundColor?: string;
+}
+
+// Default testimonials data
+const defaultTestimonials: Testimonial[] = [
+  {
+    id: 1,
+    quote: "Smice a transformé notre approche du service client. Grâce à leur expertise en mystery shopping, nous avons pu identifier des opportunités d'amélioration et renforcer notre engagement envers nos clients.",
+    name: "Mickey Mouse",
+    company: "DisneyLand Paris",
+    avatar: "/images/homepage/mickey-avatar.png",
+    nameColor: "#4A5FC1"
+  },
+  {
+    id: 2,
+    quote: "Smice a transformé notre approche du service client. Grâce à leur expertise en mystery shopping, nous avons pu identifier des opportunités d'amélioration et renforcer notre engagement envers nos clients.",
+    name: "Mickey Mouse",
+    company: "DisneyLand Paris",
+    avatar: "/images/homepage/mickey-avatar.png",
+    nameColor: "#9B7BC7"
+  },
+  {
+    id: 3,
+    quote: "Smice a transformé notre approche du service client. Grâce à leur expertise en mystery shopping, nous avons pu identifier des opportunités d'amélioration et renforcer notre engagement envers nos clients.",
+    name: "Mickey Mouse",
+    company: "DisneyLand Paris",
+    avatar: "/images/homepage/mickey-avatar.png",
+    nameColor: "#C9A227"
+  },
+  {
+    id: 4,
+    quote: "Smice a transformé notre approche du service client. Grâce à leur expertise en mystery shopping, nous avons pu identifier des opportunités d'amélioration et renforcer notre engagement envers nos clients.",
+    name: "Mickey Mouse",
+    company: "DisneyLand Paris",
+    avatar: "/images/homepage/mickey-avatar.png",
+    nameColor: "#4A5FC1"
+  }
+];
+
+const {
+  title = "Ils ont décidé de nous faire ",
+  titleHighlight = "confiance",
+  subtitle = "Ces dirigeants améliorent l'expérience client de leurs enseignes main dans la main avec Smice, et voici leurs retours.",
+  testimonials = defaultTestimonials,
+  backgroundColor = "linear-gradient(180deg, #E8EDF8 0%, #F5F7FF 100%)"
+} = Astro.props;
+
+// Generate unique ID for this instance
+const instanceId = Math.random().toString(36).substring(7);
+---
+
+<section class="testimonials-section" id="testimonials" style="background: #FFFFFF;">
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h2 class="testimonials-title">
+        {title}
+        <span class="highlight-underline" style="position:relative;display:inline-block;">
+          {titleHighlight}
+          <img src="/images/homepage/subline-confiance.png" alt="" style="position:absolute;left:0;bottom:-2px;width:100%;height:10px;pointer-events:none;" />
+        </span> :
+      </h2>
+      <p class="testimonials-subtitle">{subtitle}</p>
+    </div>
+    
+    <div class="carousel-wrapper">
+      <div class="carousel-container" id={`testimonialCarouselContainer-${instanceId}`}>
+        <div class="carousel-track" id={`testimonialCarouselTrack-${instanceId}`}>
+          {(() => {
+            const bgColors = ['#F0F7F6', '#F4F7FF', '#F3EFF6'];
+            return testimonials.map((testimonial, idx) => {
+              const bg = bgColors[idx % bgColors.length];
+              return (
+                <div class="testimonial-card" style={`background:${bg};`}>
+                  <p class="testimonial-quote">"{testimonial.quote}"</p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar">
+                      <img src={testimonial.avatar} alt={testimonial.name} />
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name" style={`color: ${testimonial.nameColor}`}>{testimonial.name}</span>
+                      <span class="author-company">{testimonial.company}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            });
+          })()}
+        </div>
+      </div>
+      
+      <div class="carousel-nav">
+        <button class="carousel-btn carousel-btn-prev" id={`testimonialPrevBtn-${instanceId}`} aria-label="Précédent">
+          <ChevronLeft size={20} />
+        </button>
+        <button class="carousel-btn carousel-btn-next" id={`testimonialNextBtn-${instanceId}`} aria-label="Suivant">
+          <ChevronRight size={20} />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    padding: 80px 24px;
+  }
+
+  .testimonials-container {
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 24px 40px;
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .testimonials-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #435888;
+    margin: 0 0 16px 0;
+    letter-spacing: 0;
+  }
+
+  .testimonials-title .highlight-underline {
+    color: #6989D4;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .testimonials-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #9795B5;
+    margin: 0;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Carousel */
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 24px;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+  }
+
+  .testimonial-quote {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #504C54;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    flex: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #F3F4F6;
+  }
+
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .author-name {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .author-company {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    color: #6B7280;
+  }
+
+  /* Carousel Navigation */
+  .carousel-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .carousel-btn {
+    background-color: white;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #9CA3AF;
+    flex-shrink: 0;
+  }
+
+  .carousel-btn:hover:not(:disabled) {
+    border-color: #4A5FC1;
+    color: #4A5FC1;
+    background-color: #F5F7FF;
+  }
+
+  .carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .testimonials-section {
+      padding: 60px 24px;
+    }
+
+    .testimonials-title {
+      font-size: 28px;
+    }
+
+    .testimonials-subtitle {
+      font-size: 14px;
+    }
+
+    .testimonial-card {
+      flex: 0 0 calc((100% - 24px) / 2);
+      padding: 24px;
+      min-height: 240px;
+    }
+
+    .testimonial-quote {
+      font-size: 13px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .testimonials-section {
+      padding: 50px 20px;
+    }
+
+    .testimonials-header {
+      margin-bottom: 35px;
+    }
+
+    .testimonials-title {
+      font-size: 24px;
+    }
+
+    .testimonials-subtitle {
+      font-size: 14px;
+    }
+
+    .testimonial-card {
+      flex: 0 0 100%;
+      padding: 24px;
+      min-height: auto;
+    }
+
+    .carousel-track {
+      gap: 16px;
+    }
+
+    .carousel-nav {
+      margin-top: 24px;
+    }
+
+    .carousel-btn {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .testimonials-title {
+      font-size: 22px;
+    }
+
+    .testimonial-card {
+      padding: 20px;
+    }
+
+    .testimonial-quote {
+      font-size: 13px;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+    }
+
+    .author-name {
+      font-size: 14px;
+    }
+
+    .author-company {
+      font-size: 12px;
+    }
+  }
+</style>
+
+<script define:vars={{ instanceId }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById(`testimonialCarouselTrack-${instanceId}`);
+    const prevBtn = document.getElementById(`testimonialPrevBtn-${instanceId}`);
+    const nextBtn = document.getElementById(`testimonialNextBtn-${instanceId}`);
+    
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    const originalCards = Array.from(track.querySelectorAll('.testimonial-card'));
+    const totalCards = originalCards.length;
+    let currentIndex = 0;
+    let isTransitioning = false;
+    
+    const getVisibleCards = () => {
+      const width = window.innerWidth;
+      if (width <= 768) return 1;
+      if (width <= 1024) return 2;
+      return 3;
+    };
+    
+    const getGap = () => {
+      const width = window.innerWidth;
+      if (width <= 768) return 16;
+      return 24;
+    };
+    
+    // Clone cards for infinite loop
+    const setupClones = () => {
+      // Remove existing clones
+      track.querySelectorAll('.clone').forEach(clone => clone.remove());
+      
+      const visibleCards = getVisibleCards();
+      
+      // Clone last 'visibleCards' cards and prepend
+      for (let i = visibleCards - 1; i >= 0; i--) {
+        const clone = originalCards[totalCards - 1 - (i % totalCards)].cloneNode(true);
+        clone.classList.add('clone');
+        track.insertBefore(clone, track.firstChild);
+      }
+      
+      // Clone first 'visibleCards' cards and append
+      for (let i = 0; i < visibleCards; i++) {
+        const clone = originalCards[i % totalCards].cloneNode(true);
+        clone.classList.add('clone');
+        track.appendChild(clone);
+      }
+    };
+    
+    const getCardWidth = () => {
+      const visibleCards = getVisibleCards();
+      const containerWidth = track.parentElement.offsetWidth;
+      const gap = getGap();
+      return (containerWidth - gap * (visibleCards - 1)) / visibleCards;
+    };
+    
+    const updateCarousel = (animate = true) => {
+      const visibleCards = getVisibleCards();
+      const cardWidth = getCardWidth();
+      const gap = getGap();
+      
+      // Offset accounts for prepended clones
+      const offset = (currentIndex + visibleCards) * (cardWidth + gap);
+      
+      if (animate) {
+        track.style.transition = 'transform 0.5s ease-in-out';
+      } else {
+        track.style.transition = 'none';
+      }
+      
+      track.style.transform = `translateX(-${offset}px)`;
+    };
+    
+    const handleTransitionEnd = () => {
+      isTransitioning = false;
+      const visibleCards = getVisibleCards();
+      
+      // Jump to real card if on a clone
+      if (currentIndex >= totalCards) {
+        currentIndex = 0;
+        updateCarousel(false);
+      } else if (currentIndex < 0) {
+        currentIndex = totalCards - 1;
+        updateCarousel(false);
+      }
+    };
+    
+    track.addEventListener('transitionend', handleTransitionEnd);
+    
+    prevBtn.addEventListener('click', () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex--;
+      updateCarousel();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex++;
+      updateCarousel();
+    });
+    
+    // Handle resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        setupClones();
+        currentIndex = Math.min(currentIndex, totalCards - 1);
+        currentIndex = Math.max(currentIndex, 0);
+        updateCarousel(false);
+      }, 100);
+    });
+    
+    // Initialize
+    setupClones();
+    updateCarousel(false);
+  });
+</script>

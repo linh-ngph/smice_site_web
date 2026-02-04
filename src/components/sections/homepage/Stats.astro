@@ -1,0 +1,435 @@
+---
+import { ChevronLeft, ChevronRight } from '@lucide/astro';
+
+// Stats cards
+const stats = [
+  {
+    id: 1,
+    number: "45 000",
+    label: "Visites mystère annuelles",
+    icon: "/images/homepage/smice-chiffres.svg",
+    bgColor: "#E8EDF8",
+    numberColor: "#4A5FC1",
+    labelColor: "#4A5FC1"
+  },
+  {
+    id: 2,
+    number: "+13%",
+    label: "Satisfaction client",
+    icon: "/images/homepage/satisfaction-client.svg",
+    bgColor: "#F0E8F8",
+    numberColor: "#9B7BC7",
+    labelColor: "#9B7BC7"
+  },
+  {
+    id: 3,
+    number: "15 000",
+    label: "Smiceurs mobilisables",
+    icon: "/images/homepage/smiceurs-mobilisables.svg",
+    bgColor: "#FDF8DC",
+    numberColor: "#C9B857",
+    labelColor: "#C9B857"
+  },
+  {
+    id: 4,
+    number: "32",
+    label: "Pays utilisant nos services",
+    icon: "/images/homepage/pays-utilisant-nos-services.svg",
+    bgColor: "#EDF2F0",
+    numberColor: "#5A8A7A",
+    labelColor: "#5A8A7A"
+  }
+];
+---
+
+<section class="stats-section" id="stats">
+  <div class="stats-container">
+    <h2 class="stats-title">
+      Smice en <span class="highlight-yellow">chiffres<img src="/images/homepage/subline-chiffres.svg" alt="" class="subline-chiffres" /></span>, c'est :
+    </h2>
+    
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Précédent">
+        <ChevronLeft size={24} />
+      </button>
+      
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel-track" id="carouselTrack">
+          {stats.map((stat, index) => (
+            <div class="stat-card" data-index={index} style={`background-color: ${stat.bgColor}`}>
+              <div class="stat-icon">
+                <img src={stat.icon} alt="" />
+              </div>
+              <div class="stat-info">
+                <div class="stat-number" style={`color: ${stat.numberColor}`}>{stat.number}</div>
+                <div class="stat-label" style={`color: ${stat.labelColor}`}>{stat.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Suivant">
+        <ChevronRight size={24} />
+      </button>
+    </div>
+    
+    <div class="carousel-dots" id="carouselDots">
+      {stats.map((_, index) => (
+        <button 
+          class={`dot ${index === 0 ? 'active' : ''}`} 
+          data-index={index}
+          aria-label={`Aller à la carte ${index + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats-section {
+    background-color: #FFFFFF;
+    padding: 80px 24px;
+  }
+
+  .stats-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stats-title {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Inter', 'Inter ExtraBold', Arial, sans-serif;
+    color: #435888;
+    margin-bottom: 50px;
+  }
+
+  .stats-title .highlight-yellow {
+    color: #6989D4;
+    background: none;
+    position: relative;
+    display: inline-block;
+  }
+
+  .subline-chiffres {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  /* Carousel */
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .carousel-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Stat Card */
+  .stat-card {
+    min-width: 100%;
+    padding: 35px 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    height: 180px;
+  }
+
+  .stat-icon {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    width: 180px;
+    flex-shrink: 0;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stat-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .stat-info {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .stat-number {
+    font-size: 56px;
+    font-weight: 700;
+    color: #4A5FC1;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+    font-weight: 400;
+    color: #6B7280;
+  }
+
+  /* Carousel Buttons */
+  .carousel-btn {
+    background-color: white;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #9CA3AF;
+    flex-shrink: 0;
+  }
+
+  .carousel-btn:hover {
+    border-color: #4A5FC1;
+    color: #4A5FC1;
+    background-color: #F5F7FF;
+  }
+
+  .carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .carousel-btn:disabled:hover {
+    border-color: #E5E7EB;
+    color: #9CA3AF;
+    background-color: white;
+  }
+
+  /* Carousel Dots */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D1D5DB;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .dot.active {
+    background-color: #4A5FC1;
+    width: 28px;
+    border-radius: 5px;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .stats-section {
+      padding: 60px 24px;
+    }
+
+    .stats-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      padding: 30px 35px;
+    }
+
+    .stat-number {
+      font-size: 48px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .stats-section {
+      padding: 50px 20px;
+    }
+
+    .stats-title {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+
+    .carousel-wrapper {
+      gap: 10px;
+    }
+
+    .carousel-btn {
+      width: 38px;
+      height: 38px;
+    }
+
+    .stat-card {
+      padding: 28px 24px;
+      gap: 16px;
+    }
+
+    .stat-icon {
+      width: 55px;
+      height: 55px;
+    }
+
+    .stat-number {
+      font-size: 40px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .stats-title {
+      font-size: 22px;
+    }
+
+    .stat-card {
+      padding: 24px 20px;
+    }
+
+    .stat-icon {
+      width: 45px;
+      height: 45px;
+    }
+
+    .stat-number {
+      font-size: 34px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('carouselTrack') as HTMLElement;
+    const prevBtn = document.getElementById('prevBtn') as HTMLButtonElement;
+    const nextBtn = document.getElementById('nextBtn') as HTMLButtonElement;
+    const dots = document.querySelectorAll('.dot');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    const cards = track.querySelectorAll('.stat-card');
+    const totalCards = cards.length;
+    
+    // Clone first and last cards for infinite loop effect
+    const firstClone = cards[0].cloneNode(true) as HTMLElement;
+    const lastClone = cards[totalCards - 1].cloneNode(true) as HTMLElement;
+    firstClone.classList.add('clone');
+    lastClone.classList.add('clone');
+    
+    // Append first clone to end, prepend last clone to beginning
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, cards[0]);
+    
+    // Start at position 1 (after the prepended clone)
+    let currentIndex = 1;
+    let isTransitioning = false;
+    
+    // Set initial position without transition
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    const updateDots = (realIndex: number) => {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === realIndex);
+      });
+    };
+    
+    const goToSlide = (index: number, withTransition = true) => {
+      if (isTransitioning) return;
+      
+      currentIndex = index;
+      
+      if (withTransition) {
+        isTransitioning = true;
+        track.style.transition = 'transform 0.5s ease-in-out';
+      } else {
+        track.style.transition = 'none';
+      }
+      
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Calculate real index for dots (accounting for clones)
+      let realIndex = currentIndex - 1;
+      if (realIndex < 0) realIndex = totalCards - 1;
+      if (realIndex >= totalCards) realIndex = 0;
+      updateDots(realIndex);
+    };
+    
+    // Handle transition end for seamless loop
+    track.addEventListener('transitionend', () => {
+      isTransitioning = false;
+      
+      // If at first clone (end), jump to real first card
+      if (currentIndex === totalCards + 1) {
+        track.style.transition = 'none';
+        currentIndex = 1;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      
+      // If at last clone (beginning), jump to real last card
+      if (currentIndex === 0) {
+        track.style.transition = 'none';
+        currentIndex = totalCards;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    });
+    
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+    });
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        // Add 1 to account for prepended clone
+        goToSlide(index + 1);
+      });
+    });
+    
+    // Initialize dots
+    updateDots(0);
+  });
+</script>

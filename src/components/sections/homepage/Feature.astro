@@ -1,0 +1,296 @@
+---
+// Feature Section - Smice s'interconnecte avec votre plateforme
+---
+
+<section class="feature-section" id="feature">
+  <div class="feature-container">
+    <!-- Floating logos -->
+    <div class="floating-logo logo-civiliz">
+      <img src="/images/homepage/feature/civiliz.png" alt="Civiliz" />
+    </div>
+    <div class="floating-logo logo-myli">
+      <img src="/images/homepage/feature/myli.png" alt="Myli" />
+    </div>
+    <div class="floating-logo logo-qualtrics">
+      <img src="/images/homepage/feature/qualtrics.png" alt="Qualtrics" />
+    </div>
+    <div class="floating-logo logo-powerbi">
+      <img src="/images/homepage/feature/powerBI.png" alt="Power BI" />
+    </div>
+    
+    <!-- Connection lines SVG -->
+    <svg class="connection-lines" viewBox="0 0 1000 240" preserveAspectRatio="xMidYMid meet">
+
+      <!-- Line from button-left to Civiliz (top-left) -->
+        <!-- Replaced with image for Civiliz connection -->
+        <image href="/images/homepage/feature/feature-line-left-1.png" x="0" y="90" height="100" width="430" />
+      
+      <!-- Line from button-left to Qualtrics (middle-left) -->
+        <!-- Replaced with image for Qualtrics connection -->
+        <image href="/images/homepage/feature/feature-line-left-2.png" x="20" y="140" height="100" width="410" />
+      
+      <!-- Line from button-right to Myli (top-right) -->
+        <!-- Replaced with image for Myli connection -->
+        <image href="/images/homepage/feature/feature-line-right-1.png" x="570" y="90" height="100" width="430" />
+      
+      <!-- Line from button-right to Power BI (bottom-right) -->
+        <!-- Replaced with image for Power BI connection -->
+        <image href="/images/homepage/feature/feature-line-right-2.png" x="575" y="140" height="100" width="420" />
+    </svg>
+    
+    <!-- Content -->
+    <div class="feature-content">
+      <p class="feature-tagline">Et pour comparer <strong>qualité produite</strong> avec <strong>qualité perçue</strong></p>
+      <h2 class="feature-title">
+        <span class="highlight-yellow">Smice</span> s'interconnecte avec votre <span class="highlight-teal">plateforme</span>
+      </h2>
+      <a href="/services" class="feature-btn">En savoir plus</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-section {
+    background-color: #FFFFFF;
+    padding: 40px 24px;
+  }
+
+  .feature-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    background: #435888;
+    border-radius: 24px;
+    padding: 60px 40px;
+    position: relative;
+    overflow: visible;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Floating Logos */
+  .floating-logo {
+    position: absolute;
+    background: white;
+    width:140px;
+    height:80px;
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+  }
+
+  .floating-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: blur(2px);
+  }
+
+  .logo-civiliz {
+    top: 60px;
+    left: -40px;
+    transform: rotate(-12deg);
+  }
+
+  .logo-myli {
+    top: 100px;
+    right: -40px;
+    transform: rotate(10deg);
+  }
+
+  .logo-qualtrics {
+    top: 80%;
+    left: 70px;
+    transform: translateY(-50%) rotate(23deg);
+  }
+
+  .logo-powerbi {
+    bottom: -15px;
+    right: -40px;
+    transform: rotate(8deg);
+  }
+
+  /* Connection Lines */
+  .connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Content */
+  .feature-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-tagline {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #E9E9E9;
+  }
+
+  .feature-tagline strong {
+    font-weight: 600;
+    color: white;
+  }
+
+  .feature-title {
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'Inter', 'Inter ExtraBold', Arial, sans-serif;
+    color: #E9E9E9;
+  }
+
+  .feature-title .highlight-yellow,
+  .feature-title .highlight-teal {
+    color: #829ad2;
+  }
+
+  .feature-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+  }
+
+  .feature-btn:hover {
+    background: white;
+    color: #4A5FC1;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .feature-container {
+      padding: 50px 30px;
+      border-radius: 20px;
+    }
+
+    .feature-title {
+      font-size: 28px;
+    }
+
+    .floating-logo {
+      padding: 10px 14px;
+    }
+
+    .floating-logo img {
+      height: 20px;
+    }
+
+    .logo-civiliz {
+      left: -20px;
+    }
+
+    .logo-myli {
+      right: -20px;
+    }
+
+    .logo-qualtrics {
+      left: -25px;
+    }
+
+    .logo-powerbi {
+      right: -20px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .feature-section {
+      padding: 30px 20px;
+    }
+
+    .feature-container {
+      padding: 50px 24px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .feature-tagline {
+      font-size: 13px;
+    }
+
+    .feature-title {
+      font-size: 22px;
+    }
+
+    .feature-btn {
+      padding: 10px 24px;
+      font-size: 13px;
+    }
+
+    /* Reposition logos for mobile */
+    .floating-logo {
+      padding: 8px 12px;
+    }
+
+    .floating-logo img {
+      height: 16px;
+    }
+
+    .logo-civiliz {
+      top: 10px;
+      left: 10px;
+    }
+
+    .logo-myli {
+      top: 10px;
+      right: 10px;
+    }
+
+    .logo-qualtrics {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .logo-powerbi {
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .connection-lines {
+      display: none;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .feature-container {
+      padding: 60px 20px;
+    }
+
+    .feature-title {
+      font-size: 20px;
+    }
+
+    .floating-logo {
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+
+    .floating-logo img {
+      height: 14px;
+    }
+  }
+</style>

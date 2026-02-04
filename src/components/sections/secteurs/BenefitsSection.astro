@@ -1,0 +1,219 @@
+---
+// Benefits Section - Multiple benefits with alternating layouts
+
+interface Benefit {
+  title: string;
+  highlights: string[];
+  sectionTitle: string;
+  paragraphs: string[];
+  buttonText: string;
+  buttonHref: string;
+  image: string;
+  imageAlt: string;
+  backgroundColor: string;
+  imageOnLeft?: boolean;
+}
+
+interface Props {
+  benefits: Benefit[];
+}
+
+const { benefits } = Astro.props;
+
+// Function to highlight words in title
+function highlightTitle(text: string, words: string[]): string {
+  let result = text;
+  words.forEach(word => {
+    const regex = new RegExp(`(${word})`, 'gi');
+    result = result.replace(regex, `<span class="highlight">$1</span>`);
+  });
+  return result;
+}
+---
+
+{benefits.map((benefit, index) => (
+  <section class="benefits-section" id={`benefit-${index + 1}`} style={`background-color: ${benefit.backgroundColor};`}>
+    <div class="benefits-container">
+      <h2 class="benefits-title" set:html={highlightTitle(benefit.title, benefit.highlights)} />
+      
+      <div class={`benefits-content ${benefit.imageOnLeft ? 'image-left' : ''}`}>
+        <div class="benefits-text">
+          <h3 class="section-title">{benefit.sectionTitle}</h3>
+          {benefit.paragraphs.map(paragraph => (
+            <p class="description">{paragraph}</p>
+          ))}
+          <a href={benefit.buttonHref} class="btn-primary">{benefit.buttonText}</a>
+        </div>
+        
+        <div class="benefits-image">
+          <img src={benefit.image} alt={benefit.imageAlt} />
+        </div>
+      </div>
+    </div>
+  </section>
+))}
+
+<style>
+  .benefits-section {
+    padding: 80px 24px;
+  }
+
+  .benefits-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .benefits-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  .benefits-title :global(.highlight) {
+    position: relative;
+    display: inline;
+    text-decoration: underline;
+    text-decoration-color: #E8C547;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+  }
+
+  .benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .benefits-content.image-left {
+    direction: ltr;
+  }
+
+  .benefits-content.image-left .benefits-image {
+    order: -1;
+  }
+
+  .benefits-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: va 0 16px 0;
+  }
+
+  .description:last-of-type {
+    margin-bottom: 0r(--text-dark);
+    margin: 0;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-gray);
+    margin: 0;
+  }
+
+  .benefit-highlight {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin: 0;
+  }
+
+  .benefit-highlight :global(span) {
+    text-decoration: underline;
+    text-decoration-color: #E8C547;
+    text-underline-offset: 3px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+  }
+
+  .benefits-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .benefits-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .benefits-title {
+      font-size: 28px;
+    }
+
+    .benefits-content {
+      gap: 40px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .benefits-section {
+      padding: 60px 20px;
+    }
+
+    .benefits-title {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .benefits-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .benefits-text {
+      order: 1;
+    }
+
+    .benefits-image {
+      order: 2;
+    }
+
+    .section-title {
+      font-size: 18px;
+    }
+
+    .description,
+    .benefit-highlight {
+      font-size: 14px;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .benefits-title {
+      font-size: 22px;
+    }
+  }
+</style>

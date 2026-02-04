@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import SecteursHero from '../../components/sections/secteurs/SecteursHero.astro';
+import Testimonials from '../../components/sections/common/Testimonials.astro';
+import Experience from '../../components/sections/common/Experience.astro';
+import BenefitsSection from '../../components/sections/secteurs/BenefitsSection.astro';
+import FeaturesSection from '../../components/sections/secteurs/FeaturesSection.astro';
+import FAQSection from '../../components/sections/common/FAQSection.astro';
+import Contact from '../../components/sections/common/Contact.astro';
+
+const seoConfig = {
+  title: "Secteur Retail | SMICE",
+  description: "Optimisez l'expérience client dans votre retail. Le partenaire qualité qui transforme chaque visite en magasin en une expérience mémorable.",
+  keywords: ["SMICE", "retail", "magasin", "commerce", "mystery shopping", "qualité"],
+};
+
+// Retail testimonials
+const retailTestimonials = [
+  {
+    id: 1,
+    quote: "Grâce à Smice, nous avons une vision précise de l'expérience vécue par nos clients en magasin. Les audits nous permettent d'optimiser chaque point de contact.",
+    name: "Nathalie Rousseau",
+    company: "Directrice Retail, FashionStore",
+    avatar: "/images/testimonials/nathalie-rousseau.png",
+    nameColor: "#4A5FC1"
+  },
+  {
+    id: 2,
+    quote: "La plateforme Smice nous offre un suivi en temps réel de nos indicateurs qualité. Nos vendeurs sont plus engagés et notre taux de conversion a augmenté.",
+    name: "Alexandre Petit",
+    company: "Responsable Qualité, TechRetail",
+    avatar: "/images/testimonials/alexandre-petit.png",
+    nameColor: "#9B7BC7"
+  },
+  {
+    id: 3,
+    quote: "Smice nous a aidés à standardiser l'expérience client sur l'ensemble de notre réseau de boutiques. Un outil indispensable pour notre croissance.",
+    name: "Émilie Garnier",
+    company: "Manager Réseau, BeautyChain",
+    avatar: "/images/testimonials/emilie-garnier.png",
+    nameColor: "#C9A227"
+  }
+];
+
+// Platform features for retail
+const retailFeatures = [
+  {
+    tag: "PLAN D'ACTIONS",
+    title: "Lancez des actions concrètes pour améliorer le respect de vos standards retail.",
+    image: "/images/platform/plan-actions.png",
+    imageAlt: "Plan d'actions"
+  },
+  {
+    tag: "VERBATIMS",
+    title: "Obtenez des retours d'expériences clients.",
+    image: "/images/platform/verbatims.png",
+    imageAlt: "Verbatims"
+  },
+  {
+    tag: "MUR D'IMAGES",
+    title: "Vos points améliorables, en images.",
+    image: "/images/platform/image-wall.png",
+    imageAlt: "Mur d'images"
+  }
+];
+
+// Retail-specific services
+const retailServices = [
+  {
+    title: "Vos process opérationnels",
+    subtitle: "Analysez la qualité de service à chaque étape du parcours d'achat.",
+    image: "/images/services/retail-process.png",
+    description: "Évaluez la rigueur de vos process, de l'accueil à l'encaissement. Smice analyse merchandising, disponibilité produits, conseil client et fluidité du parcours pour une vision complète de votre performance opérationnelle.",
+    buttonText: "En savoir plus",
+    buttonStyle: "light" as const,
+    href: "/services#process"
+  },
+  {
+    title: "Vos clients mystères",
+    subtitle: "Découvrez ce que vos clients vivent vraiment.",
+    image: "/images/services/retail-mystery.png",
+    description: "Nos Smiceurs visitent vos magasins comme de vrais clients : accueil, conseil, essayage, encaissement. Vous accédez à la réalité terrain telle qu'elle est vécue par vos acheteurs.",
+    buttonText: "En savoir plus",
+    buttonStyle: "primary" as const,
+    href: "/services#mystery"
+  },
+  {
+    title: "Vos collaborateurs",
+    subtitle: "Impliquez vos équipes dans la démarche qualité.",
+    image: "/images/services/retail-collaborators.png",
+    description: "Avec les auto-évaluations et les feedbacks immédiats, vos équipes gagnent en rigueur et en techniques de vente. Les résultats deviennent un outil de coaching opérationnel au quotidien.",
+    buttonText: "En savoir plus",
+    buttonStyle: "secondary" as const,
+    href: "/services#collaborators"
+  }
+];
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/secteurs" backgroundColor="#F0F7F6" />
+  
+  <main>
+    <SecteursHero sector="retail" />
+    <Experience 
+      title="La qualité de votre retail, mesurée à "
+      titleHighlight="chaque étape"
+      subtitle="Smice accompagne enseignes, franchises et réseaux dans le pilotage de leur excellence opérationnelle et garantit une qualité homogène sur l'ensemble des points de vente."
+      services={retailServices}
+      backgroundColor="white"
+    />
+    <BenefitsSection 
+      benefits={[
+        {
+          title: "Des standards maîtrisés, de l'entrée à la caisse",
+          highlights: ["standards", "caisse"],
+          sectionTitle: "Pour vos standards :",
+          paragraphs: [
+            "Smice vous aide à garantir une expérience client parfaitement cohérente, de l'entrée en magasin jusqu'à l'encaissement. Nos évaluations mesurent la qualité de l'accueil, le merchandising, la disponibilité produits et les techniques de vente.",
+            "Vous obtenez une vision complète et structurée de la maîtrise de vos standards, à chaque étape du parcours d'achat."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/retail-store.png",
+          imageAlt: "Magasin retail",
+          backgroundColor: "#F0F7F6",
+          imageOnLeft: true
+        },
+        {
+          title: "Pour vos clients, chaque visite compte",
+          highlights: ["clients", "visite"],
+          sectionTitle: "Pour vos clients :",
+          paragraphs: [
+            "Les visites mystère Smice vous révèlent vos magasins tels qu'ils sont réellement vécus : accueil, conseil, disponibilité, attente en caisse et qualité de l'encaissement.",
+            "Le regard objectif de nos Smiceurs met en lumière ce qui fonctionne — et les freins à l'achat que vos équipes ne voient plus.",
+            "Vous obtenez une vision authentique de l'expérience client pour optimiser votre taux de conversion."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/retail-shopping.png",
+          imageAlt: "Client en magasin",
+          backgroundColor: "#F4F7FF",
+          imageOnLeft: false
+        },
+        {
+          title: "Un outil d'engagement et de progression",
+          highlights: ["engagement", "progression"],
+          sectionTitle: "Pour vos équipes :",
+          paragraphs: [
+            "Smice leur offre un cadre simple et motivant pour progresser chaque jour. Les auto-évaluations régulières renforcent la rigueur, les feedbacks immédiats améliorent les techniques de vente.",
+            "Vos collaborateurs gagnent en autonomie et en performance commerciale — au bénéfice direct de vos résultats."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/retail-team.png",
+          imageAlt: "Équipe retail",
+          backgroundColor: "#F3EFF6",
+          imageOnLeft: true
+        }
+      ]}
+    />
+    <Testimonials 
+      title="Ils ont décidé de nous faire "
+      titleHighlight="confiance"
+      subtitle="Ces professionnels du retail améliorent l'expérience client main dans la main avec Smice, et voici leurs retours."
+      testimonials={retailTestimonials}
+      backgroundColor="#F0F7F6"
+    />
+    <FeaturesSection 
+      title="Une "
+      titleHighlight="plateforme"
+      platformImage="/images/platform/dashboard.png"
+      subtitle="Des "
+      subtitleHighlight1="fonctionnalités"
+      subtitleHighlight2="retail"
+      features={retailFeatures}
+      backgroundColor="white"
+      mobileAppTitle="Une application mobile pour former vos "
+      mobileAppHighlight="collaborateurs"
+      mobileAppImage="/images/platform/mobile-app.png"
+      mobileAppParagraphs={[
+        "Depuis près de vingt ans, Smice aide les enseignes retail à structurer leur qualité et à professionnaliser leurs équipes grâce à une expertise terrain solide.",
+        "Notre application mobile guide chaque contrôle et facilite l'intégration des bons gestes, tandis que la plateforme d'analyse donne aux managers une visibilité immédiate sur les résultats.",
+        "Avec une communauté de Smiceurs formés, Smice assure une montée en compétence continue pour renforcer l'excellence commerciale."
+      ]}
+    />
+    <FAQSection 
+      backgroundColor="#F5F7FA"
+      faqItems={[
+        {
+          question: "Comment garantir la même qualité dans tous vos points de vente ?",
+          answer: "Grâce aux visites mystère, aux audits et à l'auto-évaluation, Smice vous donne une vision homogène de chaque magasin. Les standards sont mesurés de la même façon partout, avec preuves visuelles et scores comparatifs.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment améliorer le taux de conversion en magasin ?",
+          answer: "L'auto-évaluation transforme chaque contrôle en outil de formation. Les équipes apprennent en faisant et améliorent leurs techniques de vente sans attendre une formation formelle.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment mesurer la satisfaction client objectivement ?",
+          answer: "Entre auto-évaluation, audits opérationnels et visites mystère, vous combinez perception, conformité et exécution. Une triple lecture indispensable pour garantir une qualité réellement maîtrisée.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment obtenir une vision terrain fiable sur l'ensemble de votre réseau ?",
+          answer: "La communauté de Smiceurs intervient sur site, à visage découvert ou en client mystère. Leur regard extérieur vous offre une lecture indépendante et objective.",
+          defaultOpen: false
+        }
+      ]}
+    />
+    <Contact decorationColor="#75898A" />
+  </main>
+  
+  <Footer />
+</Layout>

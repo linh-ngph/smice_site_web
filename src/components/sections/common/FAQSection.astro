@@ -1,0 +1,269 @@
+---
+// FAQ Section - Quelques réponses à vos questions
+
+interface FAQItem {
+  question: string;
+  answer: string;
+  defaultOpen?: boolean;
+}
+
+interface Props {
+  faqItems?: FAQItem[];
+  backgroundColor?: string;
+}
+
+const defaultFaqItems: FAQItem[] = [
+  {
+    question: "Qui est Smice ?",
+    answer: "Smice est une entreprise spécialisée dans la mesure et l'amélioration de l'expérience client et de la qualité opérationnelle. Nous aidons les réseaux à observer la réalité terrain, identifier les axes d'amélioration et piloter leurs actions grâce à des données fiables.",
+    defaultOpen: false,
+  },
+  {
+    question: "Quelle est l'année de création de Smice ?",
+    answer: "Smice a été créée en 2005.",
+    defaultOpen: false,
+  },
+  {
+    question: "Pourquoi rejoindre Smice ?",
+    answer: "Smice est une entreprise à taille humaine, où l'on avance ensemble. Un cadre bienveillant, des missions variées, une culture orientée amélioration continue et un vrai sens du collectif.",
+    defaultOpen: false,
+  },
+  {
+    question: "Quelles sont les valeurs qui guident notre travail ?",
+    answer: "Rigueur – Des standards précis pour des données fiables.\nNeutralité – Une évaluation objective, sans jugement.\nTransparence – Des méthodes claires, expliquées et assumées.\nAccompagnement – Des analyses orientées action.\nConfiance – Une relation durable avec nos clients et nos Smiceurs.",
+    defaultOpen: false,
+  },
+  {
+    question: "Y a-t-il du télétravail chez Smice ?",
+    answer: "Oui, l'organisation est flexible et adaptée aux rôles. Certaines fonctions sont 100% télétravaillables, d'autres mêlent terrain et bureau.",
+    defaultOpen: false,
+  },
+];
+
+const { 
+  faqItems = defaultFaqItems,
+  backgroundColor = "white"
+} = Astro.props;
+---
+
+<section class="faq-section" id="faq" style={`background-color: ${backgroundColor};`}>
+  <div class="faq-container">
+    <h2 class="faq-title">
+      Quelques <span class="underline">réponses</span> à vos questions
+    </h2>
+    
+    <div class="faq-list">
+      {faqItems.map((item, index) => (
+        <div class={`faq-item ${item.defaultOpen ? 'active' : ''}`} data-faq-index={index}>
+          <div class="faq-question-wrapper">
+            <h3 class="faq-question">{item.question}</h3>
+            <button class="faq-toggle" aria-label="Toggle answer">
+              <span class="icon-plus">+</span>
+              <span class="icon-close">×</span>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>{item.answer.split('\n').map(line => (
+              <>{line}<br /></>
+            ))}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    background-color: white;
+    padding: 80px 24px;
+  }
+
+  .faq-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .faq-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 0 60px 0;
+  }
+
+  .faq-title .underline {
+    color: var(--primary-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-blue);
+    text-underline-offset: 4px;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .faq-item {
+    border-radius: 12px;
+    background-color: #F9F9FB;
+    padding: 28px 32px;
+    transition: all 0.25s ease-out;
+  }
+
+  .faq-question-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    cursor: pointer;
+  }
+
+  .faq-question {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin: 0;
+    flex: 1;
+  }
+
+  .faq-toggle {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease-out;
+    position: relative;
+  }
+
+  .faq-toggle:hover {
+    background-color: var(--primary-blue-hover);
+    transform: scale(1.05);
+  }
+
+  .icon-plus,
+  .icon-close {
+    position: absolute;
+    transition: all 0.2s ease-out;
+  }
+
+  .faq-item .icon-plus {
+    opacity: 1;
+  }
+
+  .faq-item .icon-close {
+    opacity: 0;
+  }
+
+  .faq-item.active .icon-plus {
+    opacity: 0;
+  }
+
+  .faq-item.active .icon-close {
+    opacity: 1;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease, margin-top 0.2s ease, opacity 0.15s ease;
+    opacity: 0;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    margin-top: 20px;
+    opacity: 1;
+  }
+
+  .faq-answer p {
+    font-size: 15px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .faq-title {
+      font-size: 30px;
+    }
+
+    .faq-question {
+      font-size: 17px;
+    }
+
+    .faq-answer p {
+      font-size: 14px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 60px 20px;
+    }
+
+    .faq-title {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      padding: 24px;
+    }
+
+    .faq-question-wrapper {
+      gap: 16px;
+    }
+
+    .faq-question {
+      font-size: 16px;
+    }
+
+    .faq-toggle {
+      width: 28px;
+      height: 28px;
+      font-size: 18px;
+    }
+
+    .faq-answer p {
+      font-size: 14px;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .faq-title {
+      font-size: 22px;
+    }
+
+    .faq-question {
+      font-size: 15px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach((item) => {
+      const questionWrapper = item.querySelector('.faq-question-wrapper');
+      
+      questionWrapper?.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  });
+</script>

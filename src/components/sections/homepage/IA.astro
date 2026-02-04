@@ -1,0 +1,434 @@
+---
+// IA Section - L'IA chez Smice
+---
+
+<section class="ia-section" id="ia">
+  <div class="ia-container">
+    <h2 class="ia-title">
+      L'<span class="highlight-yellow">IA</span> chez Smice, évidemment.
+    </h2>
+    
+    <div class="ia-content">
+      <div class="ia-image-group">
+        <div class="ia-bloc-verbatims">
+          <img src="/images/homepage/ia/bloc-ia-verbatims.png" alt="Résumé de verbatims" />
+        </div>
+        <div class="ia-bloc-campagnes">
+          <img src="/images/homepage/ia/bloc-ia-campagnes.png" alt="Création de campagnes" />
+        </div>
+          <div class="ia-ceo-border-group">
+            <img class="ceo-border" src="/images/homepage/ia/border-ceo.png" alt="" />
+            <div class="ceo-img-stack">
+              <img class="ceo-border-2" src="/images/homepage/ia/border-ceo-2.png" alt="" />
+              <img class="ceo-img" src="/images/homepage/ia/ceo.png" alt="CEO Smice" />
+            </div>
+          </div>
+      </div>
+      
+      <div class="ia-text">
+        <blockquote class="ia-quote">
+          "Grâce à notre communauté, nous pouvons déployer vos programmes qualité rapidement et efficacement, quel que soit le secteur ou la localisation.
+        </blockquote>
+        <p class="ia-description">
+          Nos profils sont soigneusement sélectionnés selon vos critères : expérience, type de mission, et zone géographique."
+        </p>
+        
+        <div class="ia-author">
+          <div class="author-avatar">
+            <img src="/images/ia/julien-avatar.png" alt="Julien Mondhard" />
+          </div>
+          <div class="author-info">
+            <span class="author-name">Julien Mondhard</span>
+            <span class="author-role">CEO - Smice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ia-section {
+    background-color: #E8EDF8;
+    padding: 80px 24px;
+  }
+
+  .ia-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .ia-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1A1A2E;
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  .ia-title .highlight-yellow {
+    position: relative;
+    display: inline;
+  }
+
+  .ia-title .highlight-yellow::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 8px;
+    background: #FFE566;
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  .ia-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  /* Image Section */
+  .ia-image-group {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #DDE3F2;
+    border-radius: 20px;
+    padding: 24px 0 24px 24px;
+    overflow: visible;
+    box-shadow: 0 2px 12px 0 rgba(68, 88, 136, 0.08);
+  }
+
+  .ia-ceo-img {
+    position: relative;
+    z-index: 1;
+    height: 370px;
+    margin-left: 40px;
+    margin-right: 0;
+    display: flex;
+    align-items: flex-end;
+    filter: drop-shadow(0 8px 30px rgba(0,0,0,0.10));
+  }
+
+    .ia-ceo-border-group {
+      position: absolute;
+      right: 24px;
+      bottom: 0;
+      height: 370px;
+      width: 240px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      z-index: 1;
+    }
+
+    .ia-ceo-border-group .ceo-border {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 240px;
+      height: 370px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .ia-ceo-border-group .ceo-img-stack {
+      position: absolute;
+      right: 18px;
+      bottom: 10px;
+      width: 200px;
+      height: 340px;
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      z-index: 1;
+    }
+
+    .ia-ceo-border-group .ceo-border-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 340px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ia-ceo-border-group .ceo-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 18px;
+      z-index: 1;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+      background: transparent;
+    }
+
+  .ia-bloc-verbatims {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 210px;
+    z-index: 2;
+    transform: rotate(-7deg);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+  }
+
+  .ia-bloc-campagnes {
+    position: absolute;
+    bottom: 32px;
+    left: 0px;
+    width: 210px;
+    z-index: 2;
+    transform: rotate(-4deg);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+  }
+
+  .frequency-badge {
+    background: #4A5FC1;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .card-mini-text {
+    font-size: 10px;
+    color: #6B7280;
+    line-height: 1.4;
+  }
+
+  .card-mini-text p {
+    margin: 0;
+  }
+
+  .card-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
+
+  /* Paper Planes */
+  .paper-plane {
+    position: absolute;
+    font-size: 24px;
+    z-index: 3;
+    opacity: 0.8;
+  }
+
+  .plane-1 {
+    top: 50%;
+    right: 20px;
+    transform: rotate(-30deg);
+  }
+
+  .plane-2 {
+    bottom: 80px;
+    right: 60px;
+    transform: rotate(15deg);
+    font-size: 18px;
+  }
+
+  /* Text Section */
+  .ia-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ia-quote {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0;
+    font-style: normal;
+  }
+
+  .ia-description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0;
+  }
+
+  .ia-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #D1D5DB;
+  }
+
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .author-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4A5FC1;
+  }
+
+  .author-role {
+    font-size: 13px;
+    color: #6B7280;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .ia-section {
+      padding: 60px 24px;
+    }
+
+    .ia-title {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .ia-content {
+      gap: 40px;
+    }
+
+    .ia-image {
+      min-height: 350px;
+    }
+
+    .main-image {
+      max-width: 320px;
+    }
+
+    .card-verbatims {
+      width: 190px;
+    }
+
+    .card-campagnes {
+      width: 170px;
+      left: -10px;
+    }
+
+    .ia-quote,
+    .ia-description {
+      font-size: 15px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .ia-section {
+      padding: 50px 20px;
+    }
+
+    .ia-title {
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+
+    .ia-content {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .ia-image {
+      min-height: 320px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-image {
+      max-width: 280px;
+    }
+
+    .floating-card {
+      transform: scale(0.85);
+    }
+
+    .card-verbatims {
+      top: 10px;
+      left: 10%;
+    }
+
+    .card-campagnes {
+      bottom: 20px;
+      left: 5%;
+    }
+
+    .paper-plane {
+      display: none;
+    }
+
+    .ia-text {
+      text-align: center;
+    }
+
+    .ia-quote,
+    .ia-description {
+      font-size: 14px;
+    }
+
+    .ia-author {
+      justify-content: center;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .ia-title {
+      font-size: 24px;
+    }
+
+    .ia-title .highlight-yellow::after {
+      height: 6px;
+      bottom: 2px;
+    }
+
+    .floating-card {
+      transform: scale(0.75);
+    }
+
+    .card-verbatims {
+      left: 0;
+    }
+
+    .card-campagnes {
+      left: 0;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+    }
+
+    .author-name {
+      font-size: 15px;
+    }
+  }
+</style>

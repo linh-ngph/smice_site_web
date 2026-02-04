@@ -1,0 +1,212 @@
+---
+import { ArrowRight } from '@lucide/astro';
+
+// Platform cards data
+const platformCards = [
+  {
+    id: 1,
+    title: "Une plateforme claire",
+    titleColor: "#4B5563",
+    image: "/images/platform/plateforme.png",
+    description: "Pilotez vos audits, vos standards et vos plans d'actions depuis un espace simple et visuel.",
+    buttonText: "En savoir plus",
+    buttonLink: "/services"
+  },
+  {
+    id: 2,
+    title: "Une application mobile terrain",
+    titleColor: "#9B7BC7",
+    image: "/images/platform/mobile-app.png",
+    description: "Vos équipes remontent leurs observations, suivent leurs checklists et agissent plus vite.",
+    buttonText: "Découvrir l'app",
+    buttonLink: "/services"
+  },
+  {
+    id: 3,
+    title: "Du temps réel pour décider",
+    titleColor: "#7DD3B8",
+    image: "/images/platform/temps-reel.png",
+    description: "Indicateurs, alertes et résultats accessibles instantanément, où que vous soyez.",
+    buttonText: "Voir les fonctionnalités",
+    buttonLink: "/services"
+  }
+];
+---
+
+<section class="platform-section" id="platform">
+  <div class="platform-container">
+    <h2 class="platform-title">La Plateforme & Application Smice en vidéo</h2>
+    
+    <div class="platform-grid">
+      {platformCards.map((card) => (
+        <div class="platform-card">
+          <h3 class="card-title" style={`color: ${card.titleColor}`}>{card.title}</h3>
+          <div class="card-image">
+            <img src={card.image} alt={card.title} />
+          </div>
+          <p class="card-description">{card.description}</p>
+          <a href={card.buttonLink} class="card-btn">
+            {card.buttonText}
+            <ArrowRight size={18} />
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .platform-section {
+    background-color: #F5F7FF;
+    padding: 80px 24px;
+  }
+
+  .platform-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .platform-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #4A5FC1;
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .platform-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+  }
+
+  .card-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #E5E7EB;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6B7280;
+    margin: 0;
+    flex: 1;
+  }
+
+  .card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: #4A5FC1;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .card-btn:hover {
+    background: #3D4EAA;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .platform-section {
+      padding: 60px 24px;
+    }
+
+    .platform-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .platform-grid {
+      gap: 24px;
+    }
+
+    .card-title {
+      font-size: 20px;
+    }
+
+    .card-description {
+      font-size: 14px;
+    }
+
+    .card-btn {
+      padding: 12px 20px;
+      font-size: 13px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .platform-section {
+      padding: 50px 20px;
+    }
+
+    .platform-title {
+      font-size: 26px;
+      margin-bottom: 35px;
+    }
+
+    .platform-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .card-title {
+      font-size: 20px;
+    }
+
+    .card-description {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .platform-title {
+      font-size: 22px;
+    }
+
+    .card-title {
+      font-size: 18px;
+    }
+
+    .card-btn {
+      padding: 12px 18px;
+      font-size: 13px;
+    }
+  }
+</style>

@@ -1,0 +1,329 @@
+---
+const currentYear = new Date().getFullYear();
+
+const smiceLinks = [
+  { label: "Accueil", href: "/" },
+  { label: "Qui-sommes-nous ?", href: "/about-us" },
+  { label: "Nous contacter", href: "/contact-us" },
+];
+
+const secteursLinks = [
+  { label: "Hotêllerie", href: "/secteurs#hotellerie" },
+  { label: "Restauration", href: "/secteurs#restauration" },
+  { label: "Transports", href: "/secteurs#transports" },
+  { label: "Retail", href: "/secteurs#retail" },
+];
+
+const servicesLinks = [
+  { label: "Visite mystère", href: "/services#visite-mystere" },
+  { label: "Audit opérationnel", href: "/services#audit" },
+  { label: "Auto évaluation interne", href: "/services#auto-evaluation" },
+];
+
+const ressourcesLinks = [
+  { label: "Blog", href: "/ressources#blog" },
+  { label: "Livre blanc", href: "/ressources#livre-blanc" },
+];
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Logo & Social Section -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/images/logos/smice-logo.png" alt="SMICE" />
+        </div>
+        <p class="footer-tagline">
+          Mesurez vos standards qualité pour améliorer votre excellence opérationnelle.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+              <path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" fill="#F5F7FF"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Smice Links -->
+      <div class="footer-section">
+        <h4>Smice</h4>
+        <ul class="footer-links">
+          {smiceLinks.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      
+      <!-- Secteurs Links -->
+      <div class="footer-section">
+        <h4>Secteurs</h4>
+        <ul class="footer-links">
+          {secteursLinks.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      
+      <!-- Services Links -->
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          {servicesLinks.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      
+      <!-- Ressources Links -->
+      <div class="footer-section">
+        <h4>Ressources</h4>
+        <ul class="footer-links">
+          {ressourcesLinks.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>
+        Copyright © {currentYear} Smice | Tous Droits Réservés | 
+        <a href="/cgu">Conditions Générales d'Utilisation</a> | 
+        <a href="/mentions-legales">Mentions Légales</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #F5F7FF;
+    padding: 60px 24px 30px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  /* Brand Section */
+  .footer-brand {
+    max-width: 280px;
+  }
+
+  .footer-logo {
+    margin-bottom: 16px;
+  }
+
+  .footer-logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #E8EDF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4A5FC1;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    background: #4A5FC1;
+    color: white;
+  }
+
+  /* Footer Sections */
+  .footer-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4A5FC1;
+    margin: 0 0 20px 0;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin: 0;
+  }
+
+  .footer-links a {
+    color: #6B7280;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: #4A5FC1;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 24px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .footer-bottom a {
+    color: #9CA3AF;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom a:hover {
+    color: #4A5FC1;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-tagline {
+      max-width: 400px;
+      margin: 0 auto 20px;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+
+    .footer-section {
+      text-align: left;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 50px 20px 24px;
+    }
+
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 20px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    .footer-section h4 {
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      line-height: 1.8;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 16px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    .footer-section {
+      text-align: left;
+    }
+
+    .footer-links {
+      align-items: flex-start;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .footer-bottom p {
+      font-size: 11px;
+    }
+  }
+</style>

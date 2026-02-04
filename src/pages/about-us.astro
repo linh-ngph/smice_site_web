@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import AboutHero from '../components/sections/about-us/AboutHero.astro';
+import TeamSection from '../components/sections/about-us/TeamSection.astro';
+import JobsBanner from '../components/sections/about-us/JobsBanner.astro';
+import HistorySection from '../components/sections/about-us/HistorySection.astro';
+import FAQSection from '../components/sections/common/FAQSection.astro';
+import Contact from '../components/sections/common/Contact.astro';
+
+const seoConfig = {
+  title: "Qui sommes-nous ? | SMICE",
+  description: "Découvrez SMICE, votre partenaire de confiance. Notre histoire, nos valeurs et notre équipe.",
+  keywords: ["SMICE", "à propos", "qui sommes-nous", "entreprise", "équipe"],
+};
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/about-us" backgroundColor="#F3EFF6" />
+  
+  <main>
+    <AboutHero />
+    <TeamSection />
+    <JobsBanner />
+    <HistorySection />
+    <FAQSection />
+    <Contact decorationColor="#9B8AAD" />
+  </main>
+  
+  <Footer />
+</Layout>

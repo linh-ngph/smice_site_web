@@ -1,0 +1,1018 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/sections/common/Contact.astro';
+import FAQSection from '../../components/sections/common/FAQSection.astro';
+import { ChevronDown } from '@lucide/astro';
+
+const faqItems = [
+  {
+    question: "L'auto-évaluation remplace-t-elle les audits externes ?",
+    answer: "Pas de texte",
+    defaultOpen: false,
+  },
+  {
+    question: "Comment accéder aux résultats ?",
+    answer: "Pas de texte",
+    defaultOpen: false,
+  },
+  {
+    question: "Mes équipes peuvent-elles vraiment monter en compétence grâce à cet outil ?",
+    answer: "Pas de texte",
+    defaultOpen: false,
+  },
+  {
+    question: "Comment garantir l'objectivité si ce sont mes équipes qui évaluent ?",
+    answer: "Pas de texte",
+    defaultOpen: false,
+  },
+];
+
+const seoConfig = {
+  title: "Auto-évaluation | SMICE",
+  description: "Permettez à vos équipes de s'auto-évaluer avec un outil simple et structuré. Renforcez l'engagement et la montée en compétences.",
+  keywords: ["SMICE", "auto-évaluation", "self-assessment", "qualité", "amélioration continue"],
+};
+
+const clientLogos = [
+  { name: "Disney", src: "/images/logos/disney.png" },
+  { name: "Hermès", src: "/images/logos/hermes.png" },
+  { name: "SNCF", src: "/images/logos/sncf.png" },
+  { name: "Club Med", src: "/images/logos/clubmed.png" },
+  { name: "Häagen-Dazs", src: "/images/logos/haagendazs.png" },
+  { name: "Domino's", src: "/images/logos/dominos.png" },
+  { name: "Samsung", src: "/images/logos/samsung.png" },
+];
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/services" backgroundColor="white" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="hero-container">
+        <div class="hero-image">
+          <img src="/images/services/auto-evaluation-hero.png" alt="Auto-évaluation illustration" />
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Engagez vos équipes grâce à
+            <span class="highlight">l'auto-évaluation</span>
+          </h1>
+          <p class="hero-description">
+            Permettez à vos collaborateurs de s'évaluer eux-mêmes sur vos standards. Un outil simple qui responsabilise, engage et fait monter en compétences vos équipes terrain.
+          </p>
+          <a href="/contact-us" class="hero-cta">Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <!-- Client Logos -->
+      <div class="clients-section">
+        <p class="clients-title">
+          Plus de <span class="highlight-underline">50 entreprises</span> nous font confiance
+        </p>
+        <div class="clients-logos">
+          {clientLogos.map((logo) => (
+            <div class="logo-item">
+              <img src={logo.src} alt={logo.name} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <ChevronDown size={24} />
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+      <div class="intro-container">
+        <h2 class="intro-title">
+          Responsabilisez vos équipes sur leurs <span class="highlight">standards</span>
+        </h2>
+        
+        <div class="intro-content">
+          <div class="intro-image">
+            <img src="/images/services/auto-evaluation-intro.jpg" alt="Équipe en auto-évaluation" />
+          </div>
+          <div class="intro-text">
+            <p>
+              L'auto-évaluation Smice permet à vos collaborateurs de vérifier eux-mêmes l'application de vos standards — hygiène, process, accueil, sécurité, organisation — en suivant un parcours guidé sur l'app.
+            </p>
+            <p>
+              Chaque point est illustré, vérifiable et consolidé automatiquement pour vous donner une vision fiable et exploitable de la réalité terrain.
+            </p>
+            <a href="#more" class="intro-cta">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details-section">
+      <div class="details-container">
+        <div class="details-header">
+          <h2 class="details-title">
+            Une démarche d'auto-évaluation simple, engageante et efficace
+          </h2>
+          <p class="details-subtitle">
+            De la configuration à l'analyse, Smice structure chaque étape pour garantir des résultats fiables et un engagement durable.
+          </p>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail-card">
+            <span class="detail-phase">Configuration</span>
+            <h3 class="detail-title blue">Paramétrage des grilles</h3>
+            <div class="detail-image">
+              <img src="/images/services/ae-detail-config.jpg" alt="Configuration" />
+            </div>
+            <p class="detail-description">
+              Définissez vos critères d'évaluation, les preuves attendues et les instructions. Vos équipes disposent d'un parcours clair et guidé.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <span class="detail-phase">Évaluation</span>
+            <h3 class="detail-title purple">Auto-contrôle sur l'app</h3>
+            <div class="detail-image">
+              <img src="/images/services/ae-detail-evaluation.jpg" alt="Évaluation" />
+            </div>
+            <p class="detail-description">
+              Vos collaborateurs réalisent leur auto-évaluation en suivant un parcours structuré : questions par zone, photos, commentaires et barèmes harmonisés.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <span class="detail-phase">Suivi</span>
+            <h3 class="detail-title teal">Analyse & progression</h3>
+            <div class="detail-image">
+              <img src="/images/services/ae-detail-suivi.jpg" alt="Suivi" />
+            </div>
+            <p class="detail-description">
+              Les résultats sont consolidés automatiquement. Suivez la progression de chaque site, identifiez les points à améliorer et célébrez les réussites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+      <div class="carousel-container-wrapper">
+        <div class="carousel-wrapper">
+          <div class="carousel-track">
+            <article class="carousel-card">
+              <div class="card-image">
+                <img src="/images/services/smiceur-1.jpg" alt="Équipe engagée" />
+              </div>
+              <div class="card-content">
+                <h3>Des équipes responsabilisées et engagées</h3>
+                <p>L'auto-évaluation transforme vos collaborateurs en acteurs de la qualité. Ils prennent conscience des standards et s'approprient les bonnes pratiques.</p>
+                <p>Ce processus participatif renforce leur sentiment d'appartenance et leur motivation.</p>
+                <p class="highlight-text"><strong>Notre objectif : faire de chaque collaborateur un ambassadeur de vos standards.</strong></p>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="card-image">
+                <img src="/images/services/smiceur-2.jpg" alt="Montée en compétences" />
+              </div>
+              <div class="card-content">
+                <h3>Une montée en compétences continue</h3>
+                <p>Grâce aux retours réguliers et aux critères explicites, vos équipes progressent naturellement.</p>
+                <p>Chaque auto-évaluation est une opportunité d'apprentissage et d'amélioration.</p>
+                <p class="highlight-text"><strong>Résultat : des équipes plus compétentes et plus autonomes.</strong></p>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="card-image">
+                <img src="/images/services/smiceur-3.jpg" alt="Suivi en temps réel" />
+              </div>
+              <div class="card-content">
+                <h3>Un suivi centralisé et en temps réel</h3>
+                <p>Accédez instantanément aux résultats de toutes vos équipes via notre plateforme intuitive.</p>
+                <p>Comparez les sites, identifiez les tendances et pilotez vos plans d'action efficacement.</p>
+                <p class="highlight-text"><strong>Transformez les données en actions concrètes pour progresser ensemble.</strong></p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel-dots">
+          <button class="carousel-dot active" data-index="0" aria-label="Carte 1"></button>
+          <button class="carousel-dot" data-index="1" aria-label="Carte 2"></button>
+          <button class="carousel-dot" data-index="2" aria-label="Carte 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Characteristics Section -->
+    <section class="characteristics-section">
+      <div class="characteristics-container">
+        <div class="characteristics-header">
+          <h2>Un outil au service de vos équipes</h2>
+          <p>L'auto-évaluation engage, responsabilise et fait progresser vos collaborateurs.</p>
+        </div>
+
+        <div class="characteristics-grid">
+          <div class="characteristic-card">
+            <div class="characteristic-content">
+              <span class="characteristic-label">Engagement des équipes</span>
+              <p class="characteristic-text">Vos collaborateurs deviennent acteurs de la qualité, pas seulement spectateurs.</p>
+            </div>
+            <div class="characteristic-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="characteristic-card">
+            <div class="characteristic-content">
+              <span class="characteristic-label">Montée en compétences</span>
+              <p class="characteristic-text">Chaque évaluation est une opportunité d'apprentissage et de progression.</p>
+            </div>
+            <div class="characteristic-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="5" cy="6" r="2"/>
+                <circle cx="12" cy="6" r="2"/>
+                <rect x="3" y="14" width="8" height="6" rx="1"/>
+                <rect x="15" y="10" width="6" height="10" rx="1"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="characteristic-card">
+            <div class="characteristic-content">
+              <span class="characteristic-label">Déploiement rapide</span>
+              <p class="characteristic-text">Un outil simple à prendre en main, déployable rapidement sur l'ensemble du réseau.</p>
+            </div>
+            <div class="characteristic-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="characteristic-card">
+            <div class="characteristic-content">
+              <span class="characteristic-label">Coût maîtrisé</span>
+              <p class="characteristic-text">Une solution économique pour un suivi régulier de vos standards qualité.</p>
+            </div>
+            <div class="characteristic-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <FAQSection faqItems={faqItems} backgroundColor="white" />
+
+    <Contact decorationColor="#75898A" />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* Hero Section */
+  .service-hero {
+    background: #F4F7FF;
+    padding: 40px 24px 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    flex: 1;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1A1A2E;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .hero-title .highlight {
+    color: #4A5FC1;
+  }
+
+  .hero-description {
+    font-size: 17px;
+    color: #4B5563;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    background: #4A5FC1;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .hero-cta:hover {
+    background: #3D4EAA;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 95, 193, 0.3);
+  }
+
+  /* Clients Section */
+  .clients-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .clients-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A1A2E;
+    margin: 0 0 32px 0;
+  }
+
+  .clients-title .highlight-underline {
+    color: #4A5FC1;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .clients-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-item img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  .logo-item:hover img {
+    opacity: 1;
+  }
+
+  /* Scroll Indicator */
+  .scroll-indicator {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    color: #9CA3AF;
+  }
+
+  .scroll-indicator :global(svg) {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Introduction Section */
+  .intro-section {
+    padding: 80px 24px;
+    background: white;
+  }
+
+  .intro-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .intro-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A2E;
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  .intro-title .highlight {
+    color: #4A5FC1;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+  }
+
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .intro-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .intro-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4B5563;
+    margin: 0;
+  }
+
+  .intro-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    background: #4A5FC1;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  .intro-cta:hover {
+    background: #3D4EAA;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+  }
+
+  /* Details Section */
+  .details-section {
+    padding: 80px 24px;
+    background: #F4F7FF;
+  }
+
+  .details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .details-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+  }
+
+  .details-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A2E;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+  }
+
+  .details-subtitle {
+    font-size: 16px;
+    color: #6B7280;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-phase {
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 8px;
+  }
+
+  .detail-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+  }
+
+  .detail-title.blue {
+    color: #4A5FC1;
+  }
+
+  .detail-title.purple {
+    color: #9B7BC7;
+  }
+
+  .detail-title.teal {
+    color: #5BBFB3;
+  }
+
+  .detail-image {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    aspect-ratio: 4/3;
+  }
+
+  .detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .detail-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #4B5563;
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-content {
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 36px;
+    }
+
+    .clients-logos {
+      gap: 32px;
+    }
+
+    .logo-item img {
+      height: 28px;
+    }
+
+    .intro-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .intro-title {
+      font-size: 30px;
+    }
+
+    .intro-text {
+      text-align: center;
+      align-items: center;
+    }
+
+    .details-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .details-title {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-hero {
+      padding: 30px 20px 40px;
+      min-height: auto;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 15px;
+    }
+
+    .hero-image img {
+      max-height: 300px;
+    }
+
+    .clients-section {
+      padding-top: 40px;
+    }
+
+    .clients-title {
+      font-size: 16px;
+    }
+
+    .clients-logos {
+      gap: 24px;
+    }
+
+    .logo-item img {
+      height: 24px;
+    }
+
+    .intro-section {
+      padding: 60px 20px;
+    }
+
+    .intro-title {
+      font-size: 26px;
+      margin-bottom: 32px;
+    }
+
+    .details-section {
+      padding: 60px 20px;
+    }
+
+    .details-title {
+      font-size: 26px;
+    }
+
+    .details-subtitle {
+      font-size: 14px;
+    }
+  }
+
+  /* Carousel Section */
+  .carousel-section {
+    padding: 100px 24px;
+    background: white;
+  }
+
+  .carousel-container-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .carousel-wrapper {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 0;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform;
+  }
+
+  .carousel-card {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .card-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .carousel-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2D3A8C;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .carousel-card p {
+    font-size: 16px;
+    color: #4B5563;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .carousel-card p.highlight-text {
+    color: #1A1A2E;
+    margin-top: 8px;
+  }
+
+  .carousel-card p.highlight-text strong {
+    font-weight: 600;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 60px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #D1D5DB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .carousel-dot:hover {
+    background: #4A5FC1;
+    opacity: 0.7;
+  }
+
+  .carousel-dot.active {
+    background: #4A5FC1;
+  }
+
+  @media (max-width: 968px) {
+    .carousel-card {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0;
+    }
+
+    .card-image img {
+      height: 320px;
+    }
+
+    .carousel-card h3 {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-section {
+      padding: 60px 20px;
+    }
+
+    .card-image img {
+      height: 280px;
+    }
+
+    .carousel-card h3 {
+      font-size: 24px;
+    }
+
+    .carousel-card p {
+      font-size: 15px;
+    }
+
+    .carousel-dots {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-card h3 {
+      font-size: 22px;
+    }
+  }
+
+  /* Characteristics Section */
+  .characteristics-section {
+    padding: 80px 24px;
+    background: #F8FAFF;
+  }
+
+  .characteristics-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .characteristics-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .characteristics-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin: 0 0 16px 0;
+  }
+
+  .characteristics-header p {
+    font-size: 17px;
+    color: #4B5563;
+    margin: 0;
+  }
+
+  .characteristics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .characteristic-card {
+    background: #EEF2FF;
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .characteristic-content {
+    flex: 1;
+  }
+
+  .characteristic-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #4A5FC1;
+    margin-bottom: 10px;
+  }
+
+  .characteristic-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A2E;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .characteristic-icon {
+    flex-shrink: 0;
+    color: #7C8FE4;
+    opacity: 0.8;
+  }
+
+  .characteristic-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  @media (max-width: 768px) {
+    .characteristics-section {
+      padding: 60px 20px;
+    }
+
+    .characteristics-header h2 {
+      font-size: 28px;
+    }
+
+    .characteristics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .characteristic-card {
+      padding: 24px;
+    }
+
+    .characteristic-icon svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track') as HTMLElement;
+    const cards = document.querySelectorAll('.carousel-card');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    if (!track || cards.length === 0) return;
+    
+    let currentIndex = 0;
+    const totalCards = cards.length;
+    
+    function updateCarousel() {
+      const offset = currentIndex * 100;
+      track.style.transform = `translateX(-${offset}%)`;
+      
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+    
+    function goToSlide(index: number) {
+      currentIndex = Math.max(0, Math.min(index, totalCards - 1));
+      updateCarousel();
+    }
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          goToSlide(currentIndex + 1);
+        } else {
+          goToSlide(currentIndex - 1);
+        }
+      }
+    }, { passive: true });
+    
+    updateCarousel();
+  });
+</script>

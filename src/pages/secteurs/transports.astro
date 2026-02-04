@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import SecteursHero from '../../components/sections/secteurs/SecteursHero.astro';
+import Testimonials from '../../components/sections/common/Testimonials.astro';
+import Experience from '../../components/sections/common/Experience.astro';
+import BenefitsSection from '../../components/sections/secteurs/BenefitsSection.astro';
+import FeaturesSection from '../../components/sections/secteurs/FeaturesSection.astro';
+import FAQSection from '../../components/sections/common/FAQSection.astro';
+import Contact from '../../components/sections/common/Contact.astro';
+
+const seoConfig = {
+  title: "Secteur Transports | SMICE",
+  description: "Élevez la qualité de service de vos transports. Le partenaire qualité qui mesure et améliore l'expérience voyageur à chaque point de contact.",
+  keywords: ["SMICE", "transports", "mobilité", "mystery shopping", "qualité"],
+};
+
+// Transports testimonials
+const transportsTestimonials = [
+  {
+    id: 1,
+    quote: "Grâce à Smice, nous avons une vision précise de l'expérience vécue par nos voyageurs. Les audits nous permettent d'identifier rapidement les points d'amélioration sur l'ensemble de notre réseau.",
+    name: "Marc Dupont",
+    company: "Directeur Qualité, TransCity",
+    avatar: "/images/testimonials/marc-dupont.png",
+    nameColor: "#4A5FC1"
+  },
+  {
+    id: 2,
+    quote: "La plateforme Smice nous offre un suivi en temps réel de nos indicateurs qualité. Nos équipes terrain sont plus engagées et nos voyageurs le ressentent.",
+    name: "Julie Martin",
+    company: "Responsable Expérience Client, MetroPlus",
+    avatar: "/images/testimonials/julie-martin.png",
+    nameColor: "#9B7BC7"
+  },
+  {
+    id: 3,
+    quote: "Smice nous a aidés à standardiser nos process qualité sur toutes nos lignes. Un outil indispensable pour piloter l'excellence opérationnelle.",
+    name: "Thomas Richard",
+    company: "Manager Réseau, BusConnect",
+    avatar: "/images/testimonials/thomas-richard.png",
+    nameColor: "#C9A227"
+  }
+];
+
+// Platform features for transports
+const transportsFeatures = [
+  {
+    tag: "PLAN D'ACTIONS",
+    title: "Lancez des actions concrètes pour améliorer le respect de vos standards qualité.",
+    image: "/images/platform/plan-actions.png",
+    imageAlt: "Plan d'actions"
+  },
+  {
+    tag: "VERBATIMS",
+    title: "Obtenez des retours d'expériences voyageurs.",
+    image: "/images/platform/verbatims.png",
+    imageAlt: "Verbatims"
+  },
+  {
+    tag: "MUR D'IMAGES",
+    title: "Vos points améliorables, en images.",
+    image: "/images/platform/image-wall.png",
+    imageAlt: "Mur d'images"
+  }
+];
+
+// Transports-specific services
+const transportsServices = [
+  {
+    title: "Vos process opérationnels",
+    subtitle: "Analysez la qualité de service à chaque étape du voyage.",
+    image: "/images/services/transports-process.png",
+    description: "Évaluez la rigueur de vos process, de l'accueil en gare à la descente du véhicule. Smice analyse propreté, ponctualité, information voyageur et coordination des équipes pour une vision complète de votre performance opérationnelle.",
+    buttonText: "En savoir plus",
+    buttonStyle: "light" as const,
+    href: "/services#process"
+  },
+  {
+    title: "Vos clients mystères",
+    subtitle: "Découvrez ce que vos voyageurs vivent vraiment.",
+    image: "/images/services/transports-mystery.png",
+    description: "Nos Smiceurs empruntent vos lignes comme de vrais voyageurs : accueil, confort, information, sécurité perçue. Vous accédez à la réalité terrain telle qu'elle est vécue par vos usagers.",
+    buttonText: "En savoir plus",
+    buttonStyle: "primary" as const,
+    href: "/services#mystery"
+  },
+  {
+    title: "Vos collaborateurs",
+    subtitle: "Impliquez vos équipes dans la démarche qualité.",
+    image: "/images/services/transports-collaborators.png",
+    description: "Avec les auto-évaluations et les feedbacks immédiats, vos équipes gagnent en rigueur et en engagement. Les résultats deviennent un outil de coaching opérationnel au quotidien.",
+    buttonText: "En savoir plus",
+    buttonStyle: "secondary" as const,
+    href: "/services#collaborators"
+  }
+];
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/secteurs" backgroundColor="#F0F7F6" />
+  
+  <main>
+    <SecteursHero sector="transports" />
+    <Experience 
+      title="La qualité de vos transports, mesurée à "
+      titleHighlight="chaque étape"
+      subtitle="Smice accompagne les réseaux de transport dans le pilotage de leur excellence opérationnelle et garantit une qualité homogène sur l'ensemble des lignes."
+      services={transportsServices}
+      backgroundColor="white"
+    />
+    <BenefitsSection 
+      benefits={[
+        {
+          title: "Des standards maîtrisés, de la gare au terminus",
+          highlights: ["standards", "terminus"],
+          sectionTitle: "Pour vos standards :",
+          paragraphs: [
+            "Smice vous aide à garantir une expérience voyageur parfaitement cohérente, de l'accueil en station jusqu'à la descente du véhicule. Nos évaluations mesurent la propreté, la ponctualité, la qualité de l'information et le comportement des équipes.",
+            "Vous obtenez une vision complète et structurée de la maîtrise de vos standards, à chaque étape du parcours voyageur."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/transports-station.png",
+          imageAlt: "Station de transport",
+          backgroundColor: "#F0F7F6",
+          imageOnLeft: true
+        },
+        {
+          title: "Pour vos voyageurs, chaque trajet compte",
+          highlights: ["voyageurs", "trajet"],
+          sectionTitle: "Pour vos voyageurs :",
+          paragraphs: [
+            "Les visites mystère Smice vous révèlent vos lignes telles qu'elles sont réellement vécues : accueil, confort, propreté, information en temps réel et sentiment de sécurité.",
+            "Le regard objectif de nos Smiceurs met en lumière ce qui fonctionne — et les irritants que vos équipes ne voient plus.",
+            "Vous obtenez une vision authentique de l'expérience voyageur pour garantir un service sans compromis."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/transports-voyage.png",
+          imageAlt: "Voyageur en transport",
+          backgroundColor: "#F4F7FF",
+          imageOnLeft: false
+        },
+        {
+          title: "Un outil d'engagement et de progression",
+          highlights: ["engagement", "progression"],
+          sectionTitle: "Pour vos équipes :",
+          paragraphs: [
+            "Smice leur offre un cadre simple et motivant pour progresser chaque jour. Les auto-évaluations régulières renforcent la rigueur, les feedbacks immédiats améliorent la relation voyageur.",
+            "Vos collaborateurs gagnent en autonomie et en sens du service — au bénéfice direct de l'expérience voyageur."
+          ],
+          buttonText: "En savoir plus",
+          buttonHref: "/services",
+          image: "/images/sectors/transports-team.png",
+          imageAlt: "Équipe transport",
+          backgroundColor: "#F3EFF6",
+          imageOnLeft: true
+        }
+      ]}
+    />
+    <Testimonials 
+      title="Ils ont décidé de nous faire "
+      titleHighlight="confiance"
+      subtitle="Ces professionnels du transport améliorent l'expérience voyageur main dans la main avec Smice, et voici leurs retours."
+      testimonials={transportsTestimonials}
+      backgroundColor="#F0F7F6"
+    />
+    <FeaturesSection 
+      title="Une "
+      titleHighlight="plateforme"
+      platformImage="/images/platform/dashboard.png"
+      subtitle="Des "
+      subtitleHighlight1="fonctionnalités"
+      subtitleHighlight2="transports"
+      features={transportsFeatures}
+      backgroundColor="white"
+      mobileAppTitle="Une application mobile pour former vos "
+      mobileAppHighlight="collaborateurs"
+      mobileAppImage="/images/platform/mobile-app.png"
+      mobileAppParagraphs={[
+        "Depuis près de vingt ans, Smice aide les réseaux de transport à structurer leur qualité et à professionnaliser leurs équipes grâce à une expertise terrain solide.",
+        "Notre application mobile guide chaque contrôle et facilite l'intégration des bons gestes, tandis que la plateforme d'analyse donne aux managers une visibilité immédiate sur les résultats.",
+        "Avec une communauté de Smiceurs formés, Smice assure une montée en compétence continue pour renforcer l'excellence opérationnelle."
+      ]}
+    />
+    <FAQSection 
+      backgroundColor="#F5F7FA"
+      faqItems={[
+        {
+          question: "Comment garantir la même qualité sur toutes vos lignes ?",
+          answer: "Grâce aux visites mystère, aux audits et à l'auto-évaluation, Smice vous donne une vision homogène de chaque ligne. Les standards sont mesurés de la même façon partout, avec preuves visuelles et scores comparatifs.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment améliorer l'expérience voyageur en continu ?",
+          answer: "L'auto-évaluation transforme chaque contrôle en outil de formation. Les équipes apprennent en faisant et montent en compétence sans attendre une formation formelle.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment mesurer la satisfaction voyageur objectivement ?",
+          answer: "Entre auto-évaluation, audits opérationnels et visites mystère, vous combinez perception, conformité et exécution. Une triple lecture indispensable pour garantir une qualité réellement maîtrisée.",
+          defaultOpen: false
+        },
+        {
+          question: "Comment obtenir une vision terrain fiable sur l'ensemble du réseau ?",
+          answer: "La communauté de Smiceurs intervient sur site, à visage découvert ou en client mystère. Leur regard extérieur vous offre une lecture indépendante et objective.",
+          defaultOpen: false
+        }
+      ]}
+    />
+    <Contact decorationColor="#75898A" />
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,248 @@
+---
+// Mission section images from notre-mission folder
+
+---
+
+<section class="mission" id="mission">
+  <div class="mission-container">
+    <!-- Floating images -->
+    <div class="mission-image image-top-right">
+      <img src="/images/homepage/notre-mission/waitress.jpg" alt="Serveuse servant un plat" />
+    </div>
+    
+    <div class="mission-image image-left">
+      <img src="/images/homepage/notre-mission/handshake.jpg" alt="Poignée de main professionnelle" />
+    </div>
+    
+    <div class="mission-image image-center">
+      <img src="/images/homepage/notre-mission/metro.jpg" alt="Personnes dans une station de métro" />
+    </div>
+    
+    <div class="mission-image image-right">
+      <img src="/images/homepage/notre-mission/banquet.jpg" alt="Service de banquet" />
+    </div>
+    
+    <!-- Content -->
+    <div class="mission-content">
+      <h2 class="mission-title">
+        <span class="notre">Notre</span> <span class="mission-word">mission<img src="/images/homepage/subline-mission.svg" alt="" class="mission-underline" /></span> :
+      </h2>
+      
+      <p class="mission-text">
+        Vous aider à mieux piloter votre <span class="text-excellence">excellence opérationnelle</span>, afin de
+        <br /><span class="text-reconcilier">réconcilier</span> vos <span class="text-promesses">promesses clients</span> avec la <span class="text-realite">réalité sur le terrain</span>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission {
+    position: relative;
+    background-color: #FFFFFE;
+    padding: 80px 24px 120px;
+    overflow: visible;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  .mission-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 300px;
+  }
+
+  .mission-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding-top: 40px;
+    width: 100%;
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+
+  .mission-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 32px;
+  }
+
+  .mission-title .notre {
+    color: #435888;
+  }
+
+  .mission-title .mission-word {
+    position: relative;
+    display: inline-block;
+    color: #6989D4;
+  }
+
+  .mission-underline {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .mission-text {
+    font-size: 32px;
+    line-height: 1.6;
+    color: #504C54;
+    font-weight: 600;
+  }
+
+  .text-excellence {
+    color: #75898A;
+    font-weight: 700;
+  }
+
+  .text-reconcilier {
+    color: #C8AE12;
+    font-weight: 700;
+  }
+
+  .text-promesses {
+    color: #9B8AAD;
+    font-weight: 700;
+  }
+
+  .text-realite {
+    color: #6989D4;
+    font-weight: 700;
+  }
+
+  /* Mission Images */
+  .mission-image {
+    position: absolute;
+    z-index: 5;
+    box-sizing: border-box;
+  }
+
+  .mission-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+
+  /* Image positions - Waitress top-right with teal border */
+  .image-top-right {
+    top: -80px;
+    right: 80px;
+    width: 240px;
+    height: 160px;
+    transform: rotate(343deg);
+    background: #B6D6D7;
+    padding: 8px;
+    border-radius: 20px;
+    z-index: 100;
+  }
+
+  /* Handshake left - cropped by edge with yellow border */
+  .image-left {
+    top: 50%;
+    left: -250px;
+    transform: rotate(352deg);
+    width: 240px;
+    height: 160px;
+    background: #FEF7D0;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  /* Metro bottom-center with purple border */
+  .image-center {
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-70%) rotate(8deg);
+    width: 240px;
+    height: 160px;
+    background: #C2ADD8;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  /* Banquet bottom-right with blue border */
+  .image-right {
+    bottom: -120px;
+    right: 100px;
+    width: 240px;
+    height: 160px;
+    transform: rotate(-6.52deg);
+    background: #B4C4E9;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .mission {
+      padding: 60px 24px 100px;
+    }
+
+    .mission-title {
+      font-size: 30px;
+    }
+
+    .mission-text {
+      font-size: 20px;
+    }
+
+    .mission-text br {
+      display: none;
+    }
+
+    /* Hide floating images on tablet */
+    .mission-image {
+      display: none;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .mission {
+      padding: 50px 20px 80px;
+    }
+
+    .mission-container {
+      min-height: auto;
+    }
+
+    .mission-content {
+      padding-top: 20px;
+    }
+
+    .mission-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    .mission-text {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+
+    /* Hide floating images on mobile, show simplified layout */
+    .mission-image {
+      display: none;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .mission-title {
+      font-size: 22px;
+    }
+
+    .mission-text {
+      font-size: 15px;
+    }
+  }
+</style>

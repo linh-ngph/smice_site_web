@@ -1,0 +1,348 @@
+---
+// Secteurs Hero Section
+
+interface Props {
+  sector?: string;
+}
+
+const { sector } = Astro.props;
+
+// Sector-specific content
+const sectorContent: Record<string, { title: string; titleHighlight: string; description: string; image: string; clients: number; clientsLabel: string }> = {
+  restauration: {
+    title: "Maîtrisez l'expérience client dans vos ",
+    titleHighlight: "restaurants",
+    description: "Le partenaire qualité qui transforme vos standards opérationnels en performances mesurables, du pass à la salle.",
+    image: "/images/sectors/restaurant-3d.png",
+    clients: 50,
+    clientsLabel: "restaurants"
+  },
+  transports: {
+    title: "Élevez la qualité de service de vos ",
+    titleHighlight: "transports",
+    description: "Le partenaire qualité qui mesure et améliore l'expérience voyageur à chaque point de contact.",
+    image: "/images/sectors/transports-3d.png",
+    clients: 30,
+    clientsLabel: "réseaux de transport"
+  },
+  hotellerie: {
+    title: "Sublimez l'expérience client dans votre ",
+    titleHighlight: "hôtellerie",
+    description: "Le partenaire qualité qui garantit l'excellence de vos standards, de la réservation au check-out.",
+    image: "/images/sectors/hotellerie-3d.png",
+    clients: 45,
+    clientsLabel: "hôtels"
+  },
+  retail: {
+    title: "Optimisez l'expérience client dans votre ",
+    titleHighlight: "retail",
+    description: "Le partenaire qualité qui transforme chaque visite en magasin en une expérience mémorable.",
+    image: "/images/sectors/retail-3d.png",
+    clients: 60,
+    clientsLabel: "enseignes retail"
+  },
+  loisirs: {
+    title: "Enchantez vos visiteurs dans vos espaces de ",
+    titleHighlight: "loisirs",
+    description: "Le partenaire qualité qui mesure et optimise l'expérience visiteur pour fidéliser votre clientèle.",
+    image: "/images/sectors/loisirs-3d.png",
+    clients: 35,
+    clientsLabel: "sites de loisirs"
+  }
+};
+
+const content = sector && sectorContent[sector] 
+  ? sectorContent[sector] 
+  : {
+      title: "Maîtrisez l'expérience client dans vos ",
+      titleHighlight: "restaurants",
+      description: "Le partenaire qualité qui transforme vos standards opérationnels en performances mesurables, du pass à la salle.",
+      image: "/images/sectors/restaurant-3d.png",
+      clients: 50,
+      clientsLabel: "restaurants"
+    };
+
+// Client logos
+const clientLogos = [
+  { name: "Häagen-Dazs", image: "/images/logos/haagen-dazs.png" },
+  { name: "Domino's", image: "/images/logos/dominos.png" },
+  { name: "Häagen-Dazs", image: "/images/logos/haagen-dazs.png" },
+  { name: "Domino's", image: "/images/logos/dominos.png" },
+  { name: "Häagen-Dazs", image: "/images/logos/haagen-dazs.png" },
+  { name: "Domino's", image: "/images/logos/dominos.png" },
+];
+---
+
+<section class="secteurs-hero" id="secteurs-hero">
+  <div class="secteurs-hero-container">
+    <div class="hero-image">
+      <img src={content.image} alt="Illustration 3D" />
+    </div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">
+        {content.title}<span class="highlight">{content.titleHighlight}</span>
+      </h1>
+      <p class="hero-description">{content.description}</p>
+      <a href="/contact-us" class="btn-primary">Prendre rendez-vous</a>
+    </div>
+  </div>
+  
+  <!-- Client logos section -->
+  <div class="clients-section">
+    <p class="clients-text">
+      Plus de <span class="highlight-number">{content.clients} {content.clientsLabel}</span> nous confient leurs standards
+    </p>
+    
+    <div class="logos-carousel">
+      <div class="logos-track">
+        {clientLogos.map((logo) => (
+          <div class="logo-item">
+            <img src={logo.image} alt={logo.name} />
+          </div>
+        ))}
+        {/* Duplicate for infinite scroll */}
+        {clientLogos.map((logo) => (
+          <div class="logo-item">
+            <img src={logo.image} alt={logo.name} />
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .secteurs-hero {
+    background-color: #F0F7F6;
+    padding-top: 130px;
+    padding-bottom: 80px;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .secteurs-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .hero-title .highlight {
+    color: var(--text-dark);
+    text-decoration: underline;
+    text-decoration-color: #8B9E7D;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Client Logos Section */
+  .clients-section {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 24px 40px;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .clients-text {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin: 0 0 40px 0;
+  }
+
+  .highlight-number {
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-blue);
+    text-underline-offset: 3px;
+  }
+
+  .logos-carousel {
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .logos-track {
+    display: flex;
+    gap: 60px;
+    animation: scroll 20s linear infinite;
+  }
+
+  .logo-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-item img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-item:hover img {
+    opacity: 1;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .scroll-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--text-dark);
+    border-radius: 50%;
+    color: var(--text-dark);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .secteurs-hero-container {
+      gap: 40px;
+    }
+
+    .hero-title {
+      font-size: 36px;
+    }
+
+    .hero-description {
+      font-size: 15px;
+    }
+
+    .hero-image img {
+      max-width: 380px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .secteurs-hero {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+
+    .secteurs-hero-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+      min-height: auto;
+    }
+
+    .hero-image {
+      order: 1;
+    }
+
+    .hero-content {
+      order: 2;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 15px;
+    }
+
+    .hero-image img {
+      max-width: 300px;
+    }
+
+    .clients-section {
+      margin-top: 40px;
+    }
+
+    .clients-text {
+      font-size: 15px;
+    }
+
+    .logos-track {
+      gap: 40px;
+    }
+
+    .logo-item img {
+      height: 32px;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 24px;
+    }
+
+    .hero-image img {
+      max-width: 250px;
+    }
+  }
+</style>

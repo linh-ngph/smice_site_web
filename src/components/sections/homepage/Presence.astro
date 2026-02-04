@@ -1,0 +1,266 @@
+---
+// Presence Section - Smice est présent
+---
+
+<section class="presence-section" id="presence">
+  <div class="presence-container">
+    <div class="presence-content">
+      <div class="presence-text">
+        <p class="presence-tagline">Partout où vos clients vivent leur expérience,</p>
+        <h2 class="presence-title">
+          <span class="highlight-blue">Smice</span> est présent.
+        </h2>
+        <p class="presence-description">
+          Grâce à notre communauté de smiceurs, nous pouvons déployer vos <span class="highlight-bold">programmes qualité</span> rapidement et efficacement, quel que soit le secteur ou la localisation.
+        </p>
+        <a href="/secteurs" class="presence-btn">En savoir plus</a>
+      </div>
+      
+      <div class="mspa-section">
+        <div class="mspa-logo">
+          <img src="/images/homepage/mspa.png" alt="MSPA - Mystery Shopping Providers Association" />
+        </div>
+        <h3 class="mspa-title">Membre MSPA, en France et à l'international</h3>
+        <p class="mspa-description">
+          Un réseau certifié, une méthodologie reconnue, une présence partout où vous en avez besoin.
+        </p>
+      </div>
+    </div>
+    
+    <div class="presence-map">
+      <img src="/images/homepage/map.png" alt="Carte de présence Smice en Europe" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .presence-section {
+    background-color: #F4F7FF;
+    padding: 0 24px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .presence-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .presence-content {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .presence-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .presence-tagline {
+    font-size: 20px;
+    font-weight: 700;
+    color: #504C54;
+    margin: 0;
+    }
+
+  .presence-title {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Inter', 'Inter ExtraBold', Arial, sans-serif;
+ 
+  }
+
+  .presence-title .highlight-blue {
+    color: #6989D4;
+  }
+
+  .presence-title {
+    color: #435888;
+  }
+
+  .presence-description {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #504C54;
+  }
+
+  .presence-description .highlight-bold {
+    font-weight: 700;
+    color: #6989D4;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+
+  .presence-btn {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-top: 10px;
+  }
+
+  .presence-btn:hover {
+    background: #5678c3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(105, 137, 212, 0.2);
+  }
+
+  /* MSPA Section */
+  .mspa-section {
+    display: flex;
+    flex-direction: column;
+ 
+  }
+
+  .mspa-logo {
+    width: 80px;
+    height: auto;
+  }
+
+  .mspa-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .mspa-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4A5FC1;
+    margin: 0;
+  }
+
+  .mspa-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4B5563;
+    margin: 0;
+    max-width: 450px;
+  }
+
+  /* Map */
+  .presence-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .presence-map img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .presence-section {
+      padding: 60px 24px;
+    }
+
+    .presence-container {
+      gap: 40px;
+    }
+
+    .presence-title {
+      font-size: 36px;
+    }
+
+    .presence-tagline {
+      font-size: 16px;
+    }
+
+    .presence-description {
+      font-size: 15px;
+    }
+
+    .presence-map img {
+      max-width: 450px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .presence-section {
+      padding: 50px 20px;
+    }
+
+    .presence-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .presence-content {
+      gap: 40px;
+      order: 1;
+    }
+
+    .presence-map {
+      order: 2;
+    }
+
+    .presence-title {
+      font-size: 32px;
+    }
+
+    .presence-tagline {
+      font-size: 15px;
+    }
+
+    .presence-description {
+      font-size: 14px;
+    }
+
+    .presence-btn {
+      padding: 12px 28px;
+      font-size: 14px;
+    }
+
+    .mspa-title {
+      font-size: 16px;
+    }
+
+    .mspa-description {
+      font-size: 13px;
+    }
+
+    .presence-map img {
+      max-width: 100%;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .presence-title {
+      font-size: 28px;
+    }
+
+    .presence-tagline {
+      font-size: 14px;
+    }
+
+    .mspa-logo {
+      width: 70px;
+    }
+  }
+</style>

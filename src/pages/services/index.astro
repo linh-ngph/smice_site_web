@@ -1,0 +1,568 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Contact from '../../components/sections/common/Contact.astro';
+import Feature from '../../components/sections/homepage/Feature.astro';
+import BenefitsSection from '../../components/sections/secteurs/BenefitsSection.astro';
+import Testimonials from '../../components/sections/common/Testimonials.astro';
+
+const seoConfig = {
+  title: "Services | SMICE",
+  description: "Pilotez la qualité et l'expérience client avec les services Smice. Mesurer, comparer et améliorer la qualité opérationnelle.",
+  keywords: ["SMICE", "services", "qualité", "expérience client", "audit", "visite mystère"],
+};
+
+const steps = [
+  {
+    number: 1,
+    title: "Conseil & Conception du Questionnaire",
+    description: "Nous accompagnons vos équipes dans la définition des objectifs, la construction des questionnaires, la création des items, scénarios et critères pour garantir des évaluations pertinentes et adaptées à vos enjeux.",
+    bullets: [
+      "Définition des objectifs & KPIs",
+      "Conception ou optimisation du questionnaire",
+      "Alignement avec vos standards opérationnels"
+    ],
+    image: "/images/services/step-1.jpg"
+  },
+  {
+    number: 2,
+    title: "Interventions Terrain",
+    description: "Nos Smiceurs interviennent dans vos points de vente pour évaluer l'expérience client en conditions réelles, avec discrétion et objectivité.",
+    bullets: [
+      "Visites mystères & audits qualité",
+      "Collecte de données en temps réel",
+      "Photos et preuves visuelles"
+    ],
+    image: "/images/services/step-2.jpg"
+  },
+  {
+    number: 3,
+    title: "Analyse & Pilotage via la Smice App",
+    description: "Accédez à vos résultats en temps réel via notre plateforme et pilotez vos plans d'action pour améliorer durablement la qualité.",
+    bullets: [
+      "Dashboard personnalisé en temps réel",
+      "Analyses comparatives et benchmarks",
+      "Plans d'action et suivi des corrections"
+    ],
+    image: "/images/services/step-3.jpg"
+  }
+];
+
+const serviceBenefits = [
+  {
+    title: "Pour vos équipes : un outil d'engagement et de progression",
+    highlights: ["équipes", "outil"],
+    sectionTitle: "Auto-évaluation interne",
+    paragraphs: [
+      "L'auto-évaluation Smice engage vos équipes dans une démarche active de qualité. Chaque collaborateur peut évaluer ses propres pratiques, suivre ses progrès et contribuer à l'amélioration continue.",
+      "Cet outil renforce la culture qualité au quotidien et valorise la responsabilisation sur le terrain."
+    ],
+    buttonText: "En savoir plus",
+    buttonHref: "/services/auto-evaluation",
+    image: "/images/services/benefit-equipes.jpg",
+    imageAlt: "Équipe en réunion",
+    backgroundColor: "#F3EFF6",
+    imageOnLeft: true
+  },
+  {
+    title: "Pour vos clients : une vision réelle de l'expérience vécue",
+    highlights: ["clients", "l'expérience"],
+    sectionTitle: "Visites mystères",
+    paragraphs: [
+      "Les visites mystère Smice permettent d'évaluer la qualité perçue par vos clients réels. Réalisées par des profils ciblés et représentatifs de votre clientèle, elles mesurent l'accueil, le service et la cohérence du parcours client.",
+      "Les résultats restitués sur la plateforme Smice offrent une vision concrète de l'expérience vécue et des leviers d'amélioration."
+    ],
+    buttonText: "En savoir plus",
+    buttonHref: "/services/visite-mystere",
+    image: "/images/services/benefit-clients.jpg",
+    imageAlt: "Visite mystère",
+    backgroundColor: "#E8F4F2",
+    imageOnLeft: false
+  },
+  {
+    title: "Pour vos résultats : une compréhension approfondie et utile",
+    highlights: ["résultats", "compréhension"],
+    sectionTitle: "Analyse des résultats",
+    paragraphs: [
+      "Nos équipes d'analystes transforment vos données en insights actionnables.",
+      "Nous réalisons des rapports détaillés, des analyses approfondies, des synthèses par région ou par typologie de site, ainsi que des recommandations opérationnelles."
+    ],
+    buttonText: "En savoir plus",
+    buttonHref: "/services/audit",
+    image: "/images/services/benefit-resultats.jpg",
+    imageAlt: "Analyse des résultats",
+    backgroundColor: "#F4F7FF",
+    imageOnLeft: true
+  }
+];
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar currentPath="/services" backgroundColor="white" />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="services-hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Pilotez la <span class="highlight">qualité</span> et l'<span class="highlight">expérience client</span>
+            <br />avec les services Smice
+          </h1>
+          <p class="hero-description">
+            Smice aide les réseaux multisites à mesurer, comparer et améliorer la qualité 
+            opérationnelle et l'expérience vécue par les clients.<br />
+            Nos services combinent interventions terrain et pilotage data via la Smice App 
+            pour passer rapidement de l'observation à l'action.
+          </p>
+          <a href="#solution" class="hero-cta">
+            Découvrir nos services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution-section">
+      <div class="solution-container">
+        <h2 class="solution-title">
+          Découvrez notre <span class="underline">solution</span>
+        </h2>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn prev-btn" aria-label="Étape précédente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="steps-carousel">
+            <div class="steps-track">
+              {steps.map((step, index) => (
+                <div class="step-slide" data-index={index}>
+                  <div class="step-image">
+                    <div class="image-wrapper">
+                      <img src={step.image} alt={step.title} />
+                    </div>
+                  </div>
+                  <div class="step-content">
+                    <span class="step-label">Étape {step.number}</span>
+                    <h3 class="step-title">{step.title}</h3>
+                    <p class="step-description">{step.description}</p>
+                    <ul class="step-bullets">
+                      {step.bullets.map((bullet) => (
+                        <li>{bullet}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button class="carousel-btn next-btn" aria-label="Étape suivante">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="carousel-dots">
+          {steps.map((_, index) => (
+            <button class={`dot ${index === 0 ? 'active' : ''}`} data-index={index} aria-label={`Aller à l'étape ${index + 1}`}></button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Feature />
+
+    <BenefitsSection benefits={serviceBenefits} />
+
+    <Testimonials 
+      backgroundColor="linear-gradient(180deg, #E8EDF8 0%, #F5F7FF 100%)"
+    />
+
+    <Contact decorationColor="#9B7BC7" />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* Hero Section */
+  .services-hero {
+    padding: 80px 24px 0;
+  }
+
+  .hero-background {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    background-image: url('/images/services/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 30, 60, 0.7);
+    backdrop-filter: blur(2px);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 60px 40px;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+  }
+
+  .hero-title .highlight {
+    color: #F5D547;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin: 0 0 32px 0;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    background: white;
+    color: #1A1A2E;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .hero-cta:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+  }
+
+  /* Solution Section */
+  .solution-section {
+    padding: 100px 24px;
+  }
+
+  .solution-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .solution-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1A1A2E;
+    text-align: center;
+    margin: 0 0 60px 0;
+  }
+
+  .solution-title .underline {
+    color: #5B6DC7;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+  }
+
+  /* Carousel */
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .carousel-btn {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #E5E7EB;
+    background: white;
+    color: #1A1A2E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-btn:hover {
+    border-color: #5B6DC7;
+    color: #5B6DC7;
+  }
+
+  .carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .steps-carousel {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .steps-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .step-slide {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .step-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-wrapper {
+    width: 320px;
+    height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .step-content {
+    max-width: 500px;
+  }
+
+  .step-label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5B6DC7;
+    margin-bottom: 12px;
+  }
+
+  .step-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+  }
+
+  .step-description {
+    font-size: 15px;
+    color: #4B5563;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+  }
+
+  .step-bullets {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .step-bullets li {
+    font-size: 15px;
+    color: #4B5563;
+    line-height: 1.8;
+    margin-bottom: 8px;
+  }
+
+  .step-bullets li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Carousel Dots */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #E5E7EB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .dot:hover {
+    background: #9CA3AF;
+  }
+
+  .dot.active {
+    background: #5B6DC7;
+    width: 32px;
+    border-radius: 6px;
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .carousel-wrapper {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .carousel-btn {
+      display: none;
+    }
+
+    .step-slide {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .step-content {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .step-bullets {
+      text-align: left;
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services-hero {
+      padding: 70px 16px 0;
+    }
+
+    .hero-background {
+      border-radius: 16px;
+      min-height: 400px;
+    }
+
+    .hero-content {
+      padding: 40px 24px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 14px;
+    }
+
+    .solution-section {
+      padding: 60px 16px;
+    }
+
+    .solution-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .step-slide {
+      padding: 0 10px;
+    }
+
+    .image-wrapper {
+      width: 260px;
+      height: 260px;
+    }
+
+    .step-title {
+      font-size: 24px;
+    }
+
+    .services-overview {
+      padding: 60px 16px;
+    }
+
+    .overview-title {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.steps-track') as HTMLElement;
+    const slides = document.querySelectorAll('.step-slide');
+    const prevBtn = document.querySelector('.prev-btn') as HTMLButtonElement;
+    const nextBtn = document.querySelector('.next-btn') as HTMLButtonElement;
+    const dots = document.querySelectorAll('.dot');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+      // Move track
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+      
+      // Update buttons
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === totalSlides - 1;
+    }
+
+    function goToSlide(index: number) {
+      currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
+      updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+      });
+    });
+
+    // Initialize
+    updateCarousel();
+  });
+</script>

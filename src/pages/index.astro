@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/sections/homepage/Hero.astro';
+import Mission from '../components/sections/homepage/Mission.astro';
+import Experience from '../components/sections/common/Experience.astro';
+import Stats from '../components/sections/homepage/Stats.astro';
+import Presence from '../components/sections/homepage/Presence.astro';
+import Feature from '../components/sections/homepage/Feature.astro';
+import Testimonials from '../components/sections/common/Testimonials.astro';
+import Resources from '../components/sections/common/Resources.astro';
+import IA from '../components/sections/homepage/IA.astro';
+import Platform from '../components/sections/homepage/Platform.astro';
+import DownloadApp from '../components/sections/homepage/DownloadApp.astro';
+import Contact from '../components/sections/common/Contact.astro';
+
+// SEO Configuration
+const seoConfig = {
+  title: "SMIC - Mesurez vos standards qualité pour améliorer votre excellence opérationnelle",
+  description: "L'accompagnement qualité qui transforme vos promesses client en standards mesurables sur le terrain. Plus de 80 entreprises nous font confiance.",
+  keywords: ["SMIC", "standards qualité", "excellence opérationnelle", "accompagnement qualité", "audit", "France"],
+};
+---
+
+<Layout 
+  title={seoConfig.title}
+  description={seoConfig.description}
+  keywords={seoConfig.keywords}
+>
+  <Navbar />
+  
+  <main>
+    <Hero />
+    <Mission />
+    <Experience />
+    <Stats />
+    <Presence />
+    <Feature />
+    <Testimonials />
+    <Resources />
+    <IA />
+    <Platform />
+    <DownloadApp />
+    <Contact />
+  </main>
+  
+  <Footer />
+</Layout>

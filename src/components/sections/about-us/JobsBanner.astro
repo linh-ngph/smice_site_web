@@ -1,0 +1,173 @@
+---
+// Jobs Banner Section - WTTJ CTA
+---
+
+<section class="jobs-banner" id="jobs-banner">
+  <div class="jobs-banner-container">
+    <div class="jobs-banner-content">
+      <p class="jobs-tagline">Envie de rejoindre l'aventure ?</p>
+      <h2 class="jobs-title">Nos offres sont sur WTTJ !</h2>
+      <a href="#" class="btn-white">Consulter les dernières offres</a>
+    </div>
+    
+    <div class="jobs-banner-image">
+      <img src="/images/about/jobs-collage.png" alt="L'équipe Smice" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .jobs-banner {
+    background-color: white;
+    padding: 80px 24px;
+  }
+
+  .jobs-banner-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #8B7BA8 0%, #A89BB8 100%);
+    border-radius: 24px;
+    padding: 50px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+  }
+
+  .jobs-banner-content {
+    max-width: 400px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .jobs-tagline {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 8px 0;
+    font-weight: 400;
+  }
+
+  .jobs-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 28px 0;
+    line-height: 1.2;
+  }
+
+  .btn-white {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: white;
+    color: #8B7BA8;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-white:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .jobs-banner-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .jobs-banner-image img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0 24px 24px 0;
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .jobs-banner-container {
+      padding: 40px 40px;
+    }
+
+    .jobs-title {
+      font-size: 28px;
+    }
+
+    .jobs-tagline {
+      font-size: 15px;
+    }
+
+    .jobs-banner-image {
+      width: 45%;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .jobs-banner {
+      padding: 60px 20px;
+    }
+
+    .jobs-banner-container {
+      flex-direction: column;
+      padding: 35px 28px;
+      text-align: center;
+      min-height: auto;
+    }
+
+    .jobs-banner-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .jobs-title {
+      font-size: 26px;
+      margin-bottom: 24px;
+    }
+
+    .jobs-tagline {
+      font-size: 14px;
+    }
+
+    .jobs-banner-image {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .jobs-banner-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .jobs-banner-container {
+      padding: 30px 24px;
+      border-radius: 20px;
+    }
+
+    .jobs-title {
+      font-size: 24px;
+    }
+
+    .jobs-banner-image {
+      height: 180px;
+    }
+  }
+</style>
