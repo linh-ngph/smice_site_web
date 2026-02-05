@@ -1,0 +1,8 @@
+Update logo client (em đã upload logo mới vào folder logo client)
+Phần Smice en chiffre: cần làm cho các số nó vào giữa của khung
+Logo MSPA đã upload cái mới 
+Smice s'interconnect.. Các logo của civilizz, myli, power BI cần chỉnh lại cho giống figma
+Livre blanc: ảnh background đang bị cắt không giống so với figma
+Contactez nous: form chuyển vào link sau: https://kinsta.com/fr/docs/hebergement-wordpress/outils-mykinsta/e-mail/
+nhưng hình như nó dành cho wordpress nên cần xem  lại
+Ảnh équipe lấy ảnh team-smice giống với phần Qui sommes nous
