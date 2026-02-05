@@ -13,3 +13,104 @@ except for these word: “date clés’ has color text: #6989D4, and it has a su
 For these text: “2005, 2010, 2019, 2025” has style: font: Inter, weight: 800, style: extra bold, size: 32px, colors text: #6989D4
 
 For these text: “Création de Smice”, “Création de la 1ère plateforme et de la Smice-App”, “Création de la V2 Smice Plus”, “Les 20 ans de Smice et de la V3 de la plateforme” has style: font Inter, style Regular, weight 400, size 20px, colors text #504C54
+
+
+Team section
+In image section:
+The line “Smice, c’est avant tout une équipe engagée qui partage la même vision” has style: weight: 800, style: extra bold, size: 40px, colors text: #435888
+Except for these word: “équipé engagée”, “vision” has colors text: #6989D4
+
+
+The word “vision” has subline named: “subline_vision.png”
+
+
+The image is missing its container. Please wrap these images tag in an outer frame which has style: width: 288px, height: 224px, radius: 16px, padding: 8px, gap: 8px.
+
+Colors of outer frame for “Julien-fondateur.png” is #F3EFF6
+Colors of outer frame for “Evan-ChargeTerrain.png” is #FEF7D0
+Colors of outer frame for “Lucien-intégrateurWeb.png” is #F0F7F6
+Colors of outer frame for “Magali-DirectriceCommerciale.png” is #F3EFF6
+Colors of outer frame for “Gaelle-DitrectriceCliente.png” is #FEF7D0
+Colors of outer frame for “Développeur.png” is #F4F7FF
+Colors of outer frame for “Thomas-ProductOwner.png” is #F4F7FF
+Colors of outer frame for “Virginie-cheffeprojet.png” is #F0F7F6
+
+
+Member-name has style: weight: 700, style: bold, seize: 24px
+Membre-role has style: weight: 400, style: regular, size: 20px
+
+
+
+JobsBanner section
+It has style: background color: white, width:1224px, height: 355px, padding top:80px, bottom:80px, gap: 8px
+
+In class jobs-banner-container:
+It has style: background color: #9B8AAD, width:1224px, height: 355px, radius: 16px, padding: top 32px, right 80px, bottom 32px, left 80px
+
+In class jobs-tagline:
+The line: “Envie de rejoindre l’aventure ?” has style: weight: 700, style: bold, size: 20px, color text: #F3EFF6
+
+In class jobs-title: 
+The line: “Nos offres sont sur WTTJ !” has style: weight: 800, style: Extra bold, size: 32px; color text: #FFFFFE
+
+In class btn-white:
+The button has style: width: 258px, height: 38px, radius: 6px; padding top:8px, right 24px, bottom: 8px, left: 24px, gap 8px, background color: #F3EFF6
+The text inside this button has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
+
+In class jobs-banner-image:
+Add photo named: “WTJ.png”
+
+
+
+History-section:
+The line “Comment Smice est-il devenue une référence du Mystery Shopping ?” has style: wieght: 800, style: extra bold, size: 40px, color text: #435888
+Except for these word: “Mystery Shopping” has color text is #9B8AAD. It also has a subline named “subline_mysteryshopping.png”
+
+
+In this section, add photo named “référence_du_mystery_shopping.png”. This photo wrapped by an outer frame: width: 496px, height: 336px, Radius: 8px, padding 8px, Gap: 8px, background color: #F3EFF6
+
+The line “Depuis près de vingt ans…qui visent l’excellence” has style: Weight 500, style medium, size 18px, color text: #7C797F
+
+
+
+FAQSection:
+The line “Quelques réponses à vos question” has style: Weight 800, Style extra bold, size 40px, color text: #435888
+Except for the word :”réponses” has color text is #9B8AAD and a subline named: “subline_reponses.png”
+
+
+In class faq-item:
+background color is white (same color with faq container)
+
+In class “faq-question”:
+It has style: weight 700, style bold, size: 20px, color text: #566FAC
+
+
+In class “faq-toggle”:
+It has style: width 24px, height 24px, background color: #9B8AAD
+
+These icon-plus, icon-close has style: width 8.64px, height 8.64px, color: #FFFFFE
+
+
+
+Contact-section:
+
+In class contact-form-wrapper:
+The line “Passons à la prochaine étape…” has style: color text: #8EA7DF, width 700, style Italic, size 16px
+The line “Contactez-nous !” has style: weight 800, style extra bold, size 32px, color text: #566FAC
+The line “Envie d’en savoir plus…contactez-nous!” has style: weight 400, style regular, size 16px, color text: #9795B5
+These word “Prénom, Nom, Email, Poste actuel, Description de votre besoin” has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
+
+Add image named: “team_smice.png” to this section
+
+The button “Envoyer” has width 163px, height 38px, Radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px, background color: #6989D4
+
+
+
+
+
+
+
+
+
+
+
