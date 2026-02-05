@@ -6,12 +6,16 @@
   <div class="history-container">
     <h2 class="history-title">
       Comment Smice est-il devenu une référence<br />
-      du <span class="underline">Mystery Shopping</span> ?
+      du <span class="highlight">Mystery Shopping<img src="/images/about/history-section/subline_mysteryshopping.png" alt="" class="subline-mysteryshopping" /></span> ?
     </h2>
     
     <div class="history-content">
-      <div class="history-image">
-        <img src="/images/about/history-meeting.png" alt="Réunion d'équipe Smice" />
+      <div class="history-image-wrapper">
+        <div class="history-image-frame">
+          <div class="history-image">
+            <img src="/images/about/history-section/référence_du_mystery_shopping.png" alt="Référence du Mystery Shopping" />
+          </div>
+        </div>
       </div>
       
       <div class="history-text">
@@ -38,29 +42,38 @@
 
 <style>
   .history-section {
-    background-color: #F3EFF6;
+    background-color: #FFFFFE;
     padding: 80px 24px;
   }
 
   .history-container {
-    max-width: 1100px;
+    max-width: 1224px;
+    width: 100%;
     margin: 0 auto;
   }
 
   .history-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--text-dark);
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     text-align: center;
     line-height: 1.3;
     margin: 0 0 60px 0;
   }
 
-  .history-title .underline {
-    color: var(--primary-blue);
-    text-decoration: underline;
-    text-decoration-color: var(--primary-blue);
-    text-underline-offset: 4px;
+  .history-title .highlight {
+    color: #9B8AAD;
+    position: relative;
+    display: inline-block;
+  }
+
+  .subline-mysteryshopping {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .history-content {
@@ -70,16 +83,33 @@
     align-items: center;
   }
 
+  .history-image-wrapper {
+    width: 496px;
+    height: 336px;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #F3EFF6;
+  }
+  .history-image-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    padding: 6px;
+    background-color: #F3EFF6;
+  }
   .history-image {
     width: 100%;
-    border-radius: 16px;
+    height: 100%;
+    border-radius: 4px;
     overflow: hidden;
+    transform: scale();
   }
 
   .history-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    display: block;
   }
 
   .history-text {
@@ -89,8 +119,9 @@
   }
 
   .history-text p {
-    font-size: 16px;
-    color: var(--text-gray);
+    font-size: 18px;
+    font-weight: 500;
+    color: #7C797F;
     line-height: 1.7;
     margin: 0;
   }

@@ -2,29 +2,31 @@
 // Team Section - Qui sommes-nous page
 
 const teamMembers = [
-  { name: "Julien", role: "Fondateur et Tyran", image: "/images/about/Team-section/Julien-fondateur.png" },
-  { name: "Lucien", role: "Intégrateur web", image: "/images/about/Team-section/Lucien-intégrateurWeb.png" },
-  { name: "Gaëlle", role: "Directrice de Clientèle", image: "/images/about/Team-section/Gaelle-DirectriceCliente.png" },
-  { name: "Thomas", role: "Product Owner", image: "/images/about/Team-section/Thomas-ProductOwner.png" },
-  { name: "Evan", role: "Chargé de terrain", image: "/images/about/Team-section/Evan-ChargeTerrain.png" },
-  { name: "Magali", role: "Directrice commerciale", image: "/images/about/Team-section/Magali-DirectriceCommerciale.png" },
-  { name: "Le développeur", role: "Développeur Front", image: "/images/about/Team-section/Développeur.png" },
-  { name: "Virginie", role: "Cheffe de projet", image: "/images/about/Team-section/Virginie-cheffeprojet.png" },
+  { name: "Julien", role: "Fondateur et Tyran", image: "/images/about/Team-section/Julien-fondateur.png", bgColor: "#F3EFF6" },
+  { name: "Lucien", role: "Intégrateur web", image: "/images/about/Team-section/Lucien-intégrateurWeb.png", bgColor: "#F0F7F6" },
+  { name: "Gaëlle", role: "Directrice de Clientèle", image: "/images/about/Team-section/Gaelle-DirectriceCliente.png", bgColor: "#FEF7D0" },
+  { name: "Thomas", role: "Product Owner", image: "/images/about/Team-section/Thomas-ProductOwner.png", bgColor: "#F4F7FF" },
+  { name: "Evan", role: "Chargé de terrain", image: "/images/about/Team-section/Evan-ChargeTerrain.png", bgColor: "#FEF7D0" },
+  { name: "Magali", role: "Directrice commerciale", image: "/images/about/Team-section/Magali-DirectriceCommerciale.png", bgColor: "#F3EFF6" },
+  { name: "Le développeur", role: "Développeur Front", image: "/images/about/Team-section/Développeur.png", bgColor: "#F4F7FF" },
+  { name: "Virginie", role: "Cheffe de projet", image: "/images/about/Team-section/Virginie-cheffeprojet.png", bgColor: "#F0F7F6" },
 ];
 ---
 
 <section class="team-section" id="team">
   <div class="team-container">
     <h2 class="team-title">
-      Smice, c'est avant tout une <span class="underline">équipe engagée</span><br />
-      qui partage la même <span class="underline">vision</span>
+      Smice, c'est avant tout une <span class="highlight">équipe engagée</span><br />
+      qui partage la même <span class="highlight-vision">vision<img src="/images/about/Team-section/subline_vision.png" alt="" class="subline-vision" /></span>
     </h2>
     
     <div class="team-grid">
       {teamMembers.map((member) => (
         <div class="team-member">
-          <div class="member-image">
-            <img src={member.image} alt={member.name} />
+          <div class="member-image-wrapper" style={`background-color: ${member.bgColor}`}>
+            <div class="member-image">
+              <img src={member.image} alt={member.name} />
+            </div>
           </div>
           <h3 class="member-name">{member.name}</h3>
           <p class="member-role">{member.role}</p>
@@ -41,24 +43,37 @@ const teamMembers = [
   }
 
   .team-container {
-    max-width: 1100px;
+    max-width: 1224px;
+    width: 100%;
     margin: 0 auto;
   }
 
   .team-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--text-dark);
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     text-align: center;
     line-height: 1.3;
     margin: 0 0 60px 0;
   }
 
-  .team-title .underline {
-    color: var(--primary-blue);
-    text-decoration: underline;
-    text-decoration-color: var(--primary-blue);
-    text-underline-offset: 4px;
+  .team-title .highlight {
+    color: #6989D4;
+  }
+
+  .team-title .highlight-vision {
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .subline-vision {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .team-grid {
@@ -71,29 +86,38 @@ const teamMembers = [
     text-align: left;
   }
 
+  .member-image-wrapper {
+    width: 288px;
+    height: 224px;
+    border-radius: 16px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
   .member-image {
     width: 100%;
-    aspect-ratio: 1;
-    border-radius: 16px;
+    height: 100%;
+    border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 16px;
   }
 
   .member-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
   }
 
   .member-name {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
     color: var(--text-dark);
     margin: 0 0 4px 0;
   }
 
   .member-role {
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 400;
     color: var(--text-gray);
     margin: 0;
   }

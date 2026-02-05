@@ -7,11 +7,11 @@
     <div class="jobs-banner-content">
       <p class="jobs-tagline">Envie de rejoindre l'aventure ?</p>
       <h2 class="jobs-title">Nos offres sont sur WTTJ !</h2>
-      <a href="#" class="btn-white">Consulter les dernières offres</a>
+      <a href="https://www.welcometothejungle.com/fr/companies/smice" class="btn-white" target="_blank" rel="noopener">Consulter les dernières offres</a>
     </div>
     
     <div class="jobs-banner-image">
-      <img src="/images/about/jobs-collage.png" alt="L'équipe Smice" />
+      <img src="/images/about/jobs-banner/WTJ.png" alt="Welcome to the Jungle" />
     </div>
   </div>
 </section>
@@ -19,65 +19,75 @@
 <style>
   .jobs-banner {
     background-color: white;
-    padding: 80px 24px;
+    width: 100%;
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 80px 0;
   }
 
   .jobs-banner-container {
-    max-width: 1100px;
+    width: 1224px;
+    max-width: 100%;
+    height: 200px;
     margin: 0 auto;
-    background: linear-gradient(135deg, #8B7BA8 0%, #A89BB8 100%);
-    border-radius: 24px;
-    padding: 50px 60px;
+    background-color: #9B8AAD;
+    border-radius: 16px;
+    padding: 32px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    min-height: 200px;
   }
 
   .jobs-banner-content {
-    max-width: 400px;
+    max-width: 600px;
     z-index: 2;
     position: relative;
   }
 
   .jobs-tagline {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    font-weight: 700;
+    color: #F3EFF6;
     margin: 0 0 8px 0;
-    font-weight: 400;
   }
 
   .jobs-title {
     font-size: 32px;
-    font-weight: 700;
-    color: white;
+    font-weight: 800;
+    color: #FFFFFE;
     margin: 0 0 28px 0;
     line-height: 1.2;
   }
 
   .btn-white {
-    display: inline-block;
-    padding: 14px 28px;
-    background-color: white;
-    color: #8B7BA8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 258px;
+    height: 38px;
+    padding: 8px 24px;
+    gap: 8px;
+    background-color: #F3EFF6;
+    color: #9B8AAD;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
   }
 
   .btn-white:hover {
-    background-color: #f5f5f5;
+    background-color: #e8e3f0;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   .jobs-banner-image {
+    transform: rotate(12deg) scale(2);
     position: absolute;
-    right: 0;
+    right: 400px;
     top: 0;
     bottom: 0;
     width: 50%;
@@ -91,7 +101,7 @@
     height: 100%;
     width: auto;
     object-fit: cover;
-    border-radius: 0 24px 24px 0;
+    border-radius: 0 16px 16px 0;
   }
 
   /* ===== Tablet Responsive ===== */

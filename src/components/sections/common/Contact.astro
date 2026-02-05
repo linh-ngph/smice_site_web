@@ -5,7 +5,7 @@ interface Props {
   decorationColor?: string;
 }
 
-const { decorationColor = "#4A5FC1" } = Astro.props;
+const { decorationColor = "#435888" } = Astro.props;
 ---
 
 <section class="contact-section" id="contact">
@@ -60,7 +60,7 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
       <div class="image-decoration" style={`background: ${decorationColor};`}></div>
       <div class="team-image-bg">
         <div class="team-image">
-          <img src="/images/team/team-contactez-nous.png" alt="L'équipe Smice" />
+          <img src="/images/about/contactez-nous/team_smice.png" alt="L'équipe Smice" />
         </div>
       </div>
     </div>
@@ -75,7 +75,8 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
   }
 
   .contact-container {
-    max-width: 1200px;
+    max-width: 1224px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,18 +102,16 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
   .contact-title {
     font-size: 32px;
     font-weight: 800;
-    font-style: normal;
     color: #566FAC;
-  
+    margin: 0;
   }
 
   .contact-subtitle {
     font-size: 16px;
     font-weight: 400;
-    font-style: normal;
     color: #9795B5;
     line-height: 1.6;
-
+    margin: 0;
   }
 
   /* Form Styles */
@@ -141,8 +140,7 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
   .form-group label {
     font-size: 14px;
     font-weight: 600;
-    font-style: normal;
-    color: #435888;
+    color: #9B8AAD;
   }
 
   .form-group input,
@@ -186,17 +184,23 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
   }
 
   .submit-btn {
-    padding: 16px 40px;
+    width: 163px;
+    height: 38px;
+    padding: 8px 16px;
+    gap: 8px;
     background: #6989D4;
     color: white;
     font-size: 14px;
     font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
     align-self: flex-end;
     margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .submit-btn:hover {
@@ -221,7 +225,6 @@ const { decorationColor = "#4A5FC1" } = Astro.props;
     width: 300px;
     height: 550px;
     border-radius: 20px;
-    background: #435888 !important;
     z-index: 1;
   }
 
