@@ -100,7 +100,11 @@ The line “Contactez-nous !” has style: weight 800, style extra bold, size 32
 The line “Envie d’en savoir plus…contactez-nous!” has style: weight 400, style regular, size 16px, color text: #9795B5
 These word “Prénom, Nom, Email, Poste actuel, Description de votre besoin” has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
 
-Add image named: “team_smice.png” to this section
+Add image named: “team_smice.png” to this section, this image was wrapped by an outer framer which has width 497px, height 404px, radius 16px, border 8px, gap 8px, background color : #C2ADD8
+
+The image decoration has style: width 399px, height 565px, radius top-left: 16px, bottom-left 16px, background color: #9B8AAD
+
+
 
 The button “Envoyer” has width 163px, height 38px, Radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px, background color: #6989D4
 

@@ -1,0 +1,218 @@
+Page Services
+
+
+Hero section:
+Add photo named “banner.png”, this photo has style: blend Darken, width 1224px, height 560px, Radius 16px, Radial Gradient and background blur 14.2 hex
+
+The line “Pilotez la qualtié et l’expérience client…Smice” has style: weight 800, style extra bold, size 42px, color text: #FFFFFE
+Except for these word: “qualité”, “l’expérience client” has color text is #FAD917. Add subline for these word which named : “subline-qualité.png”, “subline-expérience.png”
+
+
+The line “Smice aide les réseaux… l’observation à l’action” has style: weight 700, style bold, size 20px, color text: #504C54
+
+
+The button “Découvrir nos services” wrapped by an outer frame: width 240px, height 45px, radius 6px, padding top 8x, right 16px, bottom 8px, left 16px, gap 8px, background color #FFFFFE.
+The text inside this wrap has style: weight 600, style semi bold, size 18px, color #435888
+
+
+
+Solution section:
+The line: “Découvrez notre solution” has style weight 800, style extra bold, seize 40px, color text: #435888. 
+Except the word “solution” has color text is: #6989D4, and a subline named “subline-solution.png”
+
+In carousel container, it has 5 steps below:
+In the class step-label, the text is “Étape 1”
+
+It has title is: “Conseil & Conception du Questionnaire”
+
+It has description is: “Nous accompagnons vos équipes dans la définition des objectifs, la construction des questionnaires, la création des items, scénarios et critères pour garantir des évaluations pertinentes et adaptées à vos enjeux.
+Objectif: 
+“
+
+It has bullets below:
+Définition des objectifs & KPIs
+Conception ou optimisation du questionnaire
+Alignement avec vos standards opérationnels
+		You need also add  image named “step1.png” for this step
+
+In the class step-label, the text is “Étape 2”
+
+It has title is: “Sélection des Smiceurs”
+
+It has description is: “Nous identifions dans notre communauté les profils les plus adaptés à vos besoins selon plusieurs critères : Proximité géographique, expérience du secteur concerné, qualité et fiabilité des enquêtes précédentes.
+Objectif: 
+”
+
+It has bullets below::
+Garantir des audits cohérents
+Réalisés par des profils fiables et représentatifs de vos clients réels.
+		
+You need also add  image named “step2.png” for this step
+
+In the class step-label, the text is “Étape 3”
+
+It has title is: “Attribution des missions”
+
+It has description is: “Une fois les profils sélectionnés, Smice attribue à chaque Smiceur la mission adaptée à son expertise :
+Mission de conformité pour vérifier le respect des standards et procédures.
+Mission d’expérience (visite mystère) pour évaluer la qualité perçue du point de vue client.
+Mission d’audit opérationnelle pour mesurer la cohérence et la performance opérationnelle.
+Toutes les missions sont centralisées et suivies via la Smice App, qui permet d’assurer le bon déroulement et la traçabilité complète de chaque étape sur le terrain.
+
+Objectif: 
+”
+
+It has bullets below:
+Garantir que chaque mission soit réalisée par le bon profil, au bon endroit, au bon moment.
+You need also add  image named “step3.png” for this step
+
+In the class step-label, the text is “Étape 4”
+
+It has title is:”Réalisation sur le terrain”
+
+It has description is: “Les Smiceurs exécutent les missions selon vos standards : observation terrain, reporting en temps réel, respect des protocoles d’évaluation.
+Les données collectées sont immédiatement intégrées dans la Smice App, garantissant une traçabilité totale.
+
+Objectif: 
+”
+
+
+It has bullets below:
+Des données fiables, précises et exploitables dès la fin de la mission.
+
+You need also add  image named “step4.png” for this step
+
+In the class step-label, the text is “Étape 5”
+
+It has title is:”Analyse et restitution sur la plateforme Smice”
+
+It has description is: “Tous les résultats sont consolidés sur votre tableau de bord Smice. Vous pouvez suivre :
+Les indicateurs de performance qualité.
+Les écarts par établissement ou région.
+L’évolution de vos plans d’action.
+
+
+Objectif: 
+”
+
+
+It has bullets below:
+Une vision 360° de la qualité opérationnelle et de l’expérience client, accessible en temps réel.
+You need also add  image named “step5.png” for this step
+
+
+
+
+
+
+In the class step-label, all steps has style: weight 700, style bold, size 20px, color text is #FAD917.
+
+
+In the class step-title, all titles has style: weight 800, style extra bold, size 32px, color text: #435888. Except for the word “Object” has color text is: #6989D4
+
+In the class step-description, all descriptions has style: weight 500, style medium, size 16, color text #7C797F
+
+
+#CẦN SỬA LẠI SMICE S’INTERCONNECT GIỐNG NHƯ SỬA Ở HOMEPAGE
+
+
+
+You need to add one more benefits-section, which has:
+Title: “Pour vos standards: des audits fiables et précis”. It has weight 800, style extra bold, size 40px, color text: #504C54.
+Except for these words: “standards”, “audits” has color text: #6989D4, and subline for each words named “subline-standards.png”, and “subline-audits.png”.
+
+It has section-title is: “Audits internes & audits opérationnels”, it has style: weight 800, style extra bold, size 32px, color text: #504C54
+
+It has description is: “
+Avec Smice, vous combinez audits internes et externes pour un pilotage qualité complet.
+
+La Smice App permet à vos équipes de réaliser des contrôles homogènes sur tout le réseau.
+
+Nos auditeurs externes apportent un regard expert pour une vision fiable et exploitable de votre performance.
+“
+it has style weight 500, style medium, size 18px, color text #7C797F
+
+The button “En savoir plus” has style: width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px, background color: #6989D4
+Add image named “audits.png” for this section.
+
+
+	For the benefits-section id=benefit-1:
+	- The title: “Pour vos équipes…progression” has style: weight 800, style extra 
+bold,size 40px, color text: #504C54.
+Except for these words: “équipes”, “outil” has color text: #9B8AAD, and subline for each words named “subline-équipes.png”, and “subline-outil.png”
+
+- The line “Auto-évaluation interne” has style: weight 800, style extra bold, size 32px, color text: #504C54
+
+- The description “L’auto-évaluation Smice…sur le terrain” has style weight 500, style medium, size 18px, color text #7C797F
+
+- The button “En savoir plus” has style: width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px, background color: #9B8AAD
+
+- Add image named “auto-évaluation.png” for this section.
+
+
+
+
+For the benefits-section id=benefit-2:
+	- The title: “Pour vos clients…l’expérience vécue” has style: weight 800, style extra 
+bold,size 40px, color text: #504C54.
+Except for these words: “clients”, “l’expérience” has color text: #75898A, and subline for each words named “subline-clients.png”, and “subline-expérience.png”
+
+- The line “Visites mystères” has style: weight 800, style extra bold, size 32px, color text: #504C54
+
+- The description “Les visites mystère Smice …des leviers d’amélioration.” has style weight 500, style medium, size 18px, color text #7C797F
+
+- The button “En savoir plus” has style: width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px, background color: #75898A
+
+- Add image named “visitesmystère.png” for this section.
+
+
+
+
+
+For the benefits-section id=benefit-3:
+	- The title: “Pour vos résultats…approfondie et utile” has style: weight 800, style extra 
+bold,size 40px, color text: #504C54.
+Except for these words: “résultats”, “compréhension” has color text: #6989D4 and subline for each words named “subline-résultats.png”, and “subline-compréhension.png”
+
+- The line “Analyse des résultats” has style: weight 800, style extra bold, size 32px, color text: #504C54
+
+- The description “Nos équipes d’analystes …recommandations opérationnelles.” has style weight 500, style medium, size 18px, color text #7C797F
+
+- The button “En savoir plus” has style: width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px, background color: #6989D4
+
+- Add image named “analyse-résultats.png” for this section.
+
+
+
+
+In testimonials section:
+The line “Ils ont décidé de nous faire confiance :” has style weight 800, style extra bold, size 40px, color text #435888
+except for the word “confiance” has corlor text: #6989D4 and a subline named: “subline-confiance.png”
+
+The line “Ces dirigeants améliorent l’expérience client de leurs enseignes main dans la main avec Smice, et voici leurs retours.” has style weight 500, style medium, size 16px, color text: #9795B5
+
+
+For testimonial card, here are these background color of card and color text of author name to correspond to background color that you can use alternative: 
+background color: #F0F7F6, color text author name: #75898A
+background color: #F4F7FF,  color text author name: #435888
+background color:#F3EFF6, color text author name: #9B8AAD
+
+For author quote, it has style: font DM sans, weight 400, style regular, size 18px, color text: #504C54
+For author company, it has style: weight 600, style semi bold, size 14px, color text: #7C797F
+
+
+
+
+In contact-section:
+
+In class contact-form-wrapper:
+The line “Passons à la prochaine étape…” has style: color text: #8EA7DF, width 700, style Italic, size 16px
+The line “Contactez-nous !” has style: weight 800, style extra bold, size 32px, color text: #566FAC
+The line “Envie d’en savoir plus…contactez-nous!” has style: weight 400, style regular, size 16px, color text: #9795B5
+These word “Prénom, Nom, Email, Poste actuel, Description de votre besoin” has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
+
+Add image named: “team_smice.png” to this section, this image was wrapped by an outer framer which has width 497px, height 404px, radius 16px, border 8px, gap 8px, background color : #FEF7D0
+
+The image decoration has style: width 399px, height 565px, radius top-left: 16px, bottom-left 16px, background color: #FAD917
+
+The button “Envoyer” has width 163px, height 38px, Radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px, background color: #6989D4
