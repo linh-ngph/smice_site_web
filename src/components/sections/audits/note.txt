@@ -1,0 +1,123 @@
+Page Audit
+
+Hero section:
+Add image named “banner.png” for this section
+
+For class hero title, the text should be: “Des audits fiables, homogènes et exploitables pour piloter votre réseau”, it has style weight 800, style extra bold, size 42px, color text is: #435888
+Except for these words: “audits”, “piloter” has color text is #6989D4
+
+For class hero description: the text should be: “Smice vous aide à contrôler, site par site, le respect de vos standards d’hygiène, de process et de service”, it has style: weight 500, style medium, size 18px, color text: #504C54
+
+The button “Prendre rendez-vous” is wrapped by an outer frame: background color: #6989D4, width 223px, height 45px, radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px. The text inside has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+For class clients title, it has style: weight 700, style bold, size 20px, color text is: #504C54.
+Except for the word “50 entreprises” has color text: #6989D4 and a sublime named sublime-50ents.png”
+
+For class logo client, add these images: “club-med.png”, “disneyland.png”, “dominos.png”, “haagendazs.png”, “hermes.png”, “sncf.png”
+
+
+Intro section
+Add image named “intro.png” for this section
+
+For class intro-title, the text should be: “Deux approches complémentaires
+pour contrôler vos opérations”, it has style weight 800, style extra bold, size 40px, color text #504C54
+Except for the word “Deux approches” has color text: #6989D4
+
+For class intro-text, the text should be: 
+“
+Audit interne digitalisé
+Vos équipes réalisent des audits uniformes sur la Smice App grâce à des critères clairs et des preuves visuelles centralisées. 
+
+Audit opérationnel externalisé
+Nos auditeurs évaluent vos sites avec un regard neutre et expert pour analyser précisément hygiène, production, sécurité, accueil et service.
+“
+It has style: weight 400, style regular size 18px, color text: #7C797F
+Except for these words: “Audit interne digitalisé”, and “Audit opérationnel externalisé” has style: weight 700, style bold
+
+
+The button “En savoir plus” is wrapped by an outer frame: background color: #6989D4, width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px. The text inside has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+
+Details section
+For the class details title, the text should be: “Un processus conçu pour améliorer la qualité et la maîtrise opérationnelle“, it has style weight 800, style extra bold, size 40px, color text is: #435888
+
+For the class details subtitle: the text should be: “De la préparation à la restitution, Smice structure chaque étape de votre audit
+afin d’assurer une évaluation cohérente, objective et simple à exploiter.”, it has style weight 500, style medium, size 20px, color text: #504C54
+
+
+For the first detail card, it has:
+detail-phase: the text should be: “Avant l’audit”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Préparation et cadrage”, it has style: weight 700, style bold, size 24px, color text #75898A
+detail-image: Add image named “avant-audit.png” for this.
+detail-description: the text should be: “Définition des critères, structure des grilles, instructions intégrées dans l’app : tout est prêt pour assurer un contrôle homogène sur l’ensemble de vos sites.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+
+	For the second detail card, it has: 
+detail-phase: the text should be: “Pendant l’audit”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Collecte terrain fiable”, it has style: weight 700, style bold, size 24px, color text #6989D4
+detail-image: Add image named “pendant-audit.png” for this.
+detail-description: the text should be: “Vos collaborateurs ou nos auditeurs Smice saisissent leurs constats directement dans l’application : photos, notations, commentaires, preuves… sans perte d’information.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+For the third detail card, it has: 
+detail-phase: the text should be: “Après l’audit”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Analyse et exploitation”, it has style: weight 700, style bold, size 24px, color text #9B8AAD
+detail-image: Add image named “apres-audit.png” for this.
+detail-description: the text should be: “Les résultats sont centralisés : écarts identifiés, comparaisons inter-sites, tendances, priorisation. Vous disposez d’une base claire pour piloter vos plans d’action.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+
+	
+	Carrousel section:
+	For the first card:
+- Add image named “smiceurs.png” for this.
+	- card-content: the title should be: “Des Smiceurs formés, fiables et passionnés”, it   has style weight 800, style extra bold, size 32px, color text: #435888
+- The line: “Chaque mission Smice … exploitable de l’expérience client.” has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Notre objectif : vous garantir des données fiables, comparables et cohérentes, quel que soit le lieu ou le moment du service.” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+
+For the second card:
+- Add image named “équipe-smice.png” for this.
+	- card-content: the title should be: “Une équipe engagée à vos côtés”, it   has style weight 800, style extra bold, size 32px, color text: #435888
+- The line: “Chez Smice, chaque projet est piloté… un impact concret.” has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Notre mission : faire du Mystery Shopping un outil vivant, utile et parfaitement aligné avec vos enjeux de marque.” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+
+For the third card:
+- Add image named “smiceurs.png” for this.
+	- card-content: the title should be: “Une méthodologie éprouvée, un accompagnement continu”, it   has style weight 800, style extra bold, size 32px, color text: #435888
+- The line: “Nous croyons en une démarche… sécurisé de vos résultats.” has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Avec Smice, vous bénéficiez d’un partenaire de confiance, qui combine rigueur de l’audit et proximité humaine.” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+
+Characteristics section:
+For the characteristic header, the text should be “Des critères concrets pour une vision juste de la réalité”, it has style: weight 800, style extra bold, size 40px, color text: #435888.
+Except for the word: “concrets” has color text is: #6989D4, and a sublime named “subline-concrets.png”
+
+The line “Vos standards…d’un audit annuel”, replace par this paragraph: “Chaque visite mystère repose sur des indicateurs clairs et personnalisés. Vous bénéficiez d’un suivi transparent, adapté à vos enjeux de satisfaction et de performance.” that has style: weight 500, style medium, size 20px, color text: #504C54
+
+In the class characteristics-grid:
+The first characteristic-card has:
+- characteristic label: the text should be: “Qualité de l’accueil”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Chaleur du premier contact, disponibilité et professionnalisme du personnel.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-star.png”
+
+
+The second characteristic-card has:
+- characteristic label: the text should be: “Fluidité du parcours”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Obtenez des retours d’expériences”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-people.png”
+
+
+The third characteristic-card has:
+- characteristic label: the text should be: “Respect des standards”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Vos points améliorables, en images”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-graph.png”
+
+
+The fourth characteristic-card has:
+- characteristic label: the text should be: “Engagement de l’équipe”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Implication, attitude positive, conseils et capacité à valoriser l’offre.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-note.png”
+
+
+FAQ section
+
