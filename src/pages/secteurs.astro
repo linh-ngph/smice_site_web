@@ -2,12 +2,81 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import Contact from '../components/sections/common/Contact.astro';
+import Feature from '../components/sections/homepage/Feature.astro';
+import Testimonials from '../components/sections/common/Testimonials.astro';
 
 const seoConfig = {
-  title: "Secteurs d'activité | SMICE",
-  description: "Découvrez les secteurs dans lesquels nous intervenons. Expertise multi-sectorielle et accompagnement sur mesure.",
-  keywords: ["SMICE", "secteurs", "industries", "domaines d'expertise", "activités"],
+  title: "Secteurs | SMICE",
+  description: "Découvrez nos solutions adaptées à votre secteur d'activité. Hôtellerie, restauration, retail, loisirs et transports.",
+  keywords: ["SMICE", "secteurs", "hôtellerie", "restauration", "retail", "loisirs", "transports", "qualité"],
 };
+
+const secteursGroup1 = [
+  {
+    number: 1,
+    title: "Restauration",
+    subtitle: "Garantissez une qualité constante à chaque service",
+    paragraphs: [
+      "Dans un restaurant, tout doit aller vite, bien, et sans compromis : organisation en cuisine, hygiène, rapidité d'exécution, présentation des plats, sourire du serveur, ambiance sonore, propreté en salle.",
+      "Smice vous offre une vision claire et factuelle de votre qualité opérationnelle, service après service, afin d'identifier les irritants, fluidifier les process et assurer une expérience stable même en période de forte affluence.",
+      "Nos outils sont conçus pour les restaurants indépendants, chaînes, franchises et dark kitchens."
+    ],
+    image: "/images/secteurs/restauration.png",
+    link: "/secteurs/restauration"
+  },
+  {
+    number: 2,
+    title: "Hôtellerie",
+    subtitle: "Offrez une expérience irréprochable, du check-in au check-out",
+    paragraphs: [
+      "Dans l'hôtellerie, chaque détail influence la satisfaction : propreté, fluidité du check-in, qualité du petit déjeuner, tenue des équipes, ambiance générale, réactivité face aux demandes...",
+      "Smice vous aide à mesurer la cohérence de l'expérience délivrée dans toutes vos unités, qu'il s'agisse d'hôtels économiques, premium ou luxe.",
+      "Nos visites et évaluations permettent de détecter les écarts invisibles au management, d'objectiver la qualité perçue et de faire progresser vos équipes sur les moments décisifs du séjour."
+    ],
+    image: "/images/secteurs/hotellerie.png",
+    link: "/secteurs/hotellerie"
+  }
+];
+
+const secteursGroup2 = [
+  {
+    number: 3,
+    title: "Retail",
+    subtitle: "Maîtrisez l'expérience client sur l'ensemble de vos points de vente",
+    paragraphs: [
+      "Dans le retail, la performance repose sur la disponibilité produit, la qualité du conseil, la maîtrise du merchandising, l'accueil, l'encaissement et même la propreté des cabines.",
+      "Smice mesure objectivement chaque étape du parcours client, du premier regard sur la vitrine jusqu'au ticket de caisse, pour vous aider à optimiser vos ventes et garantir des standards homogènes dans tout votre réseau.",
+      "Grâce à nos check-lists, photos et scoring multisite, vous détectez immédiatement les ruptures, les écarts de présentation ou les erreurs de posture commerciale."
+    ],
+    image: "/images/secteurs/retail.png",
+    link: "/secteurs/retail"
+  },
+  {
+    number: 4,
+    title: "Transports",
+    subtitle: "Fluidifiez et sécurisez l'expérience voyageur",
+    paragraphs: [
+      "Dans le transport (gares, aéroports, stations, bus, trains), la perception client est influencée par la signalétique, la propreté, les points d'attente, l'information voyageurs, l'accessibilité PMR et la courtoisie des équipes.",
+      "Smice évalue chaque interaction et chaque environnement pour vous permettre d'offrir un voyage sans frictions : meilleur accueil, meilleur confort, meilleure orientation et meilleure gestion des flux.",
+      "Nos modules multisites révèlent les zones à risque, les écarts de propreté et les ruptures dans la relation client."
+    ],
+    image: "/images/secteurs/transports.png",
+    link: "/secteurs/transports"
+  },
+  {
+    number: 5,
+    title: "Loisirs",
+    subtitle: "Créez une expérience mémorable, fluide et sans irritants",
+    paragraphs: [
+      "Parcs de loisirs, musées, cinémas, aquariums, complexes sportifs ou culturels : l'expérience émotionnelle est au cœur de votre promesse.",
+      "Smice mesure la fluidité des files d'attente, la disponibilité du personnel, la qualité des interactions, la propreté, la sécurité perçue et l'ambiance générale pour vous aider à créer un parcours fluide du début à la fin.",
+      "Nos retours permettent d'optimiser chaque moment-clé : billetterie, accueil, activités, restauration, boutique, sanitaires..."
+    ],
+    image: "/images/secteurs/loisirs.png",
+    link: "/secteurs/loisirs"
+  }
+];
 ---
 
 <Layout 
@@ -15,11 +84,409 @@ const seoConfig = {
   description={seoConfig.description}
   keywords={seoConfig.keywords}
 >
-  <Navbar currentPath="/secteurs" backgroundColor="#F0F7F6" />
+  <Navbar currentPath="/secteurs" backgroundColor="white" />
   
   <main>
-    <!-- Secteurs homepage content will be implemented later -->
+    <!-- Hero Section -->
+    <section class="secteurs-hero">
+      <div class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Des solutions <span class="highlight">adaptées<img src="/images/secteurs/hero-section/subline-adaptées.png" alt="" class="subline-img" /></span> à votre <span class="highlight">secteur<img src="/images/secteurs/hero-section/subline-secteur.png" alt="" class="subline-img" /></span>
+          </h1>
+          <p class="hero-description">
+            Smice accompagne les réseaux multisites de tous secteurs d'activité avec des solutions 
+            d'audit et d'évaluation personnalisées.<br />
+            Découvrez comment nous aidons votre secteur à améliorer la qualité opérationnelle 
+            et l'expérience client.
+          </p>
+          <a href="#secteurs" class="hero-cta">
+            Découvrir nos secteurs
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section 1: Restauration & Hôtellerie -->
+    <section id="secteurs" class="secteurs-section">
+      <div class="secteurs-container">
+        {secteursGroup1.map((secteur, index) => (
+          <div class={`secteur-block ${index % 2 !== 0 ? 'image-left' : ''}`}>
+            <div class="secteur-header">
+              <h2 class="secteur-name">
+                <span class="secteur-name-highlight">{secteur.title}<img src={`/images/secteurs/hero-section/subline-${secteur.title.toLowerCase()}.png`} alt="" class="subline-img" /></span> :
+              </h2>
+              <p class="secteur-subtitle">{secteur.subtitle}</p>
+            </div>
+            <div class="secteur-row">
+              <div class="secteur-text">
+                {secteur.paragraphs.map((p: string) => (
+                  <p class="secteur-paragraph">{p}</p>
+                ))}
+                <a href={secteur.link} class="btn-secteur">En savoir plus</a>
+              </div>
+              <div class="secteur-image">
+                <img src={secteur.image} alt={secteur.title} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Smice s'interconnecte -->
+    <Feature />
+
+    <!-- Expertise Section 2: Retail, Transports & Loisirs -->
+    <section class="secteurs-section">
+      <div class="secteurs-container">
+        {secteursGroup2.map((secteur, index) => (
+          <div class={`secteur-block ${index % 2 !== 0 ? 'image-left' : ''}`}>
+            <div class="secteur-header">
+              <h2 class="secteur-name">
+                <span class="secteur-name-highlight">{secteur.title}<img src={`/images/secteurs/hero-section/subline-${secteur.title.toLowerCase()}.png`} alt="" class="subline-img" /></span> :
+              </h2>
+              <p class="secteur-subtitle">{secteur.subtitle}</p>
+            </div>
+            <div class="secteur-row">
+              <div class="secteur-text">
+                {secteur.paragraphs.map((p: string) => (
+                  <p class="secteur-paragraph">{p}</p>
+                ))}
+                <a href={secteur.link} class="btn-secteur">En savoir plus</a>
+              </div>
+              <div class="secteur-image">
+                <img src={secteur.image} alt={secteur.title} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <Testimonials 
+      backgroundColor="linear-gradient(180deg, #E8EDF8 0%, #F5F7FF 100%)"
+      sublineImage="/images/secteurs/testimonials-section/subline-confiance.png"
+    />
+
+    <Contact decorationColor="#FAD917" />
   </main>
   
   <Footer />
 </Layout>
+
+<style>
+  /* ===== Shared Subline Image Style ===== */
+  .subline-img {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  /* ===== Hero Section ===== */
+  .secteurs-hero {
+    padding: 120px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-banner {
+    position: relative;
+    max-width: 1224px;
+    width: 100%;
+    height: 560px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url('/images/secteurs/hero-section/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(30, 30, 60, 0.55) 0%, rgba(20, 20, 45, 0.8) 100%);
+    backdrop-filter: blur(24px);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 60px 40px;
+    max-width: 900px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #FFFFFE;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+  }
+
+  .hero-title .highlight {
+    color: #FAD917;
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFE;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+    text-align: center;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 45px;
+    padding: 8px 16px;
+    gap: 8px;
+    background: #FFFFFE;
+    color: #435888;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .hero-cta:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 88, 136, 0.2);
+  }
+
+  /* ===== Secteurs Section ===== */
+  .secteurs-section {
+    padding: 100px 24px;
+    background-color: #EDF1F8;
+  }
+
+  .secteurs-container {
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+
+  /* ===== Secteur Blocks ===== */
+  .secteur-block {
+    margin-bottom: 80px;
+  }
+
+  .secteur-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .secteur-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .secteur-name {
+    font-size: 32px;
+    font-weight: 800;
+    color: #435888;
+    margin: 0 0 12px 0;
+  }
+
+  .secteur-name-highlight {
+    color: #75898A;
+    position: relative;
+    display: inline-block;
+  }
+
+  .secteur-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504C54;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .secteur-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .secteur-block.image-left .secteur-image {
+    order: -1;
+  }
+
+  .secteur-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .secteur-paragraph {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7C797F;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .secteur-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .secteur-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .btn-secteur {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    background-color: #435888;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+
+  .btn-secteur:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 88, 136, 0.3);
+  }
+
+  /* ===== Tablet Responsive ===== */
+  @media (max-width: 1024px) {
+    .hero-banner {
+      height: 450px;
+    }
+
+    .hero-title {
+      font-size: 34px;
+    }
+
+    .hero-description {
+      font-size: 18px;
+    }
+
+    .secteur-row {
+      gap: 40px;
+    }
+
+    .secteur-name {
+      font-size: 28px;
+    }
+
+    .secteur-subtitle {
+      font-size: 20px;
+    }
+  }
+
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    .secteurs-hero {
+      padding: 100px 16px 60px;
+    }
+
+    .hero-banner {
+      height: 400px;
+      border-radius: 12px;
+    }
+
+    .hero-content {
+      padding: 40px 24px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 16px;
+      margin: 0 0 24px 0;
+    }
+
+    .hero-cta {
+      width: 220px;
+      height: 42px;
+      font-size: 16px;
+    }
+
+    .secteurs-section {
+      padding: 60px 16px;
+    }
+
+    .secteur-block {
+      margin-bottom: 60px;
+    }
+
+    .secteur-name {
+      font-size: 24px;
+    }
+
+    .secteur-subtitle {
+      font-size: 18px;
+    }
+
+    .secteur-row {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .secteur-block.image-left .secteur-image {
+      order: 0;
+    }
+
+    .secteur-text {
+      text-align: center;
+    }
+
+    .btn-secteur {
+      align-self: center;
+    }
+  }
+
+  /* ===== Small Mobile ===== */
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 24px;
+    }
+
+    .hero-description {
+      font-size: 14px;
+    }
+
+    .secteur-name {
+      font-size: 22px;
+    }
+
+    .secteur-subtitle {
+      font-size: 16px;
+    }
+  }
+</style>
+
+
