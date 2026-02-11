@@ -36,13 +36,12 @@ const seoConfig = {
 };
 
 const clientLogos = [
-  { name: "Disney", src: "/images/logos/disney.png" },
-  { name: "Hermès", src: "/images/logos/hermes.png" },
-  { name: "SNCF", src: "/images/logos/sncf.png" },
-  { name: "Club Med", src: "/images/logos/clubmed.png" },
-  { name: "Häagen-Dazs", src: "/images/logos/haagendazs.png" },
-  { name: "Domino's", src: "/images/logos/dominos.png" },
-  { name: "Samsung", src: "/images/logos/samsung.png" },
+  { name: "Club Med", src: "/images/audits/logo-client/club-med.png" },
+  { name: "Disneyland", src: "/images/audits/logo-client/disneyland.png" },
+  { name: "Domino's", src: "/images/audits/logo-client/dominos.png" },
+  { name: "Häagen-Dazs", src: "/images/audits/logo-client/haagendazs.png" },
+  { name: "Hermès", src: "/images/audits/logo-client/hermes.png" },
+  { name: "SNCF", src: "/images/audits/logo-client/sncf.svg" },
 ];
 ---
 
@@ -58,15 +57,14 @@ const clientLogos = [
     <section class="audit-hero">
       <div class="hero-container">
         <div class="hero-image">
-          <img src="/images/services/audit-hero.png" alt="Audit qualité illustration" />
+          <img src="/images/audits/hero-section/banner.png" alt="Audit qualité illustration" />
         </div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Mesurez la conformité de vos standards grâce à un
-            <span class="highlight">audit structuré</span>
+            Des <span class="highlight">audits</span> fiables, homogènes et exploitables pour <span class="highlight">piloter</span> votre réseau
           </h1>
           <p class="hero-description">
-            Grâce aux audits Smice, vos équipes terrain bénéficient d'évaluations objectives, avec des critères clairs, des preuves visuelles et une méthodologie homogène sur l'ensemble du réseau.
+            Smice vous aide à contrôler, site par site, le respect de vos standards d'hygiène, de process et de service
           </p>
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ27UtgHDTUCRt4BpE4GOtimxdPfrdMg_TcPTaY934vA3zoDc1ZYjtMv_dpAdkZAlMQK4axFyMfh" class="hero-cta" target="_blank" rel="noopener">Prendre rendez-vous</a>
         </div>
@@ -75,7 +73,7 @@ const clientLogos = [
       <!-- Client Logos -->
       <div class="clients-section">
         <p class="clients-title">
-          Plus de <span class="highlight-underline">50 entreprises</span> nous confient leurs standards
+          Plus de <span class="highlight-underline">50 entreprises<img src="/images/audits/logo-client/subline-50ents.png" alt="" class="subline-img" /></span> nous confient leurs standards
         </p>
         <div class="clients-logos">
           {clientLogos.map((logo) => (
@@ -96,19 +94,21 @@ const clientLogos = [
     <section class="intro-section">
       <div class="intro-container">
         <h2 class="intro-title">
-          Plongez dans la réalité de vos <span class="highlight">opérations</span>
+          <span class="highlight">Deux approches</span> complémentaires<br />pour contrôler vos opérations
         </h2>
         
         <div class="intro-content">
           <div class="intro-image">
-            <img src="/images/services/audit-intro.jpg" alt="Équipe en réunion" />
+            <img src="/images/audits/intro-section/intro.png" alt="Audit opérationnel" />
           </div>
           <div class="intro-text">
             <p>
-              Les audits Smice permettent à vos collaborateurs de vérifier eux-mêmes l'application de vos standards — hygiène, process, accueil, sécurité, organisation — en suivant un parcours guidé sur l'app.
+              <strong>Audit interne digitalisé</strong><br />
+              Vos équipes réalisent des audits uniformes sur la Smice App grâce à des critères clairs et des preuves visuelles centralisées.
             </p>
             <p>
-              Chaque point est illustré, vérifiable et consolidé automatiquement pour vous donner une vision fiable et exploitable de la réalité terrain.
+              <strong>Audit opérationnel externalisé</strong><br />
+              Nos auditeurs évaluent vos sites avec un regard neutre et expert pour analyser précisément hygiène, production, sécurité, accueil et service.
             </p>
             <a href="#more" class="intro-cta">En savoir plus</a>
           </div>
@@ -121,44 +121,44 @@ const clientLogos = [
       <div class="details-container">
         <div class="details-header">
           <h2 class="details-title">
-            Une méthodologie d'audit fluide, maîtrisée et pensée pour l'excellence opérationnelle
+            Un processus conçu pour améliorer la qualité et la maîtrise opérationnelle
           </h2>
           <p class="details-subtitle">
-            De la préparation à la restitution, Smice structure chaque étape de votre audit afin d'assurer une évaluation cohérente, objective et simple à exploiter.
+            De la préparation à la restitution, Smice structure chaque étape de votre audit<br />afin d'assurer une évaluation cohérente, objective et simple à exploiter.
           </p>
         </div>
 
         <div class="details-grid">
           <div class="detail-card">
-            <span class="detail-phase">Avant l'évaluation</span>
-            <h3 class="detail-title blue">Paramétrage & scénarios</h3>
+            <span class="detail-phase">Avant l'audit</span>
+            <h3 class="detail-title teal">Préparation et cadrage</h3>
             <div class="detail-image">
-              <img src="/images/services/detail-parametrage.jpg" alt="Paramétrage" />
+              <img src="/images/audits/details-section/avant-audit.png" alt="Préparation et cadrage" />
             </div>
             <p class="detail-description">
-              Vous définissez les critères, les preuves attendues, les seuils de conformité et les instructions. Tout est intégré dans l'app, prêt à l'emploi pour vos équipes.
+              Définition des critères, structure des grilles, instructions intégrées dans l'app : tout est prêt pour assurer un contrôle homogène sur l'ensemble de vos sites.
             </p>
           </div>
 
           <div class="detail-card">
-            <span class="detail-phase">Pendant l'évaluation</span>
-            <h3 class="detail-title purple">Réalisation sur la Smice App</h3>
+            <span class="detail-phase">Pendant l'audit</span>
+            <h3 class="detail-title blue">Collecte terrain fiable</h3>
             <div class="detail-image">
-              <img src="/images/services/detail-realisation.jpg" alt="Réalisation" />
+              <img src="/images/audits/details-section/pendant-audit.jpg" alt="Collecte terrain fiable" />
             </div>
             <p class="detail-description">
-              Votre collaborateur suit un parcours d'audit clair : questions structurées par zone, photos intégrées, commentaires guidés et barèmes harmonisés. Chaque contrôle devient ainsi objectif, homogène et parfaitement documenté, quel que soit le site.
+              Vos collaborateurs ou nos auditeurs Smice saisissent leurs constats directement dans l'application : photos, notations, commentaires, preuves… sans perte d'information.
             </p>
           </div>
 
           <div class="detail-card">
-            <span class="detail-phase">Après l'évaluation</span>
-            <h3 class="detail-title teal">Analyse immédiate</h3>
+            <span class="detail-phase">Après l'audit</span>
+            <h3 class="detail-title purple">Analyse et exploitation</h3>
             <div class="detail-image">
-              <img src="/images/services/detail-analyse.jpg" alt="Analyse" />
+              <img src="/images/audits/details-section/apres-audit.jpg" alt="Analyse et exploitation" />
             </div>
             <p class="detail-description">
-              Après chaque audit, les résultats sont immédiatement disponibles sur votre tableau de bord Smice : scores, photos, écarts, tendances et priorités d'action. Vous visualisez en un instant la performance de chaque site, comparez les établissements, identifiez les zones à risque et suivez l'évolution des progrès dans le temps.
+              Les résultats sont centralisés : écarts identifiés, comparaisons inter-sites, tendances, priorisation. Vous disposez d'une base claire pour piloter vos plans d'action.
             </p>
           </div>
         </div>
@@ -172,37 +172,34 @@ const clientLogos = [
           <div class="carousel-track">
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-1.jpg" alt="Smiceur en mission" />
+                <img src="/images/audits/carrousel-section/smiceurs.png" alt="Des Smiceurs formés" />
               </div>
               <div class="card-content">
                 <h3>Des Smiceurs formés, fiables et passionnés</h3>
-                <p>Chaque mission Smice repose sur notre communauté de clients mystère, soigneusement sélectionnés et formés à vos standards.</p>
-                <p>Ils observent chaque détail avec impartialité pour restituer une vision fidèle et exploitable de l'expérience client.</p>
-                <p class="highlight-text"><strong>Notre objectif : vous garantir des données fiables, comparables et cohérentes, quel que soit le lieu ou le moment du service.</strong></p>
+                <p>Chaque mission Smice repose sur notre communauté de clients mystère, soigneusement sélectionnés et formés à vos standards. Ils observent chaque détail avec impartialité pour restituer une vision fidèle et exploitable de l'expérience client.</p>
+                <p class="highlight-text">Notre objectif : vous garantir des données fiables, comparables et cohérentes, quel que soit le lieu ou le moment du service.</p>
               </div>
             </article>
 
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-2.jpg" alt="Smiceur analysant" />
+                <img src="/images/audits/carrousel-section/équipe-smice.png" alt="Équipe Smice" />
               </div>
               <div class="card-content">
-                <h3>Une méthodologie rigoureuse et éprouvée</h3>
-                <p>Notre processus d'évaluation suit un protocole strict, garantissant des résultats objectifs et exploitables.</p>
-                <p>Chaque Smiceur suit un parcours de formation complet avant de réaliser sa première mission sur le terrain.</p>
-                <p class="highlight-text"><strong>Résultat : des audits homogènes et comparables sur l'ensemble de votre réseau.</strong></p>
+                <h3>Une équipe engagée à vos côtés</h3>
+                <p>Chez Smice, chaque projet est piloté par une équipe dédiée qui connaît vos enjeux, vos standards et vos objectifs. De la conception des grilles à l'analyse des résultats, nous vous accompagnons à chaque étape pour garantir un impact concret.</p>
+                <p class="highlight-text">Notre mission : faire du Mystery Shopping un outil vivant, utile et parfaitement aligné avec vos enjeux de marque.</p>
               </div>
             </article>
 
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-3.jpg" alt="Smiceur prenant des notes" />
+                <img src="/images/audits/carrousel-section/smiceurs.png" alt="Méthodologie éprouvée" />
               </div>
               <div class="card-content">
-                <h3>Des insights actionnables en temps réel</h3>
-                <p>Accédez instantanément aux résultats de vos audits via notre plateforme intuitive et nos tableaux de bord dynamiques.</p>
-                <p>Identifiez rapidement les points forts et les axes d'amélioration pour chaque site de votre réseau.</p>
-                <p class="highlight-text"><strong>Transformez vos données en actions concrètes pour améliorer l'expérience client.</strong></p>
+                <h3>Une méthodologie éprouvée, un accompagnement continu</h3>
+                <p>Nous croyons en une démarche structurée et transparente. Chaque audit suit un protocole rigoureux, de la préparation terrain jusqu'au suivi sécurisé de vos résultats.</p>
+                <p class="highlight-text">Avec Smice, vous bénéficiez d'un partenaire de confiance, qui combine rigueur de l'audit et proximité humaine.</p>
               </div>
             </article>
           </div>
@@ -220,59 +217,48 @@ const clientLogos = [
     <section class="characteristics-section">
       <div class="characteristics-container">
         <div class="characteristics-header">
-          <h2>Une conformité mesurée en continu</h2>
-          <p>Vos standards sont suivis au quotidien, pas seulement lors d'un audit annuel.</p>
+          <h2>Des critères <span class="highlight-concrets">concrets<img src="/images/audits/characteristics-section/subline-concrets.png" alt="" class="subline-img" /></span> pour une vision juste de la réalité</h2>
+          <p>Chaque visite mystère repose sur des indicateurs clairs et personnalisés. Vous bénéficiez d'un suivi transparent, adapté à vos enjeux de satisfaction et de performance.</p>
         </div>
 
         <div class="characteristics-grid">
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Conformité mesurée en continu</span>
-              <p class="characteristic-text">Vos standards sont suivis au quotidien, pas seulement lors d'un audit annuel.</p>
+              <span class="characteristic-label">Qualité de l'accueil</span>
+              <p class="characteristic-text">Chaleur du premier contact, disponibilité et professionnalisme du personnel.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
+              <img src="/images/audits/characteristics-section/vector-star.png" alt="" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Lecture objective du terrain</span>
-              <p class="characteristic-text">Les preuves visuelles éliminent les interprétations subjectives.</p>
+              <span class="characteristic-label">Fluidité du parcours</span>
+              <p class="characteristic-text">Obtenez des retours d'expériences</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="5" cy="6" r="2"/>
-                <circle cx="12" cy="6" r="2"/>
-                <rect x="3" y="14" width="8" height="6" rx="1"/>
-                <rect x="15" y="10" width="6" height="10" rx="1"/>
-              </svg>
+              <img src="/images/audits/characteristics-section/vector-people.png" alt="" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Amélioration continue maîtrisée</span>
-              <p class="characteristic-text">Vous identifiez les écarts récurrents et priorisez aisément vos actions.</p>
+              <span class="characteristic-label">Respect des standards</span>
+              <p class="characteristic-text">Vos points améliorables, en images</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
+              <img src="/images/audits/characteristics-section/vector-graph.png" alt="" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
               <span class="characteristic-label">Engagement de l'équipe</span>
-              <p class="characteristic-text">Les collaborateurs se sentent responsables, engagés et valorisés.</p>
+              <p class="characteristic-text">Implication, attitude positive, conseils et capacité à valoriser l'offre.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
+              <img src="/images/audits/characteristics-section/vector-note.png" alt="" />
             </div>
           </div>
         </div>
@@ -328,19 +314,20 @@ const clientLogos = [
 
   .hero-title {
     font-size: 42px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.2;
     margin: 0;
   }
 
   .hero-title .highlight {
-    color: #4A5FC1;
+    color: #6989D4;
   }
 
   .hero-description {
-    font-size: 17px;
-    color: #4B5563;
+    font-size: 18px;
+    font-weight: 500;
+    color: #504C54;
     line-height: 1.7;
     margin: 0;
   }
@@ -349,21 +336,23 @@ const clientLogos = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 15px;
+    width: 223px;
+    height: 45px;
+    padding: 8px 16px;
+    gap: 8px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
     align-self: flex-start;
   }
 
   .hero-cta:hover {
-    background: #3D4EAA;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 8px 25px rgba(105, 137, 212, 0.3);
   }
 
   /* Clients Section */
@@ -375,17 +364,25 @@ const clientLogos = [
   }
 
   .clients-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1A1A2E;
+    font-size: 20px;
+    font-weight: 700;
+    color: #504C54;
     margin: 0 0 32px 0;
   }
 
   .clients-title .highlight-underline {
-    color: #4A5FC1;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .subline-img {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .clients-logos {
@@ -451,18 +448,15 @@ const clientLogos = [
   }
 
   .intro-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-size: 40px;
+    font-weight: 800;
+    color: #504C54;
     text-align: center;
     margin: 0 0 50px 0;
   }
 
   .intro-title .highlight {
-    color: #4A5FC1;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 5px;
+    color: #6989D4;
   }
 
   .intro-content {
@@ -491,22 +485,31 @@ const clientLogos = [
   }
 
   .intro-text p {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 1.7;
-    color: #4B5563;
+    color: #7C797F;
     margin: 0;
+  }
+
+  .intro-text p strong {
+    font-weight: 700;
+    color: #7C797F;
   }
 
   .intro-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 14px;
+    width: 173px;
+    height: 45px;
+    padding: 8px 24px;
+    gap: 8px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
     align-self: flex-start;
@@ -514,9 +517,8 @@ const clientLogos = [
   }
 
   .intro-cta:hover {
-    background: #3D4EAA;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
   }
 
   /* Details Section */
@@ -537,16 +539,17 @@ const clientLogos = [
   }
 
   .details-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.3;
     margin: 0 0 20px 0;
   }
 
   .details-subtitle {
-    font-size: 16px;
-    color: #6B7280;
+    font-size: 20px;
+    font-weight: 500;
+    color: #504C54;
     line-height: 1.7;
     margin: 0;
   }
@@ -564,27 +567,28 @@ const clientLogos = [
 
   .detail-phase {
     font-size: 14px;
-    color: #6B7280;
+    font-weight: 600;
+    color: #504C54;
     margin-bottom: 8px;
   }
 
   .detail-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0 0 20px 0;
     line-height: 1.3;
   }
 
   .detail-title.blue {
-    color: #4A5FC1;
+    color: #6989D4;
   }
 
   .detail-title.purple {
-    color: #9B7BC7;
+    color: #9B8AAD;
   }
 
   .detail-title.teal {
-    color: #5BBFB3;
+    color: #75898A;
   }
 
   .detail-image {
@@ -602,8 +606,9 @@ const clientLogos = [
 
   .detail-description {
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.7;
-    color: #4B5563;
+    color: #7C797F;
     margin: 0;
   }
 
@@ -767,27 +772,26 @@ const clientLogos = [
   }
 
   .carousel-card h3 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #2D3A8C;
+    font-size: 32px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.25;
     margin: 0;
   }
 
   .carousel-card p {
     font-size: 16px;
-    color: #4B5563;
+    font-weight: 500;
+    color: #7C797F;
     line-height: 1.75;
     margin: 0;
   }
 
   .carousel-card p.highlight-text {
-    color: #1A1A2E;
-    margin-top: 8px;
-  }
-
-  .carousel-card p.highlight-text strong {
+    font-size: 20px;
     font-weight: 600;
+    color: #504C54;
+    margin-top: 8px;
   }
 
   .carousel-dots {
@@ -809,12 +813,12 @@ const clientLogos = [
   }
 
   .carousel-dot:hover {
-    background: #4A5FC1;
+    background: #6989D4;
     opacity: 0.7;
   }
 
   .carousel-dot.active {
-    background: #4A5FC1;
+    background: #6989D4;
   }
 
   @media (max-width: 968px) {
@@ -879,15 +883,23 @@ const clientLogos = [
 
   .characteristics-header h2 {
     font-size: 40px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-weight: 800;
+    color: #435888;
     margin: 0 0 16px 0;
   }
 
+  .characteristics-header .highlight-concrets {
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
   .characteristics-header p {
-    font-size: 17px;
-    color: #4B5563;
+    font-size: 20px;
+    font-weight: 500;
+    color: #504C54;
     margin: 0;
+    line-height: 1.6;
   }
 
   .characteristics-grid {
@@ -912,31 +924,30 @@ const clientLogos = [
 
   .characteristic-label {
     display: block;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #4A5FC1;
+    letter-spacing: 0.2em;
+    color: #6989D4;
     margin-bottom: 10px;
   }
 
   .characteristic-text {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1A1A2E;
-    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 800;
+    color: #435888;
+    line-height: 1.4;
     margin: 0;
   }
 
   .characteristic-icon {
     flex-shrink: 0;
-    color: #7C8FE4;
-    opacity: 0.8;
   }
 
-  .characteristic-icon svg {
+  .characteristic-icon img {
     width: 52px;
     height: 52px;
+    object-fit: contain;
   }
 
   @media (max-width: 768px) {
@@ -948,6 +959,10 @@ const clientLogos = [
       font-size: 28px;
     }
 
+    .characteristics-header p {
+      font-size: 16px;
+    }
+
     .characteristics-grid {
       grid-template-columns: 1fr;
     }
@@ -956,7 +971,15 @@ const clientLogos = [
       padding: 24px;
     }
 
-    .characteristic-icon svg {
+    .characteristic-label {
+      font-size: 14px;
+    }
+
+    .characteristic-text {
+      font-size: 18px;
+    }
+
+    .characteristic-icon img {
       width: 44px;
       height: 44px;
     }
