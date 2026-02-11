@@ -16,6 +16,7 @@ interface Props {
   subtitle?: string;
   testimonials?: Testimonial[];
   backgroundColor?: string;
+  sublineImage?: string;
 }
 
 // Default testimonials data
@@ -26,7 +27,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Mickey Mouse",
     company: "DisneyLand Paris",
     avatar: "/images/homepage/mickey-avatar.png",
-    nameColor: "#4A5FC1"
+    nameColor: "#75898A"
   },
   {
     id: 2,
@@ -34,7 +35,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Mickey Mouse",
     company: "DisneyLand Paris",
     avatar: "/images/homepage/mickey-avatar.png",
-    nameColor: "#9B7BC7"
+    nameColor: "#435888"
   },
   {
     id: 3,
@@ -42,7 +43,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Mickey Mouse",
     company: "DisneyLand Paris",
     avatar: "/images/homepage/mickey-avatar.png",
-    nameColor: "#C9A227"
+    nameColor: "#9B8AAD"
   },
   {
     id: 4,
@@ -50,7 +51,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "Mickey Mouse",
     company: "DisneyLand Paris",
     avatar: "/images/homepage/mickey-avatar.png",
-    nameColor: "#4A5FC1"
+    nameColor: "#75898A"
   }
 ];
 
@@ -59,7 +60,8 @@ const {
   titleHighlight = "confiance",
   subtitle = "Ces dirigeants améliorent l'expérience client de leurs enseignes main dans la main avec Smice, et voici leurs retours.",
   testimonials = defaultTestimonials,
-  backgroundColor = "linear-gradient(180deg, #E8EDF8 0%, #F5F7FF 100%)"
+  backgroundColor = "linear-gradient(180deg, #E8EDF8 0%, #F5F7FF 100%)",
+  sublineImage = "/images/homepage/subline-confiance.png"
 } = Astro.props;
 
 // Generate unique ID for this instance
@@ -73,7 +75,7 @@ const instanceId = Math.random().toString(36).substring(7);
         {title}
         <span class="highlight-underline" style="position:relative;display:inline-block;">
           {titleHighlight}
-          <img src="/images/homepage/subline-confiance.png" alt="" style="position:absolute;left:0;bottom:5px;width:100%;height:5px;pointer-events:none;" />
+          <img src={sublineImage} alt="" style="position:absolute;left:0;bottom:5px;width:100%;height:auto;pointer-events:none;" />
         </span> :
       </h2>
       <p class="testimonials-subtitle">{subtitle}</p>
@@ -84,8 +86,10 @@ const instanceId = Math.random().toString(36).substring(7);
         <div class="carousel-track" id={`testimonialCarouselTrack-${instanceId}`}>
           {(() => {
             const bgColors = ['#F0F7F6', '#F4F7FF', '#F3EFF6'];
+            const nameColors = ['#75898A', '#435888', '#9B8AAD'];
             return testimonials.map((testimonial, idx) => {
               const bg = bgColors[idx % bgColors.length];
+              const nc = nameColors[idx % nameColors.length];
               return (
                 <div class="testimonial-card" style={`background:${bg};`}>
                   <p class="testimonial-quote">"{testimonial.quote}"</p>
@@ -94,7 +98,7 @@ const instanceId = Math.random().toString(36).substring(7);
                       <img src={testimonial.avatar} alt={testimonial.name} />
                     </div>
                     <div class="author-info">
-                      <span class="author-name" style={`color: ${testimonial.nameColor}`}>{testimonial.name}</span>
+                      <span class="author-name" style={`color: ${nc}`}>{testimonial.name}</span>
                       <span class="author-company">{testimonial.company}</span>
                     </div>
                   </div>
@@ -135,7 +139,7 @@ const instanceId = Math.random().toString(36).substring(7);
   }
 
   .testimonials-title {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 800;
     color: #435888;
     margin: 0 0 16px 0;
@@ -187,6 +191,7 @@ const instanceId = Math.random().toString(36).substring(7);
   }
 
   .testimonial-quote {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
@@ -233,7 +238,7 @@ const instanceId = Math.random().toString(36).substring(7);
     font-size: 14px;
     font-weight: 600;
     font-style: normal;
-    color: #6B7280;
+    color: #7C797F;
   }
 
   /* Carousel Navigation */
