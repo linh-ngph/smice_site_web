@@ -1,0 +1,162 @@
+Page Visites mystère
+Hero section:
+Add image named “banner-visitesmystère.png” for this section
+
+For class hero title, the text should be: “Mesurez l’expérience réelle grâce aux visites mystère”, it has style weight 800, style extra bold, size 42px, color text is: #435888
+Except for these words: “visites mystère” has color text is #6989D4
+
+For class hero description: the text should be: “Les visites mystère Smice vous permettent de voir votre service tel qu’il est réellement perçu par vos clients. Conçues pour les réseaux multisites, elles révèlent les écarts entre vos standards et la réalité du terrain.”, it has style: weight 500, style medium, size 18px, color text: #504C54
+
+The button “Prendre rendez-vous” is wrapped by an outer frame: background color: #6989D4, width 223px, height 45px, radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px. The text inside has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+For class clients title, it has style: weight 700, style bold, size 20px, color text is: #504C54.
+Except for the word “50 entreprises” has color text: #6989D4 and a sublime named sublime-50ents.png”
+
+For class logo client, add these images: “club-med.png”, “disneyland.png”, “dominos.png”, “haagendazs.png”, “hermes.png”, “sncf.png”
+
+
+Intro section
+Add image named “intro-VM.png” for this section
+
+For class intro-title, the text should be: “Pourquoi mettre en place un programme de visites mystère ?”, it has style weight 800, style extra bold, size 40px, color text #504C54
+Except for the word “visites mystère” has color text: #6989D4
+
+For class intro-text, the text should be: 
+“
+Dans un réseau, la qualité perçue varie fortement d’un site à l’autre. Les indicateurs internes ou enquêtes de satisfaction ne suffisent pas à capturer toute la réalité vécue par vos clients.
+
+La visite mystère est un levier essentiel pour observer objectivement le terrain, détecter les irritants invisibles et renforcer la cohérence de l’expérience dans l’ensemble de votre réseau.
+“
+It has style: weight 400, style regular size 18px, color text: #7C797F
+
+
+The button “En savoir plus” is wrapped by an outer frame: background color: #6989D4, width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px. The text inside has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+
+Details section
+For the class details title, the text should be: “Une méthodologie complète, pensée pour la fiabilité“, it has style weight 800, style extra bold, size 40px, color text is: #435888
+
+For the class details subtitle: the text should be: “De la sélection des Smiceurs à l’analyse des résultats, chaque étape du dispositif est conçue pour transformer l’observation terrain en leviers d’amélioration concrets.”, it has style weight 500, style medium, size 20px, color text: #504C54
+
+
+For the first detail card, it has:
+detail-phase: the text should be: “Avant la visites mystère”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Conception du questionnaire”, it has style: weight 700, style bold, size 24px, color text #75898A
+detail-image: Add image named “avant-vm.png” for this.
+detail-description: the text should be: “Avant chaque programme, Smice co-construit avec vos équipes le référentiel d’évaluation ainsi que le questionnaire détaillé, en s’appuyant sur votre book opérationnel, vos standards de marque et vos enjeux prioritaires.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+
+	For the second detail card, it has: 
+detail-phase: the text should be: “Pendant la visites mystère”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Sélection exigeante des Smiceurs”, it has style: weight 700, style bold, size 24px, color text #6989D4
+detail-image: Add image named “pendant-vm.png” for this.
+detail-description: the text should be: “Chaque scénario est construit pour observer les moments clés du parcours : accueil, conseil, fluidité, discours, service… Les critères sont précis et exploitables pour permettre une analyse pragmatique.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+For the third detail card, it has: 
+detail-phase: the text should be: “Après la visites mystère”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Des scénarios à l’analyse opérationnelle”, it has style: weight 700, style bold, size 24px, color text #9B8AAD
+detail-image: Add image named “apres-vm.png” for this.
+detail-description: the text should be: “Smice sélectionne rigoureusement ses profils et automatise l’attribution des missions via la Smice App pour garantir des scénarios fiables et cohérents. Les données consolidées permettent ensuite d’identifier les écarts, suivre les tendances et transformer les retours terrain en actions concrètes.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+
+	Carrousel section:
+	For the first card:
+- Add image named “visites-conformité.png” for this.
+	- card-content: the title should be: “Visites Conformité”, it has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be : “Évalue la bonne application de vos standards sur le terrain : procédures, accueil, propreté, discours, délais, hygiène.” it has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Notre objectif : garantir une cohérence opérationnelle sur tous vos sites et détecter rapidement les écarts qui menacent votre qualité de service.” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+
+For the second card:
+- Add image named “visites-experience.png” for this.
+	- card-content: the title should be: “Visites Expérience”, it   has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be: “Analyse la perception réelle vécue par un client type : émotions, fluidité, attention portée, ambiance, irritants rencontrés.” has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Notre objectif : comprendre ce que ressent vraiment votre clientèle et améliorer les moments clés qui influencent la satisfaction et la recommandation.” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+
+For the third card:
+- Add image named “smiceurs-vm.png” for this.
+	- card-content: the title should be: “Des Smiceurs adaptés à chaque profil client”, it   has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be: “Une communauté d’enquêteurs aux profils variés : familles, couples avec PMR, retraités, voyageurs business, amateurs de loisirs… Chaque Smiceur reflète un type de client réellement présent dans votre réseau.” has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Notre objectif : obtenir des retours authentiques, représentatifs et alignés avec les différentes typologies de clientèle que vous accueillez.
+” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+For the fourth card:
+- Add image named “résultats-vm.png” for this.
+	- card-content: the title should be: “Des résultats actionnables pour vos équipes”, it   has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be: “Rapports clairs, visuels et orientés action : points forts, écarts prioritaires, tendances multisites, plan d’amélioration.” has style: weight 500, style medium, size 16px, color text: #7C797F
+- The highlight-text: “Notre objectif : aider vos équipes à progresser, prioriser les actions clés et renforcer la performance de votre réseau dans la durée.” has style: weight 600, style semi bold, size 20px, color text: #504C54
+
+
+Characteristics section:
+For the characteristic header, the text should be “Des critères concrets, adaptés à vos enjeux”, it has style: weight 800, style extra bold, size 40px, color text: #435888.
+Except for the word: “concrets”, “enjeux” has color text is: #6989D4, and a subline named “subline-concrets.png” for concret et sublime named “subline-enjeux.png” for enjeux.
+
+The line “Mesurez ce que vos…qu’ils vivent”, replace par this paragraph: “Chaque visite mystère repose sur des indicateurs clairs et personnalisés. Vous bénéficiez d’un suivi transparent, adapté à vos enjeux de satisfaction et de performance.” that has style: weight 500, style medium, size 20px, color text: #504C54
+
+In the class characteristics-grid:
+The first characteristic-card has:
+- characteristic label: the text should be: “Qualité de l’accueil”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Chaleur, disponibilité, posture, professionnalisme.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-star.png”
+
+
+The second characteristic-card has:
+- characteristic label: the text should be: “Fluidité du parcours”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Signalétique, attente, friction, compréhension.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-people.png”
+
+
+The third characteristic-card has:
+- characteristic label: the text should be: “Respect des standards”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Conformité aux process et engagements de marque.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-graph.png”
+
+
+The fourth characteristic-card has:
+- characteristic label: the text should be: “Engagement de l’équipe”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Attitude, conseil, proactivité, valorisation de l’offre.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-note.png”
+
+
+
+	FAQ section
+The line “Quelques réponses à vos question” has style: Weight 800, Style extra bold, size 40px, color text: #435888
+Except for the word :”réponses” has color text is #9B8AAD and a subline named: “subline_reponses.png”
+
+
+In class faq-item:
+background color is white (same color with faq container)
+
+In class “faq-question”:
+It has style: weight 700, style bold, size: 20px, color text: #566FAC
+
+
+In class “faq-toggle”:
+It has style: width 24px, height 24px, background color: #9B8AAD
+
+These icon-plus, icon-close has style: width 8.64px, height 8.64px, color: #FFFFFE
+
+
+	ADD THÊM SECTION BLOG CHO CÁC PAGE CỦA SERVICES.
+3 BLOGS.
+Style:
+Title: weitgh 700, style bold, seize 20px, color text: #435888
+Sub-title: weight 500, style medium, size 14px, color text: #7C797F
+Button “Lire l’article”: width 344px, height 45px, radius 6px, padding top 8x, right 16px, bottom 8px, left 16px, background color: #6989D4
+The text inside buttom has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+
+In contact-section:
+
+In class contact-form-wrapper:
+The line “Passons à la prochaine étape…” has style: color text: #8EA7DF, width 700, style Italic, size 16px
+The line “Contactez-nous !” has style: weight 800, style extra bold, size 32px, color text: #566FAC
+The line “Envie d’en savoir plus…contactez-nous!” has style: weight 400, style regular, size 16px, color text: #9795B5
+These word “Prénom, Nom, Email, Poste actuel, Description de votre besoin” has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
+
+Add image named: “team_smice.png” to this section, this image was wrapped by an outer framer which has width 497px, height 404px, radius 16px, border 8px, gap 8px, background color : #75898A
+
+The image decoration has style: width 399px, height 565px, radius top-left: 16px, bottom-left 16px, background color:#B6D6D7
+
+The button “Envoyer” has width 163px, height 38px, Radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px, background color: #6989D4

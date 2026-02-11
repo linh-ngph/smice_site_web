@@ -120,4 +120,43 @@ The fourth characteristic-card has:
 
 
 FAQ section
+The line “Quelques réponses à vos question” has style: Weight 800, Style extra bold, size 40px, color text: #435888
+Except for the word :”réponses” has color text is #9B8AAD and a subline named: “subline_reponses.png”
 
+
+In class faq-item:
+background color is white (same color with faq container)
+
+In class “faq-question”:
+It has style: weight 700, style bold, size: 20px, color text: #566FAC
+
+
+In class “faq-toggle”:
+It has style: width 24px, height 24px, background color: #9B8AAD
+
+These icon-plus, icon-close has style: width 8.64px, height 8.64px, color: #FFFFFE
+
+
+'''ADD THÊM SECTION BLOG CHO CÁC PAGE CỦA SERVICES.
+3 BLOGS'''
+Style:
+Title: weitgh 700, style bold, seize 20px, color text: #435888
+Sub-title: weight 500, style medium, size 14px, color text: #7C797F
+Button “Lire l’article”: width 344px, height 45px, radius 6px, padding top 8x, right 16px, bottom 8px, left 16px, background color: #6989D4
+The text inside buttom has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+
+
+In contact-section:
+
+In class contact-form-wrapper:
+The line “Passons à la prochaine étape…” has style: color text: #8EA7DF, width 700, style Italic, size 16px
+The line “Contactez-nous !” has style: weight 800, style extra bold, size 32px, color text: #566FAC
+The line “Envie d’en savoir plus…contactez-nous!” has style: weight 400, style regular, size 16px, color text: #9795B5
+These word “Prénom, Nom, Email, Poste actuel, Description de votre besoin” has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
+
+Add image named: “team_smice.png” to this section, this image was wrapped by an outer framer which has width 497px, height 404px, radius 16px, border 8px, gap 8px, background color : #FEF7D0
+
+The image decoration has style: width 399px, height 565px, radius top-left: 16px, bottom-left 16px, background color: #435888
+
+The button “Envoyer” has width 163px, height 38px, Radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px, background color: #6989D4
