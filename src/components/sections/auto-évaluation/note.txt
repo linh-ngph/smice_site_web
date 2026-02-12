@@ -1,0 +1,159 @@
+Page l’auto-évaluation
+Hero section:
+Add image named “banner-auto-évaluation.png” for this section, it has style: width 496px, height 400px, radius 16px
+For class hero title, the text should be: “Harmonisez vos pratiques opérationnelles grâce à une auto-évaluation structurée”, it has style weight 800, style extra bold, size 42px, color text is: #435888
+Except for these words: “auto-évaluation” has color text is #6989D4
+
+For class hero description: the text should be: “Grâce à l’auto-évaluation Smice, vos équipes réalisent leurs contrôles qualité directement sur le terrain, avec des critères clairs, des preuves immédiates et une méthodologie homogène sur l’ensemble du réseau.”, it has style: weight 500, style medium, size 18px, color text: #504C54
+
+The button “Prendre rendez-vous” is wrapped by an outer frame: background color: #6989D4, width 223px, height 45px, radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px. The text inside has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+For class clients title, it has style: weight 700, style bold, size 20px, color text is: #504C54.
+Except for the word “50 entreprises” has color text: #6989D4 and a sublime named sublime-50ents.png”
+
+For class logo client, add these images: “club-med.png”, “disneyland.png”, “dominos.png”, “haagendazs.png”, “hermes.png”, “sncf.png”
+
+
+
+Intro section
+Add image named “intro-AE.png” for this section
+
+For class intro-title, the text should be: “Plongez dans la réalité de vos opérations”, it has style weight 800, style extra bold, size 40px, color text #504C54
+Except for the word “opérations” has color text: #6989D4
+
+For class intro-text, the text should be: 
+“
+Les auto-évaluations Smice permettent à vos collaborateurs de vérifier eux-mêmes l’application de vos standards - hygiène, process, accueil, sécurité, organisation - en suivant un parcours guidé sur l’app.
+
+Chaque point est illustré, vérifiable et consolidé automatiquement pour vous donner une vision fiable et exploitable de la réalité terrain.
+“
+It has style: weight 400, style regular size 18px, color text: #7C797F
+
+
+The button “En savoir plus” is wrapped by an outer frame: background color: #6989D4, width 173px, height 45px, radius 6px, padding top 8px, right 24px, bottom 8px, left 24px, gap 8px. The text inside has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+
+Details section
+For the class details title, the text should be: “Une méthodologie d’auto-évaluation fluide, maîtrisée et pensée pour l’excellence opérationnelle“, it has style weight 800, style extra bold, size 40px, color text is: #435888
+
+For the class details subtitle: the text should be: “De la préparation à la restitution, Smice structure chaque étape de votre audit afin d’assurer une évaluation cohérente, objective et simple à exploiter.”, it has style weight 500, style medium, size 20px, color text: #504C54
+
+
+For the first detail card, it has:
+detail-phase: the text should be: “Avant l’auto-évaluation”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Paramétrage & scénarios”, it has style: weight 700, style bold, size 24px, color text #75898A
+detail-image: Add image named “avant-AE.png” for this.
+detail-description: the text should be: “Vous définissez les critères, les preuves attendues, les seuils de conformité et les instructions.Tout est intégré dans l’app, prêt à l’emploi pour vos équipes.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+
+	For the second detail card, it has: 
+detail-phase: the text should be: “Pendant l’auto-évaluation”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Réalisation sur la Smice App”, it has style: weight 700, style bold, size 24px, color text #6989D4
+detail-image: Add image named “pendant-vm.png” for this.
+detail-description: the text should be: “Votre collaborateur suit un parcours d’auto-évaluation clair : questions structurées par zone, photos intégrées, commentaires guidés et barèmes harmonisés. Chaque contrôle devient ainsi objectif, homogène et parfaitement documenté, quel que soit le site.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+For the third detail card, it has: 
+detail-phase: the text should be: “Après l’auto-évaluation”, it has style: weight 600, style semi bold, size 14px, color text: #504C54
+detail-title: the text should be: “Analyse immédiate”, it has style: weight 700, style bold, size 24px, color text #9B8AAD
+detail-image: Add image named “apres-AE.jpg” for this.
+detail-description: the text should be: “Après chaque auto-évaluation, les résultats sont disponibles sur votre tableau de bord Smice : scores, photos, écarts et priorités d’action. Visualisez rapidement la performance de chaque site, comparez les établissements, identifiez les risques et suivez les progrès dans le temps grâce à une restitution claire et centralisée.”, it has style weight 500, style medium, size 14px, color text: #7C797F
+
+Carrousel section:
+	For the first card:
+- Add image named “AE-simple.png” for this.
+	- card-content: the title should be: “Une auto-évaluation simple, guidée et homogène sur tout votre réseau”, it has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be : “La Smice App structure chaque contrôle : questions organisées par zones, instructions intégrées, barèmes harmonisés et photos obligatoires selon vos besoins. Vos équipes appliquent les mêmes standards, au même niveau d’exigence, quel que soit le site.” it has style: weight 500, style medium, size 16px, color text: #7C797F
+
+
+
+For the second card:
+- Add image named “AE-visuelle.png” for this.
+	- card-content: the title should be: “Objectivité renforcée grâce aux preuves visuelles et commentaires pré-listés”, it has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be: “Chaque point contrôlé peut être illustré par des photos et complété par des commentaires guidés. Les preuves sont claires, factuelles et directement exploitables, ce qui limite les interprétations et fiabilise vos auto-évaluations.” has style: weight 500, style medium, size 16px, color text: #7C797F
+
+
+For the third card:
+- Add image named “AE-equipe.png” for this.
+	- card-content: the title should be: “Des équipes responsabilisées et engagées dans la qualité”, it has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be: “L’auto-évaluation devient un véritable outil pédagogique : vos collaborateurs comprennent mieux les standards, gagnent en rigueur et adoptent une posture proactive. Ils ne “subissent” plus les audits : ils y contribuent et s’y impliquent.” has style: weight 500, style medium, size 16px, color text: #7C797F
+
+
+For the fourth card:
+- Add image named “AE-restitution.png” for this.
+	- card-content: the title should be: “Une restitution instantanée pour piloter la performance en continu”, it has style weight 800, style extra bold, size 32px, color text: #435888
+- The text details should be: “Les résultats remontent automatiquement dans votre tableau de bord Smice : scores, tendances, écarts critiques et priorités d’action. Vous suivez l’évolution de chaque site dans le temps et pilotez votre réseau en vous appuyant sur des données claires et constamment mises à jour.” has style: weight 500, style medium, size 16px, color text: #7C797F
+
+
+
+	Characteristics section:
+For the characteristic header, the line “Un outil au service…de vos équipes” has style: weight 800, style extra bold, size 40px, color text: #435888.
+Except for the word: “outil” has color text is: #6989D4, and a subline named “subline-concrets.png” for concret et sublime named “subline-enjeux.png” for enjeux.
+
+The line “L’auto-évaluation…vos collaborateurs” has style: weight 500, style medium, size 20px, color text: #504C54
+
+In the class characteristics-grid:
+The first characteristic-card has:
+- characteristic label: the line “Engagement des équipes”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Les collaborateurs se sentent responsables, engagés et valorisés.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-star.png”
+
+
+The second characteristic-card has:
+- characteristic label: the text should be: “Lecture objective du terrain”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Les preuves visuelles éliminent les interprétations subjectives.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-people.png”
+
+
+The third characteristic-card has:
+- characteristic label: the text should be: “Amélioration continue maîtrisée”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Vous identifiez les écarts récurrents et priorisez aisément vos actions.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-graph.png”
+
+
+The fourth characteristic-card has:
+- characteristic label: the text should be: “conformité mesurée en continu”, it has style weight 800, style extra bold, size 18px, color text: #6989D4, letter spacing 20%, case: Uppercase.
+- characteristic text: the text should be: “Vos standards sont suivis au quotidien, pas seulement lors d’un audit annuel.”, it has style: weight 800, style extra bold, size 22px, color text is: #435888
+- characteristic-icon: add imaged named “vector-note.png”
+
+
+
+FAQ section
+The line “Quelques réponses à vos question” has style: Weight 800, Style extra bold, size 40px, color text: #435888
+Except for the word :”réponses” has color text is #9B8AAD and a subline named: “subline_reponses.png”
+
+
+In class faq-item:
+background color is white (same color with faq container)
+
+In class “faq-question”:
+It has style: weight 700, style bold, size: 20px, color text: #566FAC
+
+
+In class “faq-toggle”:
+It has style: width 24px, height 24px, background color: #9B8AAD
+
+These icon-plus, icon-close has style: width 8.64px, height 8.64px, color: #FFFFFE
+
+
+	ADD THÊM SECTION BLOG CHO CÁC PAGE CỦA SERVICES.
+3 BLOGS.
+Style:
+Title: weitgh 700, style bold, seize 20px, color text: #435888
+Sub-title: weight 500, style medium, size 14px, color text: #7C797F
+Button “Lire l’article”: width 344px, height 45px, radius 6px, padding top 8x, right 16px, bottom 8px, left 16px, background color: #6989D4
+The text inside buttom has style: weight 600, style semi bold, size 18px, color text: #FFFFFE
+
+
+In contact-section:
+
+In class contact-form-wrapper:
+The line “Passons à la prochaine étape…” has style: color text: #8EA7DF, width 700, style Italic, size 16px
+The line “Contactez-nous !” has style: weight 800, style extra bold, size 32px, color text: #566FAC
+The line “Envie d’en savoir plus…contactez-nous!” has style: weight 400, style regular, size 16px, color text: #9795B5
+These word “Prénom, Nom, Email, Poste actuel, Description de votre besoin” has style: weight 600, style semi bold, size 14px, color text: #9B8AAD
+
+Add image named: “team_smice.png” to this section, this image was wrapped by an outer framer which has width 497px, height 404px, radius 16px, border 8px, gap 8px, background color : #D9E1F3
+
+The image decoration has style: width 399px, height 565px, radius top-left: 16px, bottom-left 16px, background color #435888
+
+The button “Envoyer” has width 163px, height 38px, Radius 6px, padding top 8px, right 16px, bottom 8px, left 16px, gap 8px, background color: #6989D4
