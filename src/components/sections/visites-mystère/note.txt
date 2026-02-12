@@ -1,6 +1,6 @@
 Page Visites mystère
 Hero section:
-Add image named “banner-visitesmystère.png” for this section
+Add image named “banner-visitesmystère.png” for this section, it has style: width 496px, height 400px, radius 16px 
 
 For class hero title, the text should be: “Mesurez l’expérience réelle grâce aux visites mystère”, it has style weight 800, style extra bold, size 42px, color text is: #435888
 Except for these words: “visites mystère” has color text is #6989D4
