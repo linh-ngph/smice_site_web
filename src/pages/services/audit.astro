@@ -265,6 +265,44 @@ const clientLogos = [
       </div>
     </section>
 
+    <!-- Blog / Case Studies Section -->
+    <section class="blog-section">
+      <div class="blog-container">
+        <h2 class="blog-heading">
+          Découvrez nos dernières <span class="blog-highlight">études de cas</span>
+        </h2>
+
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/audits/hero-section/banner-audits.png" alt="Disneyland Paris" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°1 : Visites Mystère Expérience chez Disneyland Paris</h3>
+            <p class="blog-card-subtitle">Smice accompagne Disneyland Paris avec des visites mystère centrées sur l'expérience, pour détecter les micro-frictions du parcours visiteur. Ces observations permettent à Disney d'ajuster la qualité perçue, de former ses équipes et d'optimiser les parcours pour une expérience fluide et mémorable.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/audits/hero-section/banner-audits.png" alt="Free" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°2 : Visites Mystère Conformité chez Free</h3>
+            <p class="blog-card-subtitle">Free utilise les visites mystère Smice pour vérifier l'application de ses standards dans ses Free Centers.<br /><br />Les évaluations portent sur l'accueil, les besoins, les réponses techniques et le parcours client. Les résultats permettent d'assurer une exécution homogène et de renforcer une expérience simple et fiable.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/audits/hero-section/banner-audits.png" alt="Groupe Bertrand" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°3 : Visites Mystère Conformité dans les franchises du Groupe Bertrand</h3>
+            <p class="blog-card-subtitle">Le Groupe Bertrand utilise les visites mystère conformité Smice pour garantir l'uniformité des standards dans son réseau multi-enseignes : hygiène, accueil, rapidité, qualité des plats et respect des procédures. Les retours détaillés révèlent les écarts entre établissements, sécurisent la performance opérationnelle et soutiennent les franchisés dans une démarche de progrès continu et de cohérence marque.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ Section -->
     <FAQSection faqItems={auditFaqItems} backgroundColor="white" />
 
@@ -950,6 +988,101 @@ const clientLogos = [
     object-fit: contain;
   }
 
+  /* ===== Blog / Case Studies Section ===== */
+  .blog-section {
+    padding: 80px 24px;
+    background: white;
+  }
+
+  .blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .blog-heading {
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
+    text-align: center;
+    margin: 0 0 60px 0;
+    line-height: 1.3;
+  }
+
+  .blog-heading .blog-highlight {
+    color: #435888;
+    border-bottom: 4px solid #E5C04B;
+    padding-bottom: 2px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .blog-card-image {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    aspect-ratio: 16/10;
+  }
+
+  .blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .blog-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #435888;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    min-height: 84px;
+  }
+
+  .blog-card-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #7C797F;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    flex: 1;
+  }
+
+  .blog-card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 344px;
+    height: 45px;
+    padding: 8px 16px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+  }
+
+  .blog-card-btn:hover {
+    background: #5a7ac5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
+  }
+
   @media (max-width: 768px) {
     .characteristics-section {
       padding: 60px 20px;
@@ -982,6 +1115,28 @@ const clientLogos = [
     .characteristic-icon img {
       width: 44px;
       height: 44px;
+    }
+
+    .blog-section {
+      padding: 60px 20px;
+    }
+
+    .blog-heading {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .blog-card-btn {
+      max-width: 100%;
+    }
+
+    .blog-card-title {
+      min-height: auto;
     }
   }
 </style>

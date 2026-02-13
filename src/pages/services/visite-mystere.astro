@@ -36,13 +36,12 @@ const seoConfig = {
 };
 
 const clientLogos = [
-  { name: "Disney", src: "/images/logos/disney.png" },
-  { name: "Hermès", src: "/images/logos/hermes.png" },
-  { name: "SNCF", src: "/images/logos/sncf.png" },
-  { name: "Club Med", src: "/images/logos/clubmed.png" },
-  { name: "Häagen-Dazs", src: "/images/logos/haagendazs.png" },
-  { name: "Domino's", src: "/images/logos/dominos.png" },
-  { name: "Samsung", src: "/images/logos/samsung.png" },
+  { name: "Club Med", src: "/images/visites-mystère/logo-client/club-med.png" },
+  { name: "Disneyland", src: "/images/visites-mystère/logo-client/disneyland.png" },
+  { name: "Domino's", src: "/images/visites-mystère/logo-client/dominos.png" },
+  { name: "Häagen-Dazs", src: "/images/visites-mystère/logo-client/haagendazs.png" },
+  { name: "Hermès", src: "/images/visites-mystère/logo-client/hermes.png" },
+  { name: "SNCF", src: "/images/visites-mystère/logo-client/sncf.svg" },
 ];
 ---
 
@@ -58,15 +57,14 @@ const clientLogos = [
     <section class="service-hero">
       <div class="hero-container">
         <div class="hero-image">
-          <img src="/images/services/visite-mystere-hero.png" alt="Visite mystère illustration" />
+          <img src="/images/visites-mystère/hero-section/banner-visitesmystère.png" alt="Visites mystère illustration" />
         </div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Évaluez l'expérience client réelle grâce à la
-            <span class="highlight">visite mystère</span>
+            Mesurez l'expérience réelle grâce aux <span class="highlight">visites mystère</span>
           </h1>
           <p class="hero-description">
-            Nos clients mystère se glissent dans la peau de vos clients pour évaluer chaque étape du parcours. Vous obtenez une vision objective et détaillée de l'expérience vécue sur le terrain.
+            Les visites mystère Smice vous permettent de voir votre service tel qu'il est réellement perçu par vos clients. Conçues pour les réseaux multisites, elles révèlent les écarts entre vos standards et la réalité du terrain.
           </p>
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ27UtgHDTUCRt4BpE4GOtimxdPfrdMg_TcPTaY934vA3zoDc1ZYjtMv_dpAdkZAlMQK4axFyMfh" class="hero-cta" target="_blank" rel="noopener">Prendre rendez-vous</a>
         </div>
@@ -75,7 +73,7 @@ const clientLogos = [
       <!-- Client Logos -->
       <div class="clients-section">
         <p class="clients-title">
-          Plus de <span class="highlight-underline">50 entreprises</span> nous font confiance
+          Plus de <span class="highlight-underline">50 entreprises<img src="/images/visites-mystère/logo-client/subline-50ents.png" alt="" class="underline-img" /></span> nous font confiance
         </p>
         <div class="clients-logos">
           {clientLogos.map((logo) => (
@@ -95,21 +93,22 @@ const clientLogos = [
     <!-- Introduction Section -->
     <section class="intro-section">
       <div class="intro-container">
-        <h2 class="intro-title">
-          Vivez l'expérience à travers les yeux de vos <span class="highlight">clients</span>
-        </h2>
-        
         <div class="intro-content">
           <div class="intro-image">
-            <img src="/images/services/visite-mystere-intro.jpg" alt="Client mystère en action" />
+            <img src="/images/visites-mystère/intro-section/intro-VM.png" alt="Introduction visites mystère" />
           </div>
-          <div class="intro-text">
-            <p>
-              Les visites mystère Smice vous permettent de mesurer objectivement la qualité de l'accueil, du conseil, de l'environnement et de l'ensemble du parcours client.
-            </p>
-            <p>
-              Nos Smiceurs, formés à vos standards, évaluent chaque point de contact en situation réelle, sans que vos équipes ne le sachent.
-            </p>
+          <div class="intro-text-wrapper">
+            <h2 class="intro-title">
+              Pourquoi mettre en place un programme de <span class="highlight">visites mystère</span> ?
+            </h2>
+            <div class="intro-text">
+              <p>
+                Dans un réseau, la qualité perçue varie fortement d'un site à l'autre. Les indicateurs internes ou enquêtes de satisfaction ne suffisent pas à capturer toute la réalité vécue par vos clients.
+              </p>
+              <p>
+                La visite mystère est un levier essentiel pour observer objectivement le terrain, détecter les irritants invisibles et renforcer la cohérence de l'expérience dans l'ensemble de votre réseau.
+              </p>
+            </div>
             <a href="#more" class="intro-cta">En savoir plus</a>
           </div>
         </div>
@@ -121,44 +120,44 @@ const clientLogos = [
       <div class="details-container">
         <div class="details-header">
           <h2 class="details-title">
-            Une méthodologie éprouvée pour des résultats fiables et actionnables
+            Une méthodologie complète, pensée pour la fiabilité
           </h2>
           <p class="details-subtitle">
-            De la préparation à l'analyse, chaque visite mystère suit un protocole rigoureux pour garantir des données exploitables.
+            De la sélection des Smiceurs à l'analyse des résultats, chaque étape du dispositif est conçue pour transformer l'observation terrain en leviers d'amélioration concrets.
           </p>
         </div>
 
         <div class="details-grid">
           <div class="detail-card">
-            <span class="detail-phase">Avant la visite</span>
-            <h3 class="detail-title blue">Briefing & scénarios</h3>
+            <span class="detail-phase">Avant la visites mystère</span>
+            <h3 class="detail-title green">Conception du questionnaire</h3>
             <div class="detail-image">
-              <img src="/images/services/vm-detail-briefing.jpg" alt="Briefing" />
+              <img src="/images/visites-mystère/details-section/avant-vm.png" alt="Avant la visite mystère" />
             </div>
             <p class="detail-description">
-              Nous définissons ensemble les critères d'évaluation, le scénario à suivre et les points d'attention spécifiques à votre enseigne.
+              Avant chaque programme, Smice co-construit avec vos équipes le référentiel d'évaluation ainsi que le questionnaire détaillé, en s'appuyant sur votre book opérationnel, vos standards de marque et vos enjeux prioritaires.
             </p>
           </div>
 
           <div class="detail-card">
-            <span class="detail-phase">Pendant la visite</span>
-            <h3 class="detail-title purple">Évaluation terrain</h3>
+            <span class="detail-phase">Pendant la visites mystère</span>
+            <h3 class="detail-title blue">Sélection exigeante des Smiceurs</h3>
             <div class="detail-image">
-              <img src="/images/services/vm-detail-visite.jpg" alt="Visite terrain" />
+              <img src="/images/visites-mystère/details-section/pendant-vm.png" alt="Pendant la visite mystère" />
             </div>
             <p class="detail-description">
-              Le Smiceur vit l'expérience client complète : accueil, conseil, achat, service. Il observe, mémorise et documente chaque interaction de manière objective.
+              Chaque scénario est construit pour observer les moments clés du parcours : accueil, conseil, fluidité, discours, service… Les critères sont précis et exploitables pour permettre une analyse pragmatique.
             </p>
           </div>
 
           <div class="detail-card">
-            <span class="detail-phase">Après la visite</span>
-            <h3 class="detail-title teal">Rapport détaillé</h3>
+            <span class="detail-phase">Après la visites mystère</span>
+            <h3 class="detail-title purple">Des scénarios à l'analyse opérationnelle</h3>
             <div class="detail-image">
-              <img src="/images/services/vm-detail-rapport.jpg" alt="Rapport" />
+              <img src="/images/visites-mystère/details-section/apres-vm.png" alt="Après la visite mystère" />
             </div>
             <p class="detail-description">
-              Vous recevez un rapport complet avec scores, verbatims, photos et recommandations. Les résultats sont accessibles en temps réel sur votre tableau de bord.
+              Smice sélectionne rigoureusement ses profils et automatise l'attribution des missions via la Smice App pour garantir des scénarios fiables et cohérents. Les données consolidées permettent ensuite d'identifier les écarts, suivre les tendances et transformer les retours terrain en actions concrètes.
             </p>
           </div>
         </div>
@@ -172,37 +171,45 @@ const clientLogos = [
           <div class="carousel-track">
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-1.jpg" alt="Smiceur en mission" />
+                <img src="/images/visites-mystère/carrousel-section/visites-conformité.jpg" alt="Visites Conformité" />
               </div>
               <div class="card-content">
-                <h3>Des Smiceurs formés, fiables et passionnés</h3>
-                <p>Chaque mission Smice repose sur notre communauté de clients mystère, soigneusement sélectionnés et formés à vos standards.</p>
-                <p>Ils observent chaque détail avec impartialité pour restituer une vision fidèle et exploitable de l'expérience client.</p>
-                <p class="highlight-text"><strong>Notre objectif : vous garantir des données fiables, comparables et cohérentes, quel que soit le lieu ou le moment du service.</strong></p>
+                <h3>Visites Conformité</h3>
+                <p class="card-details">Évalue la bonne application de vos standards sur le terrain : procédures, accueil, propreté, discours, délais, hygiène.</p>
+                <p class="highlight-text">Notre objectif : garantir une cohérence opérationnelle sur tous vos sites et détecter rapidement les écarts qui menacent votre qualité de service.</p>
               </div>
             </article>
 
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-2.jpg" alt="Smiceur analysant" />
+                <img src="/images/visites-mystère/carrousel-section/visites-experience.png" alt="Visites Expérience" />
               </div>
               <div class="card-content">
-                <h3>Une immersion totale dans le parcours client</h3>
-                <p>Nos clients mystère vivent l'expérience de A à Z, comme n'importe quel client de votre enseigne.</p>
-                <p>Ils évaluent l'accueil, le conseil, l'environnement, les délais et la qualité globale du service.</p>
-                <p class="highlight-text"><strong>Résultat : une vision 360° de l'expérience client réellement vécue.</strong></p>
+                <h3>Visites Expérience</h3>
+                <p class="card-details">Analyse la perception réelle vécue par un client type : émotions, fluidité, attention portée, ambiance, irritants rencontrés.</p>
+                <p class="highlight-text">Notre objectif : comprendre ce que ressent vraiment votre clientèle et améliorer les moments clés qui influencent la satisfaction et la recommandation.</p>
               </div>
             </article>
 
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-3.jpg" alt="Smiceur prenant des notes" />
+                <img src="/images/visites-mystère/carrousel-section/smiceurs-vm.png" alt="Des Smiceurs adaptés à chaque profil client" />
               </div>
               <div class="card-content">
-                <h3>Des insights actionnables en temps réel</h3>
-                <p>Accédez instantanément aux résultats de vos visites via notre plateforme intuitive et nos tableaux de bord dynamiques.</p>
-                <p>Identifiez rapidement les points forts et les axes d'amélioration pour chaque site de votre réseau.</p>
-                <p class="highlight-text"><strong>Transformez vos données en actions concrètes pour améliorer l'expérience client.</strong></p>
+                <h3>Des Smiceurs adaptés à chaque profil client</h3>
+                <p class="card-details">Une communauté d'enquêteurs aux profils variés : familles, couples avec PMR, retraités, voyageurs business, amateurs de loisirs… Chaque Smiceur reflète un type de client réellement présent dans votre réseau.</p>
+                <p class="highlight-text">Notre objectif : obtenir des retours authentiques, représentatifs et alignés avec les différentes typologies de clientèle que vous accueillez.</p>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="card-image">
+                <img src="/images/visites-mystère/carrousel-section/résultats-vm.png" alt="Des résultats actionnables pour vos équipes" />
+              </div>
+              <div class="card-content">
+                <h3>Des résultats actionnables pour vos équipes</h3>
+                <p class="card-details">Rapports clairs, visuels et orientés action : points forts, écarts prioritaires, tendances multisites, plan d'amélioration.</p>
+                <p class="highlight-text">Notre objectif : aider vos équipes à progresser, prioriser les actions clés et renforcer la performance de votre réseau dans la durée.</p>
               </div>
             </article>
           </div>
@@ -212,6 +219,7 @@ const clientLogos = [
           <button class="carousel-dot active" data-index="0" aria-label="Carte 1"></button>
           <button class="carousel-dot" data-index="1" aria-label="Carte 2"></button>
           <button class="carousel-dot" data-index="2" aria-label="Carte 3"></button>
+          <button class="carousel-dot" data-index="3" aria-label="Carte 4"></button>
         </div>
       </div>
     </section>
@@ -220,60 +228,87 @@ const clientLogos = [
     <section class="characteristics-section">
       <div class="characteristics-container">
         <div class="characteristics-header">
-          <h2>Une vision client objective et actionnable</h2>
-          <p>Mesurez ce que vos clients vivent vraiment, pas ce que vous pensez qu'ils vivent.</p>
+          <h2>Des critères <span class="highlight-word">concrets<img src="/images/visites-mystère/characteristics-section/subline-concrets.png" alt="" class="subline-img" /></span>, adaptés à vos <span class="highlight-word">enjeux<img src="/images/visites-mystère/characteristics-section/subline-enjeux.png" alt="" class="subline-img" /></span></h2>
+          <p>Chaque visite mystère repose sur des indicateurs clairs et personnalisés. Vous bénéficiez d'un suivi transparent, adapté à vos enjeux de satisfaction et de performance.</p>
         </div>
 
         <div class="characteristics-grid">
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Expérience client authentique</span>
-              <p class="characteristic-text">Nos Smiceurs vivent la même expérience que vos vrais clients, sans biais ni artifice.</p>
+              <span class="characteristic-label">Qualité de l'accueil</span>
+              <p class="characteristic-text">Chaleur, disponibilité, posture, professionnalisme.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
+              <img src="/images/visites-mystère/characteristics-section/vector-star.png" alt="Qualité de l'accueil" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Évaluation objective</span>
-              <p class="characteristic-text">Des critères clairs et mesurables pour une analyse sans interprétation subjective.</p>
+              <span class="characteristic-label">Fluidité du parcours</span>
+              <p class="characteristic-text">Signalétique, attente, friction, compréhension.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="5" cy="6" r="2"/>
-                <circle cx="12" cy="6" r="2"/>
-                <rect x="3" y="14" width="8" height="6" rx="1"/>
-                <rect x="15" y="10" width="6" height="10" rx="1"/>
-              </svg>
+              <img src="/images/visites-mystère/characteristics-section/vector-people.png" alt="Fluidité du parcours" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Benchmarking réseau</span>
-              <p class="characteristic-text">Comparez les performances de vos sites et identifiez les meilleures pratiques.</p>
+              <span class="characteristic-label">Respect des standards</span>
+              <p class="characteristic-text">Conformité aux process et engagements de marque.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
+              <img src="/images/visites-mystère/characteristics-section/vector-graph.png" alt="Respect des standards" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Amélioration continue</span>
-              <p class="characteristic-text">Suivez l'évolution de vos performances et mesurez l'impact de vos actions.</p>
+              <span class="characteristic-label">Engagement de l'équipe</span>
+              <p class="characteristic-text">Attitude, conseil, proactivité, valorisation de l'offre.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
+              <img src="/images/visites-mystère/characteristics-section/vector-note.png" alt="Engagement de l'équipe" />
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Case Studies Section -->
+    <section class="blog-section">
+      <div class="blog-container">
+        <h2 class="blog-heading">
+          Découvrez nos dernières <span class="blog-highlight">études de cas</span>
+        </h2>
+
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/visites-mystère/hero-section/banner-visitesmystère.png" alt="Disneyland Paris" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°1 : Visites Mystère Expérience chez Disneyland Paris</h3>
+            <p class="blog-card-subtitle">Smice accompagne Disneyland Paris avec des visites mystère centrées sur l'expérience, pour détecter les micro-frictions du parcours visiteur. Ces observations permettent à Disney d'ajuster la qualité perçue, de former ses équipes et d'optimiser les parcours pour une expérience fluide et mémorable.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/visites-mystère/hero-section/banner-visitesmystère.png" alt="Free" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°2 : Visites Mystère Conformité chez Free</h3>
+            <p class="blog-card-subtitle">Free utilise les visites mystère Smice pour vérifier l'application de ses standards dans ses Free Centers.<br /><br />Les évaluations portent sur l'accueil, les besoins, les réponses techniques et le parcours client. Les résultats permettent d'assurer une exécution homogène et de renforcer une expérience simple et fiable.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/visites-mystère/hero-section/banner-visitesmystère.png" alt="Groupe Bertrand" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°3 : Visites Mystère Conformité dans les franchises du Groupe Bertrand</h3>
+            <p class="blog-card-subtitle">Le Groupe Bertrand utilise les visites mystère conformité Smice pour garantir l'uniformité des standards dans son réseau multi-enseignes : hygiène, accueil, rapidité, qualité des plats et respect des procédures. Les retours détaillés révèlent les écarts entre établissements, sécurisent la performance opérationnelle et soutiennent les franchisés dans une démarche de progrès continu et de cohérence marque.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
           </div>
         </div>
       </div>
@@ -289,7 +324,7 @@ const clientLogos = [
 </Layout>
 
 <style>
-  /* Hero Section */
+  /* ===== Hero Section ===== */
   .service-hero {
     background: #F4F7FF;
     padding: 40px 24px 60px;
@@ -314,10 +349,10 @@ const clientLogos = [
   }
 
   .hero-image img {
-    max-width: 100%;
-    height: auto;
-    max-height: 450px;
-    object-fit: contain;
+    width: 496px;
+    height: 400px;
+    border-radius: 16px;
+    object-fit: cover;
   }
 
   .hero-content {
@@ -328,19 +363,20 @@ const clientLogos = [
 
   .hero-title {
     font-size: 42px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.2;
     margin: 0;
   }
 
   .hero-title .highlight {
-    color: #4A5FC1;
+    color: #6989D4;
   }
 
   .hero-description {
-    font-size: 17px;
-    color: #4B5563;
+    font-size: 18px;
+    font-weight: 500;
+    color: #504C54;
     line-height: 1.7;
     margin: 0;
   }
@@ -349,24 +385,27 @@ const clientLogos = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 15px;
+    width: 223px;
+    height: 45px;
+    padding: 8px 16px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
+    gap: 8px;
     transition: all 0.3s ease;
     align-self: flex-start;
   }
 
   .hero-cta:hover {
-    background: #3D4EAA;
+    background: #5a7ac5;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 8px 25px rgba(105, 137, 212, 0.3);
   }
 
-  /* Clients Section */
+  /* ===== Clients Section ===== */
   .clients-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -375,17 +414,25 @@ const clientLogos = [
   }
 
   .clients-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1A1A2E;
+    font-size: 20px;
+    font-weight: 700;
+    color: #504C54;
     margin: 0 0 32px 0;
   }
 
   .clients-title .highlight-underline {
-    color: #4A5FC1;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .clients-title .highlight-underline .underline-img {
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .clients-logos {
@@ -415,7 +462,7 @@ const clientLogos = [
     opacity: 1;
   }
 
-  /* Scroll Indicator */
+  /* ===== Scroll Indicator ===== */
   .scroll-indicator {
     display: flex;
     justify-content: center;
@@ -439,7 +486,7 @@ const clientLogos = [
     }
   }
 
-  /* Introduction Section */
+  /* ===== Introduction Section ===== */
   .intro-section {
     padding: 80px 24px;
     background: white;
@@ -448,21 +495,6 @@ const clientLogos = [
   .intro-container {
     max-width: 1100px;
     margin: 0 auto;
-  }
-
-  .intro-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1A1A2E;
-    text-align: center;
-    margin: 0 0 50px 0;
-  }
-
-  .intro-title .highlight {
-    color: #4A5FC1;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 5px;
   }
 
   .intro-content {
@@ -484,6 +516,24 @@ const clientLogos = [
     display: block;
   }
 
+  .intro-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #504C54;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .intro-title .highlight {
+    color: #6989D4;
+  }
+
   .intro-text {
     display: flex;
     flex-direction: column;
@@ -491,9 +541,10 @@ const clientLogos = [
   }
 
   .intro-text p {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 1.7;
-    color: #4B5563;
+    color: #7C797F;
     margin: 0;
   }
 
@@ -501,25 +552,28 @@ const clientLogos = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 14px;
+    width: 173px;
+    height: 45px;
+    padding: 8px 24px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
+    gap: 8px;
     transition: all 0.3s ease;
     align-self: flex-start;
     margin-top: 8px;
   }
 
   .intro-cta:hover {
-    background: #3D4EAA;
+    background: #5a7ac5;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
   }
 
-  /* Details Section */
+  /* ===== Details Section ===== */
   .details-section {
     padding: 80px 24px;
     background: #F4F7FF;
@@ -537,16 +591,17 @@ const clientLogos = [
   }
 
   .details-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.3;
     margin: 0 0 20px 0;
   }
 
   .details-subtitle {
-    font-size: 16px;
-    color: #6B7280;
+    font-size: 20px;
+    font-weight: 500;
+    color: #504C54;
     line-height: 1.7;
     margin: 0;
   }
@@ -555,36 +610,41 @@ const clientLogos = [
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    align-items: start;
   }
 
   .detail-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .detail-phase {
     font-size: 14px;
-    color: #6B7280;
+    font-weight: 600;
+    color: #504C54;
     margin-bottom: 8px;
+    min-height: 20px;
   }
 
   .detail-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0 0 20px 0;
     line-height: 1.3;
+    min-height: 62px;
+  }
+
+  .detail-title.green {
+    color: #75898A;
   }
 
   .detail-title.blue {
-    color: #4A5FC1;
+    color: #6989D4;
   }
 
   .detail-title.purple {
-    color: #9B7BC7;
-  }
-
-  .detail-title.teal {
-    color: #5BBFB3;
+    color: #9B8AAD;
   }
 
   .detail-image {
@@ -592,6 +652,7 @@ const clientLogos = [
     overflow: hidden;
     margin-bottom: 20px;
     aspect-ratio: 4/3;
+    height: 250px;
   }
 
   .detail-image img {
@@ -602,121 +663,13 @@ const clientLogos = [
 
   .detail-description {
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.7;
-    color: #4B5563;
+    color: #7C797F;
     margin: 0;
   }
 
-  /* Responsive */
-  @media (max-width: 968px) {
-    .hero-container {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      text-align: center;
-    }
-
-    .hero-image {
-      order: -1;
-    }
-
-    .hero-content {
-      align-items: center;
-    }
-
-    .hero-title {
-      font-size: 36px;
-    }
-
-    .clients-logos {
-      gap: 32px;
-    }
-
-    .logo-item img {
-      height: 28px;
-    }
-
-    .intro-content {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
-
-    .intro-title {
-      font-size: 30px;
-    }
-
-    .intro-text {
-      text-align: center;
-      align-items: center;
-    }
-
-    .details-grid {
-      grid-template-columns: 1fr;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .details-title {
-      font-size: 30px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .service-hero {
-      padding: 30px 20px 40px;
-      min-height: auto;
-    }
-
-    .hero-title {
-      font-size: 28px;
-    }
-
-    .hero-description {
-      font-size: 15px;
-    }
-
-    .hero-image img {
-      max-height: 300px;
-    }
-
-    .clients-section {
-      padding-top: 40px;
-    }
-
-    .clients-title {
-      font-size: 16px;
-    }
-
-    .clients-logos {
-      gap: 24px;
-    }
-
-    .logo-item img {
-      height: 24px;
-    }
-
-    .intro-section {
-      padding: 60px 20px;
-    }
-
-    .intro-title {
-      font-size: 26px;
-      margin-bottom: 32px;
-    }
-
-    .details-section {
-      padding: 60px 20px;
-    }
-
-    .details-title {
-      font-size: 26px;
-    }
-
-    .details-subtitle {
-      font-size: 14px;
-    }
-  }
-
-  /* Carousel Section */
+  /* ===== Carousel Section ===== */
   .carousel-section {
     padding: 100px 24px;
     background: white;
@@ -767,27 +720,27 @@ const clientLogos = [
   }
 
   .carousel-card h3 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #2D3A8C;
+    font-size: 32px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.25;
     margin: 0;
   }
 
-  .carousel-card p {
+  .carousel-card .card-details {
     font-size: 16px;
-    color: #4B5563;
+    font-weight: 500;
+    color: #7C797F;
     line-height: 1.75;
     margin: 0;
   }
 
   .carousel-card p.highlight-text {
-    color: #1A1A2E;
-    margin-top: 8px;
-  }
-
-  .carousel-card p.highlight-text strong {
+    font-size: 20px;
     font-weight: 600;
+    color: #504C54;
+    line-height: 1.5;
+    margin-top: 8px;
   }
 
   .carousel-dots {
@@ -809,59 +762,15 @@ const clientLogos = [
   }
 
   .carousel-dot:hover {
-    background: #4A5FC1;
+    background: #6989D4;
     opacity: 0.7;
   }
 
   .carousel-dot.active {
-    background: #4A5FC1;
+    background: #6989D4;
   }
 
-  @media (max-width: 968px) {
-    .carousel-card {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 0;
-    }
-
-    .card-image img {
-      height: 320px;
-    }
-
-    .carousel-card h3 {
-      font-size: 28px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .carousel-section {
-      padding: 60px 20px;
-    }
-
-    .card-image img {
-      height: 280px;
-    }
-
-    .carousel-card h3 {
-      font-size: 24px;
-    }
-
-    .carousel-card p {
-      font-size: 15px;
-    }
-
-    .carousel-dots {
-      margin-top: 40px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .carousel-card h3 {
-      font-size: 22px;
-    }
-  }
-
-  /* Characteristics Section */
+  /* ===== Characteristics Section ===== */
   .characteristics-section {
     padding: 80px 24px;
     background: #F8FAFF;
@@ -879,15 +788,36 @@ const clientLogos = [
 
   .characteristics-header h2 {
     font-size: 40px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-weight: 800;
+    color: #435888;
     margin: 0 0 16px 0;
+    line-height: 1.3;
+  }
+
+  .characteristics-header .highlight-word {
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .characteristics-header .subline-img {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .characteristics-header p {
-    font-size: 17px;
-    color: #4B5563;
+    font-size: 20px;
+    font-weight: 500;
+    color: #504C54;
     margin: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
   }
 
   .characteristics-grid {
@@ -912,34 +842,303 @@ const clientLogos = [
 
   .characteristic-label {
     display: block;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #4A5FC1;
+    letter-spacing: 0.2em;
+    color: #6989D4;
     margin-bottom: 10px;
   }
 
   .characteristic-text {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1A1A2E;
+    font-size: 22px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.5;
     margin: 0;
   }
 
   .characteristic-icon {
     flex-shrink: 0;
-    color: #7C8FE4;
-    opacity: 0.8;
   }
 
-  .characteristic-icon svg {
+  .characteristic-icon img {
     width: 52px;
     height: 52px;
+    object-fit: contain;
+  }
+
+  /* ===== Blog / Case Studies Section ===== */
+  .blog-section {
+    padding: 80px 24px;
+    background: white;
+  }
+
+  .blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .blog-heading {
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
+    text-align: center;
+    margin: 0 0 60px 0;
+    line-height: 1.3;
+  }
+
+  .blog-heading .blog-highlight {
+    color: #435888;
+    border-bottom: 4px solid #E5C04B;
+    padding-bottom: 2px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .blog-card-image {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    aspect-ratio: 16/10;
+  }
+
+  .blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .blog-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #435888;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    min-height: 84px;
+  }
+
+  .blog-card-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #7C797F;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    flex: 1;
+  }
+
+  .blog-card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 344px;
+    height: 45px;
+    padding: 8px 16px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+  }
+
+  .blog-card-btn:hover {
+    background: #5a7ac5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 968px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 496px;
+      height: auto;
+    }
+
+    .hero-content {
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 36px;
+    }
+
+    .hero-cta {
+      align-self: center;
+    }
+
+    .clients-logos {
+      gap: 32px;
+    }
+
+    .logo-item img {
+      height: 28px;
+    }
+
+    .intro-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .intro-title {
+      font-size: 30px;
+    }
+
+    .intro-text-wrapper {
+      text-align: center;
+      align-items: center;
+    }
+
+    .details-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .details-title {
+      font-size: 30px;
+    }
+
+    .carousel-card {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0;
+    }
+
+    .card-image img {
+      height: 320px;
+    }
+
+    .carousel-card h3 {
+      font-size: 28px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .blog-card-title {
+      min-height: auto;
+    }
+
+    .blog-heading {
+      font-size: 32px;
+    }
   }
 
   @media (max-width: 768px) {
+    .service-hero {
+      padding: 30px 20px 40px;
+      min-height: auto;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 15px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    .clients-section {
+      padding-top: 40px;
+    }
+
+    .clients-title {
+      font-size: 16px;
+    }
+
+    .clients-logos {
+      gap: 24px;
+    }
+
+    .logo-item img {
+      height: 24px;
+    }
+
+    .intro-section {
+      padding: 60px 20px;
+    }
+
+    .intro-title {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+    }
+
+    .details-section {
+      padding: 60px 20px;
+    }
+
+    .details-title {
+      font-size: 26px;
+    }
+
+    .details-subtitle {
+      font-size: 16px;
+    }
+
+    .carousel-section {
+      padding: 60px 20px;
+    }
+
+    .card-image img {
+      height: 280px;
+    }
+
+    .carousel-card h3 {
+      font-size: 24px;
+    }
+
+    .carousel-card .card-details {
+      font-size: 15px;
+    }
+
+    .carousel-card p.highlight-text {
+      font-size: 17px;
+    }
+
+    .carousel-dots {
+      margin-top: 40px;
+    }
+
     .characteristics-section {
       padding: 60px 20px;
     }
@@ -956,9 +1155,33 @@ const clientLogos = [
       padding: 24px;
     }
 
-    .characteristic-icon svg {
+    .characteristic-icon img {
       width: 44px;
       height: 44px;
+    }
+
+    .blog-section {
+      padding: 60px 20px;
+    }
+
+    .blog-heading {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .blog-card-btn {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-card h3 {
+      font-size: 22px;
     }
   }
 </style>

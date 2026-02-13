@@ -36,13 +36,12 @@ const seoConfig = {
 };
 
 const clientLogos = [
-  { name: "Disney", src: "/images/logos/disney.png" },
-  { name: "Hermès", src: "/images/logos/hermes.png" },
-  { name: "SNCF", src: "/images/logos/sncf.png" },
-  { name: "Club Med", src: "/images/logos/clubmed.png" },
-  { name: "Häagen-Dazs", src: "/images/logos/haagendazs.png" },
-  { name: "Domino's", src: "/images/logos/dominos.png" },
-  { name: "Samsung", src: "/images/logos/samsung.png" },
+  { name: "Club Med", src: "/images/auto-évaluation/logo-client/club-med.png" },
+  { name: "Disneyland", src: "/images/auto-évaluation/logo-client/disneyland.png" },
+  { name: "Domino's", src: "/images/auto-évaluation/logo-client/dominos.png" },
+  { name: "Häagen-Dazs", src: "/images/auto-évaluation/logo-client/haagendazs.png" },
+  { name: "Hermès", src: "/images/auto-évaluation/logo-client/hermes.png" },
+  { name: "SNCF", src: "/images/auto-évaluation/logo-client/sncf.svg" },
 ];
 ---
 
@@ -58,15 +57,14 @@ const clientLogos = [
     <section class="service-hero">
       <div class="hero-container">
         <div class="hero-image">
-          <img src="/images/services/auto-evaluation-hero.png" alt="Auto-évaluation illustration" />
+          <img src="/images/auto-évaluation/hero-section/banner-auto-évaluation.png" alt="Auto-évaluation illustration" />
         </div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Engagez vos équipes grâce à
-            <span class="highlight">l'auto-évaluation</span>
+            Harmonisez vos pratiques opérationnelles grâce à une <span class="highlight">auto-évaluation</span> structurée
           </h1>
           <p class="hero-description">
-            Permettez à vos collaborateurs de s'évaluer eux-mêmes sur vos standards. Un outil simple qui responsabilise, engage et fait monter en compétences vos équipes terrain.
+            Grâce à l'auto-évaluation Smice, vos équipes réalisent leurs contrôles qualité directement sur le terrain, avec des critères clairs, des preuves immédiates et une méthodologie homogène sur l'ensemble du réseau.
           </p>
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ27UtgHDTUCRt4BpE4GOtimxdPfrdMg_TcPTaY934vA3zoDc1ZYjtMv_dpAdkZAlMQK4axFyMfh" class="hero-cta" target="_blank" rel="noopener">Prendre rendez-vous</a>
         </div>
@@ -75,7 +73,7 @@ const clientLogos = [
       <!-- Client Logos -->
       <div class="clients-section">
         <p class="clients-title">
-          Plus de <span class="highlight-underline">50 entreprises</span> nous font confiance
+          Plus de <span class="highlight-underline">50 entreprises<img src="/images/auto-évaluation/logo-client/subline-50ents.png" alt="" class="underline-img" /></span> nous font confiance
         </p>
         <div class="clients-logos">
           {clientLogos.map((logo) => (
@@ -95,21 +93,22 @@ const clientLogos = [
     <!-- Introduction Section -->
     <section class="intro-section">
       <div class="intro-container">
-        <h2 class="intro-title">
-          Responsabilisez vos équipes sur leurs <span class="highlight">standards</span>
-        </h2>
-        
         <div class="intro-content">
           <div class="intro-image">
-            <img src="/images/services/auto-evaluation-intro.jpg" alt="Équipe en auto-évaluation" />
+            <img src="/images/auto-évaluation/intro-section/intro-AE.png" alt="Introduction auto-évaluation" />
           </div>
-          <div class="intro-text">
-            <p>
-              L'auto-évaluation Smice permet à vos collaborateurs de vérifier eux-mêmes l'application de vos standards — hygiène, process, accueil, sécurité, organisation — en suivant un parcours guidé sur l'app.
-            </p>
-            <p>
-              Chaque point est illustré, vérifiable et consolidé automatiquement pour vous donner une vision fiable et exploitable de la réalité terrain.
-            </p>
+          <div class="intro-text-wrapper">
+            <h2 class="intro-title">
+              Plongez dans la réalité de vos <span class="highlight">opérations</span>
+            </h2>
+            <div class="intro-text">
+              <p>
+                Les auto-évaluations Smice permettent à vos collaborateurs de vérifier eux-mêmes l'application de vos standards - hygiène, process, accueil, sécurité, organisation - en suivant un parcours guidé sur l'app.
+              </p>
+              <p>
+                Chaque point est illustré, vérifiable et consolidé automatiquement pour vous donner une vision fiable et exploitable de la réalité terrain.
+              </p>
+            </div>
             <a href="#more" class="intro-cta">En savoir plus</a>
           </div>
         </div>
@@ -121,44 +120,44 @@ const clientLogos = [
       <div class="details-container">
         <div class="details-header">
           <h2 class="details-title">
-            Une démarche d'auto-évaluation simple, engageante et efficace
+            Une méthodologie d'auto-évaluation fluide, maîtrisée et pensée pour l'excellence opérationnelle
           </h2>
           <p class="details-subtitle">
-            De la configuration à l'analyse, Smice structure chaque étape pour garantir des résultats fiables et un engagement durable.
+            De la préparation à la restitution, Smice structure chaque étape de votre audit afin d'assurer une évaluation cohérente, objective et simple à exploiter.
           </p>
         </div>
 
         <div class="details-grid">
           <div class="detail-card">
-            <span class="detail-phase">Configuration</span>
-            <h3 class="detail-title blue">Paramétrage des grilles</h3>
+            <span class="detail-phase">Avant l'auto-évaluation</span>
+            <h3 class="detail-title green">Paramétrage & scénarios</h3>
             <div class="detail-image">
-              <img src="/images/services/ae-detail-config.jpg" alt="Configuration" />
+              <img src="/images/auto-évaluation/details-section/avant-AE.png" alt="Avant l'auto-évaluation" />
             </div>
             <p class="detail-description">
-              Définissez vos critères d'évaluation, les preuves attendues et les instructions. Vos équipes disposent d'un parcours clair et guidé.
+              Vous définissez les critères, les preuves attendues, les seuils de conformité et les instructions. Tout est intégré dans l'app, prêt à l'emploi pour vos équipes.
             </p>
           </div>
 
           <div class="detail-card">
-            <span class="detail-phase">Évaluation</span>
-            <h3 class="detail-title purple">Auto-contrôle sur l'app</h3>
+            <span class="detail-phase">Pendant l'auto-évaluation</span>
+            <h3 class="detail-title blue">Réalisation sur la Smice App</h3>
             <div class="detail-image">
-              <img src="/images/services/ae-detail-evaluation.jpg" alt="Évaluation" />
+              <img src="/images/auto-évaluation/details-section/pendant-AE.png" alt="Pendant l'auto-évaluation" />
             </div>
             <p class="detail-description">
-              Vos collaborateurs réalisent leur auto-évaluation en suivant un parcours structuré : questions par zone, photos, commentaires et barèmes harmonisés.
+              Votre collaborateur suit un parcours d'auto-évaluation clair : questions structurées par zone, photos intégrées, commentaires guidés et barèmes harmonisés. Chaque contrôle devient ainsi objectif, homogène et parfaitement documenté, quel que soit le site.
             </p>
           </div>
 
           <div class="detail-card">
-            <span class="detail-phase">Suivi</span>
-            <h3 class="detail-title teal">Analyse & progression</h3>
+            <span class="detail-phase">Après l'auto-évaluation</span>
+            <h3 class="detail-title purple">Analyse immédiate</h3>
             <div class="detail-image">
-              <img src="/images/services/ae-detail-suivi.jpg" alt="Suivi" />
+              <img src="/images/auto-évaluation/details-section/apres-AE.jpg" alt="Après l'auto-évaluation" />
             </div>
             <p class="detail-description">
-              Les résultats sont consolidés automatiquement. Suivez la progression de chaque site, identifiez les points à améliorer et célébrez les réussites.
+              Après chaque auto-évaluation, les résultats sont disponibles sur votre tableau de bord Smice : scores, photos, écarts et priorités d'action. Visualisez rapidement la performance de chaque site, comparez les établissements, identifiez les risques et suivez les progrès dans le temps grâce à une restitution claire et centralisée.
             </p>
           </div>
         </div>
@@ -172,37 +171,41 @@ const clientLogos = [
           <div class="carousel-track">
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-1.jpg" alt="Équipe engagée" />
+                <img src="/images/auto-évaluation/carrousel-section/AE-simple.png" alt="Auto-évaluation simple" />
               </div>
               <div class="card-content">
-                <h3>Des équipes responsabilisées et engagées</h3>
-                <p>L'auto-évaluation transforme vos collaborateurs en acteurs de la qualité. Ils prennent conscience des standards et s'approprient les bonnes pratiques.</p>
-                <p>Ce processus participatif renforce leur sentiment d'appartenance et leur motivation.</p>
-                <p class="highlight-text"><strong>Notre objectif : faire de chaque collaborateur un ambassadeur de vos standards.</strong></p>
+                <h3>Une auto-évaluation simple, guidée et homogène sur tout votre réseau</h3>
+                <p class="card-details">La Smice App structure chaque contrôle : questions organisées par zones, instructions intégrées, barèmes harmonisés et photos obligatoires selon vos besoins. Vos équipes appliquent les mêmes standards, au même niveau d'exigence, quel que soit le site.</p>
               </div>
             </article>
 
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-2.jpg" alt="Montée en compétences" />
+                <img src="/images/auto-évaluation/carrousel-section/AE-visuelle.png" alt="Preuves visuelles" />
               </div>
               <div class="card-content">
-                <h3>Une montée en compétences continue</h3>
-                <p>Grâce aux retours réguliers et aux critères explicites, vos équipes progressent naturellement.</p>
-                <p>Chaque auto-évaluation est une opportunité d'apprentissage et d'amélioration.</p>
-                <p class="highlight-text"><strong>Résultat : des équipes plus compétentes et plus autonomes.</strong></p>
+                <h3>Objectivité renforcée grâce aux preuves visuelles et commentaires pré-listés</h3>
+                <p class="card-details">Chaque point contrôlé peut être illustré par des photos et complété par des commentaires guidés. Les preuves sont claires, factuelles et directement exploitables, ce qui limite les interprétations et fiabilise vos auto-évaluations.</p>
               </div>
             </article>
 
             <article class="carousel-card">
               <div class="card-image">
-                <img src="/images/services/smiceur-3.jpg" alt="Suivi en temps réel" />
+                <img src="/images/auto-évaluation/carrousel-section/AE-equipe.png" alt="Équipes engagées" />
               </div>
               <div class="card-content">
-                <h3>Un suivi centralisé et en temps réel</h3>
-                <p>Accédez instantanément aux résultats de toutes vos équipes via notre plateforme intuitive.</p>
-                <p>Comparez les sites, identifiez les tendances et pilotez vos plans d'action efficacement.</p>
-                <p class="highlight-text"><strong>Transformez les données en actions concrètes pour progresser ensemble.</strong></p>
+                <h3>Des équipes responsabilisées et engagées dans la qualité</h3>
+                <p class="card-details">L'auto-évaluation devient un véritable outil pédagogique : vos collaborateurs comprennent mieux les standards, gagnent en rigueur et adoptent une posture proactive. Ils ne "subissent" plus les audits : ils y contribuent et s'y impliquent.</p>
+              </div>
+            </article>
+
+            <article class="carousel-card">
+              <div class="card-image">
+                <img src="/images/auto-évaluation/carrousel-section/AE-restitution.png" alt="Restitution instantanée" />
+              </div>
+              <div class="card-content">
+                <h3>Une restitution instantanée pour piloter la performance en continu</h3>
+                <p class="card-details">Les résultats remontent automatiquement dans votre tableau de bord Smice : scores, tendances, écarts critiques et priorités d'action. Vous suivez l'évolution de chaque site dans le temps et pilotez votre réseau en vous appuyant sur des données claires et constamment mises à jour.</p>
               </div>
             </article>
           </div>
@@ -212,6 +215,7 @@ const clientLogos = [
           <button class="carousel-dot active" data-index="0" aria-label="Carte 1"></button>
           <button class="carousel-dot" data-index="1" aria-label="Carte 2"></button>
           <button class="carousel-dot" data-index="2" aria-label="Carte 3"></button>
+          <button class="carousel-dot" data-index="3" aria-label="Carte 4"></button>
         </div>
       </div>
     </section>
@@ -220,7 +224,7 @@ const clientLogos = [
     <section class="characteristics-section">
       <div class="characteristics-container">
         <div class="characteristics-header">
-          <h2>Un outil au service de vos équipes</h2>
+          <h2>Un <span class="highlight-word">outil<img src="/images/auto-évaluation/characteristics-section/subline-concrets.png" alt="" class="subline-img" /></span> au service de vos équipes</h2>
           <p>L'auto-évaluation engage, responsabilise et fait progresser vos collaborateurs.</p>
         </div>
 
@@ -228,52 +232,79 @@ const clientLogos = [
           <div class="characteristic-card">
             <div class="characteristic-content">
               <span class="characteristic-label">Engagement des équipes</span>
-              <p class="characteristic-text">Vos collaborateurs deviennent acteurs de la qualité, pas seulement spectateurs.</p>
+              <p class="characteristic-text">Les collaborateurs se sentent responsables, engagés et valorisés.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
+              <img src="/images/auto-évaluation/characteristics-section/vector-star.png" alt="Engagement des équipes" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Montée en compétences</span>
-              <p class="characteristic-text">Chaque évaluation est une opportunité d'apprentissage et de progression.</p>
+              <span class="characteristic-label">Lecture objective du terrain</span>
+              <p class="characteristic-text">Les preuves visuelles éliminent les interprétations subjectives.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="5" cy="6" r="2"/>
-                <circle cx="12" cy="6" r="2"/>
-                <rect x="3" y="14" width="8" height="6" rx="1"/>
-                <rect x="15" y="10" width="6" height="10" rx="1"/>
-              </svg>
+              <img src="/images/auto-évaluation/characteristics-section/vector-people.png" alt="Lecture objective du terrain" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Déploiement rapide</span>
-              <p class="characteristic-text">Un outil simple à prendre en main, déployable rapidement sur l'ensemble du réseau.</p>
+              <span class="characteristic-label">Amélioration continue maîtrisée</span>
+              <p class="characteristic-text">Vous identifiez les écarts récurrents et priorisez aisément vos actions.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
+              <img src="/images/auto-évaluation/characteristics-section/vector-graph.png" alt="Amélioration continue maîtrisée" />
             </div>
           </div>
 
           <div class="characteristic-card">
             <div class="characteristic-content">
-              <span class="characteristic-label">Coût maîtrisé</span>
-              <p class="characteristic-text">Une solution économique pour un suivi régulier de vos standards qualité.</p>
+              <span class="characteristic-label">Conformité mesurée en continu</span>
+              <p class="characteristic-text">Vos standards sont suivis au quotidien, pas seulement lors d'un audit annuel.</p>
             </div>
             <div class="characteristic-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
+              <img src="/images/auto-évaluation/characteristics-section/vector-note.png" alt="Conformité mesurée en continu" />
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Case Studies Section -->
+    <section class="blog-section">
+      <div class="blog-container">
+        <h2 class="blog-heading">
+          Découvrez nos dernières <span class="blog-highlight">études de cas</span>
+        </h2>
+
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/auto-évaluation/hero-section/banner-auto-évaluation.png" alt="Disneyland Paris" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°1 : Visites Mystère Expérience chez Disneyland Paris</h3>
+            <p class="blog-card-subtitle">Smice accompagne Disneyland Paris avec des visites mystère centrées sur l'expérience, pour détecter les micro-frictions du parcours visiteur. Ces observations permettent à Disney d'ajuster la qualité perçue, de former ses équipes et d'optimiser les parcours pour une expérience fluide et mémorable.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/auto-évaluation/hero-section/banner-auto-évaluation.png" alt="Free" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°2 : Visites Mystère Conformité chez Free</h3>
+            <p class="blog-card-subtitle">Free utilise les visites mystère Smice pour vérifier l'application de ses standards dans ses Free Centers.<br /><br />Les évaluations portent sur l'accueil, les besoins, les réponses techniques et le parcours client. Les résultats permettent d'assurer une exécution homogène et de renforcer une expérience simple et fiable.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/auto-évaluation/hero-section/banner-auto-évaluation.png" alt="Groupe Bertrand" />
+            </div>
+            <h3 class="blog-card-title">Case Study n°3 : Visites Mystère Conformité dans les franchises du Groupe Bertrand</h3>
+            <p class="blog-card-subtitle">Le Groupe Bertrand utilise les visites mystère conformité Smice pour garantir l'uniformité des standards dans son réseau multi-enseignes : hygiène, accueil, rapidité, qualité des plats et respect des procédures. Les retours détaillés révèlent les écarts entre établissements, sécurisent la performance opérationnelle et soutiennent les franchisés dans une démarche de progrès continu et de cohérence marque.</p>
+            <a href="#" class="blog-card-btn">Lire l'article</a>
           </div>
         </div>
       </div>
@@ -289,7 +320,7 @@ const clientLogos = [
 </Layout>
 
 <style>
-  /* Hero Section */
+  /* ===== Hero Section ===== */
   .service-hero {
     background: #F4F7FF;
     padding: 40px 24px 60px;
@@ -314,10 +345,10 @@ const clientLogos = [
   }
 
   .hero-image img {
-    max-width: 100%;
-    height: auto;
-    max-height: 450px;
-    object-fit: contain;
+    width: 496px;
+    height: 400px;
+    border-radius: 16px;
+    object-fit: cover;
   }
 
   .hero-content {
@@ -328,19 +359,20 @@ const clientLogos = [
 
   .hero-title {
     font-size: 42px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.2;
     margin: 0;
   }
 
   .hero-title .highlight {
-    color: #4A5FC1;
+    color: #6989D4;
   }
 
   .hero-description {
-    font-size: 17px;
-    color: #4B5563;
+    font-size: 18px;
+    font-weight: 500;
+    color: #504C54;
     line-height: 1.7;
     margin: 0;
   }
@@ -349,24 +381,27 @@ const clientLogos = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 15px;
+    width: 223px;
+    height: 45px;
+    padding: 8px 16px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
+    gap: 8px;
     transition: all 0.3s ease;
     align-self: flex-start;
   }
 
   .hero-cta:hover {
-    background: #3D4EAA;
+    background: #5a7ac5;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 8px 25px rgba(105, 137, 212, 0.3);
   }
 
-  /* Clients Section */
+  /* ===== Clients Section ===== */
   .clients-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -375,17 +410,25 @@ const clientLogos = [
   }
 
   .clients-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1A1A2E;
+    font-size: 20px;
+    font-weight: 700;
+    color: #504C54;
     margin: 0 0 32px 0;
   }
 
   .clients-title .highlight-underline {
-    color: #4A5FC1;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .clients-title .highlight-underline .underline-img {
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .clients-logos {
@@ -415,7 +458,7 @@ const clientLogos = [
     opacity: 1;
   }
 
-  /* Scroll Indicator */
+  /* ===== Scroll Indicator ===== */
   .scroll-indicator {
     display: flex;
     justify-content: center;
@@ -439,7 +482,7 @@ const clientLogos = [
     }
   }
 
-  /* Introduction Section */
+  /* ===== Introduction Section ===== */
   .intro-section {
     padding: 80px 24px;
     background: white;
@@ -448,21 +491,6 @@ const clientLogos = [
   .intro-container {
     max-width: 1100px;
     margin: 0 auto;
-  }
-
-  .intro-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1A1A2E;
-    text-align: center;
-    margin: 0 0 50px 0;
-  }
-
-  .intro-title .highlight {
-    color: #4A5FC1;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 5px;
   }
 
   .intro-content {
@@ -484,6 +512,24 @@ const clientLogos = [
     display: block;
   }
 
+  .intro-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #504C54;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .intro-title .highlight {
+    color: #6989D4;
+  }
+
   .intro-text {
     display: flex;
     flex-direction: column;
@@ -491,9 +537,10 @@ const clientLogos = [
   }
 
   .intro-text p {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 1.7;
-    color: #4B5563;
+    color: #7C797F;
     margin: 0;
   }
 
@@ -501,25 +548,28 @@ const clientLogos = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
-    background: #4A5FC1;
-    color: white;
-    font-size: 14px;
+    width: 173px;
+    height: 45px;
+    padding: 8px 24px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
+    gap: 8px;
     transition: all 0.3s ease;
     align-self: flex-start;
     margin-top: 8px;
   }
 
   .intro-cta:hover {
-    background: #3D4EAA;
+    background: #5a7ac5;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 95, 193, 0.3);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
   }
 
-  /* Details Section */
+  /* ===== Details Section ===== */
   .details-section {
     padding: 80px 24px;
     background: #F4F7FF;
@@ -537,16 +587,17 @@ const clientLogos = [
   }
 
   .details-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.3;
     margin: 0 0 20px 0;
   }
 
   .details-subtitle {
-    font-size: 16px;
-    color: #6B7280;
+    font-size: 20px;
+    font-weight: 500;
+    color: #504C54;
     line-height: 1.7;
     margin: 0;
   }
@@ -555,36 +606,41 @@ const clientLogos = [
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    align-items: start;
   }
 
   .detail-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .detail-phase {
     font-size: 14px;
-    color: #6B7280;
+    font-weight: 600;
+    color: #504C54;
     margin-bottom: 8px;
+    min-height: 20px;
   }
 
   .detail-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0 0 20px 0;
     line-height: 1.3;
+    min-height: 62px;
+  }
+
+  .detail-title.green {
+    color: #75898A;
   }
 
   .detail-title.blue {
-    color: #4A5FC1;
+    color: #6989D4;
   }
 
   .detail-title.purple {
-    color: #9B7BC7;
-  }
-
-  .detail-title.teal {
-    color: #5BBFB3;
+    color: #9B8AAD;
   }
 
   .detail-image {
@@ -592,6 +648,7 @@ const clientLogos = [
     overflow: hidden;
     margin-bottom: 20px;
     aspect-ratio: 4/3;
+    height: 250px;
   }
 
   .detail-image img {
@@ -602,121 +659,13 @@ const clientLogos = [
 
   .detail-description {
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.7;
-    color: #4B5563;
+    color: #7C797F;
     margin: 0;
   }
 
-  /* Responsive */
-  @media (max-width: 968px) {
-    .hero-container {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      text-align: center;
-    }
-
-    .hero-image {
-      order: -1;
-    }
-
-    .hero-content {
-      align-items: center;
-    }
-
-    .hero-title {
-      font-size: 36px;
-    }
-
-    .clients-logos {
-      gap: 32px;
-    }
-
-    .logo-item img {
-      height: 28px;
-    }
-
-    .intro-content {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
-
-    .intro-title {
-      font-size: 30px;
-    }
-
-    .intro-text {
-      text-align: center;
-      align-items: center;
-    }
-
-    .details-grid {
-      grid-template-columns: 1fr;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .details-title {
-      font-size: 30px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .service-hero {
-      padding: 30px 20px 40px;
-      min-height: auto;
-    }
-
-    .hero-title {
-      font-size: 28px;
-    }
-
-    .hero-description {
-      font-size: 15px;
-    }
-
-    .hero-image img {
-      max-height: 300px;
-    }
-
-    .clients-section {
-      padding-top: 40px;
-    }
-
-    .clients-title {
-      font-size: 16px;
-    }
-
-    .clients-logos {
-      gap: 24px;
-    }
-
-    .logo-item img {
-      height: 24px;
-    }
-
-    .intro-section {
-      padding: 60px 20px;
-    }
-
-    .intro-title {
-      font-size: 26px;
-      margin-bottom: 32px;
-    }
-
-    .details-section {
-      padding: 60px 20px;
-    }
-
-    .details-title {
-      font-size: 26px;
-    }
-
-    .details-subtitle {
-      font-size: 14px;
-    }
-  }
-
-  /* Carousel Section */
+  /* ===== Carousel Section ===== */
   .carousel-section {
     padding: 100px 24px;
     background: white;
@@ -767,27 +716,27 @@ const clientLogos = [
   }
 
   .carousel-card h3 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #2D3A8C;
+    font-size: 32px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.25;
     margin: 0;
   }
 
-  .carousel-card p {
+  .carousel-card .card-details {
     font-size: 16px;
-    color: #4B5563;
+    font-weight: 500;
+    color: #7C797F;
     line-height: 1.75;
     margin: 0;
   }
 
   .carousel-card p.highlight-text {
-    color: #1A1A2E;
-    margin-top: 8px;
-  }
-
-  .carousel-card p.highlight-text strong {
+    font-size: 20px;
     font-weight: 600;
+    color: #504C54;
+    line-height: 1.5;
+    margin-top: 8px;
   }
 
   .carousel-dots {
@@ -809,59 +758,15 @@ const clientLogos = [
   }
 
   .carousel-dot:hover {
-    background: #4A5FC1;
+    background: #6989D4;
     opacity: 0.7;
   }
 
   .carousel-dot.active {
-    background: #4A5FC1;
+    background: #6989D4;
   }
 
-  @media (max-width: 968px) {
-    .carousel-card {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 0;
-    }
-
-    .card-image img {
-      height: 320px;
-    }
-
-    .carousel-card h3 {
-      font-size: 28px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .carousel-section {
-      padding: 60px 20px;
-    }
-
-    .card-image img {
-      height: 280px;
-    }
-
-    .carousel-card h3 {
-      font-size: 24px;
-    }
-
-    .carousel-card p {
-      font-size: 15px;
-    }
-
-    .carousel-dots {
-      margin-top: 40px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .carousel-card h3 {
-      font-size: 22px;
-    }
-  }
-
-  /* Characteristics Section */
+  /* ===== Characteristics Section ===== */
   .characteristics-section {
     padding: 80px 24px;
     background: #F8FAFF;
@@ -879,15 +784,36 @@ const clientLogos = [
 
   .characteristics-header h2 {
     font-size: 40px;
-    font-weight: 700;
-    color: #1A1A2E;
+    font-weight: 800;
+    color: #435888;
     margin: 0 0 16px 0;
+    line-height: 1.3;
+  }
+
+  .characteristics-header .highlight-word {
+    color: #6989D4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .characteristics-header .subline-img {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
   }
 
   .characteristics-header p {
-    font-size: 17px;
-    color: #4B5563;
+    font-size: 20px;
+    font-weight: 500;
+    color: #504C54;
     margin: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
   }
 
   .characteristics-grid {
@@ -912,34 +838,303 @@ const clientLogos = [
 
   .characteristic-label {
     display: block;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #4A5FC1;
+    letter-spacing: 0.2em;
+    color: #6989D4;
     margin-bottom: 10px;
   }
 
   .characteristic-text {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1A1A2E;
+    font-size: 22px;
+    font-weight: 800;
+    color: #435888;
     line-height: 1.5;
     margin: 0;
   }
 
   .characteristic-icon {
     flex-shrink: 0;
-    color: #7C8FE4;
-    opacity: 0.8;
   }
 
-  .characteristic-icon svg {
+  .characteristic-icon img {
     width: 52px;
     height: 52px;
+    object-fit: contain;
+  }
+
+  /* ===== Blog / Case Studies Section ===== */
+  .blog-section {
+    padding: 80px 24px;
+    background: white;
+  }
+
+  .blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .blog-heading {
+    font-size: 40px;
+    font-weight: 800;
+    color: #435888;
+    text-align: center;
+    margin: 0 0 60px 0;
+    line-height: 1.3;
+  }
+
+  .blog-heading .blog-highlight {
+    color: #435888;
+    border-bottom: 4px solid #E5C04B;
+    padding-bottom: 2px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .blog-card-image {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    aspect-ratio: 16/10;
+  }
+
+  .blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .blog-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #435888;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    min-height: 84px;
+  }
+
+  .blog-card-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #7C797F;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    flex: 1;
+  }
+
+  .blog-card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 344px;
+    height: 45px;
+    padding: 8px 16px;
+    background: #6989D4;
+    color: #FFFFFE;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+  }
+
+  .blog-card-btn:hover {
+    background: #5a7ac5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(105, 137, 212, 0.3);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 968px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 496px;
+      height: auto;
+    }
+
+    .hero-content {
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 36px;
+    }
+
+    .hero-cta {
+      align-self: center;
+    }
+
+    .clients-logos {
+      gap: 32px;
+    }
+
+    .logo-item img {
+      height: 28px;
+    }
+
+    .intro-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .intro-title {
+      font-size: 30px;
+    }
+
+    .intro-text-wrapper {
+      text-align: center;
+      align-items: center;
+    }
+
+    .details-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .details-title {
+      font-size: 30px;
+    }
+
+    .carousel-card {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0;
+    }
+
+    .card-image img {
+      height: 320px;
+    }
+
+    .carousel-card h3 {
+      font-size: 28px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .blog-card-title {
+      min-height: auto;
+    }
+
+    .blog-heading {
+      font-size: 32px;
+    }
   }
 
   @media (max-width: 768px) {
+    .service-hero {
+      padding: 30px 20px 40px;
+      min-height: auto;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 15px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    .clients-section {
+      padding-top: 40px;
+    }
+
+    .clients-title {
+      font-size: 16px;
+    }
+
+    .clients-logos {
+      gap: 24px;
+    }
+
+    .logo-item img {
+      height: 24px;
+    }
+
+    .intro-section {
+      padding: 60px 20px;
+    }
+
+    .intro-title {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+    }
+
+    .details-section {
+      padding: 60px 20px;
+    }
+
+    .details-title {
+      font-size: 26px;
+    }
+
+    .details-subtitle {
+      font-size: 16px;
+    }
+
+    .carousel-section {
+      padding: 60px 20px;
+    }
+
+    .card-image img {
+      height: 280px;
+    }
+
+    .carousel-card h3 {
+      font-size: 24px;
+    }
+
+    .carousel-card .card-details {
+      font-size: 15px;
+    }
+
+    .carousel-card p.highlight-text {
+      font-size: 17px;
+    }
+
+    .carousel-dots {
+      margin-top: 40px;
+    }
+
     .characteristics-section {
       padding: 60px 20px;
     }
@@ -956,9 +1151,37 @@ const clientLogos = [
       padding: 24px;
     }
 
-    .characteristic-icon svg {
+    .characteristic-icon img {
       width: 44px;
       height: 44px;
+    }
+
+    .blog-section {
+      padding: 60px 20px;
+    }
+
+    .blog-heading {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .blog-card-btn {
+      max-width: 100%;
+    }
+
+    .blog-card-title {
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-card h3 {
+      font-size: 22px;
     }
   }
 </style>
